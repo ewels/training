@@ -1519,7 +1519,7 @@
   <span class="md-ellipsis">
     
   
-    Orientation
+    Getting started
   
 
     
@@ -1540,14 +1540,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nf4_science/genomics/01_per_sample_variant_calling/" class="md-nav__link">
+      <a href="../../nf4_science/genomics/01_method/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 1: Per-sample variant calling
+    Part 1: Method overview and manual testing
   
 
     
@@ -1568,14 +1568,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nf4_science/genomics/02_joint_calling/" class="md-nav__link">
+      <a href="../../nf4_science/genomics/02_per_sample_variant_calling/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 2: Joint calling on a cohort
+    Part 2: Per-sample variant calling
   
 
     
@@ -1596,42 +1596,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nf4_science/genomics/03_modules/" class="md-nav__link">
+      <a href="../../nf4_science/genomics/03_joint_calling/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Part 3: Moving code into modules
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nf4_science/genomics/04_testing/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Part 4: Adding tests
+    Part 3: Joint calling on a cohort
   
 
     
@@ -1687,7 +1659,7 @@
   <span class="md-ellipsis">
     
   
-    Next Steps
+    Course summary
   
 
     
@@ -4905,7 +4877,7 @@ As we'll see later, remote files will have different class names (such as <code>
 <p>You see the various file attributes printed to the console above.</p>
 <h3 id="14-feed-the-file-to-a-process">1.4. Feed the file to a process<a class="headerlink" href="#14-feed-the-file-to-a-process" title="Permanent link">&para;</a></h3>
 <p>The difference between strings and Path objects becomes critical when you start building actual workflows with processes.
-So far we've verified that Nextflow is now treating out input file as a file, but let's see if we can actually run something on that file in a process.</p>
+So far we've verified that Nextflow is now treating our input file as a file, but let's see if we can actually run something on that file in a process.</p>
 <h4 id="141-import-the-process-and-examine-the-code">1.4.1. Import the process and examine the code<a class="headerlink" href="#141-import-the-process-and-examine-the-code" title="Permanent link">&para;</a></h4>
 <p>We provide you with a pre-written process module called <code>COUNT_LINES</code> that takes a file input and counts how many lines are in it.</p>
 <p>To use the process in the workflow, you just need to add an include statement before the workflow block:</p>
