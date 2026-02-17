@@ -11,14 +11,16 @@
         <link rel="canonical" href="https://training.nextflow.io/pt/nf4_science/genomics/next_steps/">
       
       
-        <link rel="prev" href="../survey/">
+        <link rel="prev" href="../03_joint_calling/">
       
       
-        <link rel="next" href="../../rnaseq/">
+        <link rel="next" href="../survey/">
       
       
         
           <link rel="alternate" href="/" hreflang="en">
+        
+          <link rel="alternate" href="/ca/" hreflang="ca">
         
           <link rel="alternate" href="/de/" hreflang="de">
         
@@ -243,6 +245,12 @@
           <li class="md-select__item">
             <a href="/" hreflang="en" class="md-select__link">
               English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/ca/" hreflang="ca" class="md-select__link">
+              Català
             </a>
           </li>
         
@@ -1459,7 +1467,7 @@
   <span class="md-ellipsis">
     
   
-    Nextflow para Genômica
+    Genômica
   
 
     
@@ -1475,7 +1483,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nextflow para Genômica
+    Genômica
   
 
           </label>
@@ -1495,7 +1503,7 @@
   <span class="md-ellipsis">
     
   
-    Nextflow para Genômica
+    Genômica
   
 
     
@@ -1551,7 +1559,7 @@
   <span class="md-ellipsis">
     
   
-    Parte 1: Visão geral do método e testes manuais
+    Parte 1: Visão geral do método
   
 
     
@@ -1608,34 +1616,6 @@
     
   
     Parte 3: Chamada conjunta em uma coorte
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../survey/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pesquisa de feedback
   
 
     
@@ -1969,6 +1949,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pesquisa de feedback
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2002,7 +2010,7 @@
   <span class="md-ellipsis">
     
   
-    Nextflow para RNAseq
+    RNAseq
   
 
     
@@ -2018,7 +2026,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nextflow para RNAseq
+    RNAseq
   
 
           </label>
@@ -2038,7 +2046,7 @@
   <span class="md-ellipsis">
     
   
-    Nextflow para RNAseq
+    RNAseq
   
 
     
@@ -2066,7 +2074,7 @@
   <span class="md-ellipsis">
     
   
-    Orientação
+    Primeiros Passos
   
 
     
@@ -2094,7 +2102,7 @@
   <span class="md-ellipsis">
     
   
-    Parte 1: Visão geral do método e teste manual
+    Parte 1: Visão geral do método
   
 
     
@@ -2171,14 +2179,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rnaseq/survey/" class="md-nav__link">
+      <a href="../../rnaseq/next_steps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Pesquisa de feedback
+    Resumo do Curso
   
 
     
@@ -2199,14 +2207,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rnaseq/next_steps/" class="md-nav__link">
+      <a href="../../rnaseq/survey/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Próximos Passos
+    Pesquisa de feedback
   
 
     
@@ -2253,7 +2261,7 @@
   <span class="md-ellipsis">
     
   
-    Executar Nextflow para Imagens
+    Imagens
   
 
     
@@ -2269,7 +2277,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Executar Nextflow para Imagens
+    Imagens
   
 
           </label>
@@ -2289,7 +2297,7 @@
   <span class="md-ellipsis">
     
   
-    Executar Nextflow para Imagens
+    Imagens
   
 
     
@@ -3615,7 +3623,7 @@ Depois, construiu um pipeline Nextflow para uma única amostra para automatizar 
 <ul>
 <li>Um pipeline de chamada de variantes que recebe arquivos BAM como entrada e produz VCFs com chamadas conjuntas como saída.</li>
 <li>Três processos (<code>SAMTOOLS_INDEX</code>, <code>GATK_HAPLOTYPECALLER</code> e <code>GATK_JOINTGENOTYPING</code>) armazenados em arquivos de módulo separados.</li>
-<li>O pipeline escala automaticamente para qualquer número de amostras de entrada usando o paradigma de fluxo de dados do Nextflow.</li>
+<li>O pipeline paraleliza automaticamente o processamento de amostras de entrada usando o paradigma de fluxo de dados do Nextflow.</li>
 <li>Os resultados são publicados em um diretório chamado <code>results/</code>.</li>
 </ul>
 <h3 id="habilidades-adquiridas">Habilidades adquiridas<a class="headerlink" href="#habilidades-adquiridas" title="Permanent link">&para;</a></h3>
@@ -5189,7 +5197,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../survey/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Pesquisa de feedback">
+          <a href="../03_joint_calling/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Parte 3: Chamada conjunta em uma coorte">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5199,20 +5207,20 @@ window.mkdocsQuizConfig = {
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Pesquisa de feedback
+                Parte 3: Chamada conjunta em uma coorte
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../rnaseq/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Nextflow para RNAseq">
+          <a href="../survey/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Pesquisa de feedback">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Próximo
               </span>
               <div class="md-ellipsis">
-                Nextflow para RNAseq
+                Pesquisa de feedback
               </div>
             </div>
             <div class="md-footer__button md-icon">

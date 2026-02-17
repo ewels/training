@@ -11,14 +11,16 @@
         <link rel="canonical" href="https://training.nextflow.io/ko/nf4_science/genomics/next_steps/">
       
       
-        <link rel="prev" href="../survey/">
+        <link rel="prev" href="../03_joint_calling/">
       
       
-        <link rel="next" href="../../rnaseq/">
+        <link rel="next" href="../survey/">
       
       
         
           <link rel="alternate" href="/" hreflang="en">
+        
+          <link rel="alternate" href="/ca/" hreflang="ca">
         
           <link rel="alternate" href="/de/" hreflang="de">
         
@@ -243,6 +245,12 @@
           <li class="md-select__item">
             <a href="/" hreflang="en" class="md-select__link">
               English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/ca/" hreflang="ca" class="md-select__link">
+              Català
             </a>
           </li>
         
@@ -1459,7 +1467,7 @@
   <span class="md-ellipsis">
     
   
-    Nextflow for Genomics
+    유전체학
   
 
     
@@ -1475,7 +1483,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    Nextflow for Genomics
+    유전체학
   
 
           </label>
@@ -1495,7 +1503,7 @@
   <span class="md-ellipsis">
     
   
-    Nextflow for Genomics
+    유전체학
   
 
     
@@ -1551,7 +1559,7 @@
   <span class="md-ellipsis">
     
   
-    파트 1: 방법론 개요 및 수동 테스트
+    파트 1: 방법론 개요
   
 
     
@@ -1608,34 +1616,6 @@
     
   
     파트 3: 코호트에 대한 조인트 호출
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../survey/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    피드백 설문조사
   
 
     
@@ -1969,6 +1949,34 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../survey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    피드백 설문조사
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2002,7 +2010,7 @@
   <span class="md-ellipsis">
     
   
-    RNAseq을 위한 Nextflow
+    RNAseq
   
 
     
@@ -2018,7 +2026,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    RNAseq을 위한 Nextflow
+    RNAseq
   
 
           </label>
@@ -2038,7 +2046,7 @@
   <span class="md-ellipsis">
     
   
-    RNAseq을 위한 Nextflow
+    RNAseq
   
 
     
@@ -2066,7 +2074,7 @@
   <span class="md-ellipsis">
     
   
-    오리엔테이션
+    시작하기
   
 
     
@@ -2094,7 +2102,7 @@
   <span class="md-ellipsis">
     
   
-    파트 1: 방법 개요 및 수동 테스트
+    파트 1: 방법 개요
   
 
     
@@ -2171,14 +2179,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rnaseq/survey/" class="md-nav__link">
+      <a href="../../rnaseq/next_steps/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    피드백 설문조사
+    과정 요약
   
 
     
@@ -2199,14 +2207,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../../rnaseq/next_steps/" class="md-nav__link">
+      <a href="../../rnaseq/survey/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    다음 단계
+    피드백 설문조사
   
 
     
@@ -2253,7 +2261,7 @@
   <span class="md-ellipsis">
     
   
-    이미징을 위한 Nextflow 실행
+    이미징
   
 
     
@@ -2269,7 +2277,7 @@
             <span class="md-nav__icon md-icon"></span>
             
   
-    이미징을 위한 Nextflow 실행
+    이미징
   
 
           </label>
@@ -2289,7 +2297,7 @@
   <span class="md-ellipsis">
     
   
-    이미징을 위한 Nextflow 실행
+    이미징
   
 
     
@@ -3615,7 +3623,7 @@
 <ul>
 <li>BAM 파일을 입력으로 받아 공동 호출된 VCF를 출력으로 생성하는 변이 호출 파이프라인.</li>
 <li>별도의 모듈 파일에 저장된 세 개의 프로세스(<code>SAMTOOLS_INDEX</code>, <code>GATK_HAPLOTYPECALLER</code>, <code>GATK_JOINTGENOTYPING</code>).</li>
-<li>Nextflow의 데이터플로우 패러다임을 사용하여 입력 샘플 수에 관계없이 자동으로 확장되는 파이프라인.</li>
+<li>Nextflow의 데이터플로우 패러다임을 사용하여 입력 샘플 처리를 자동으로 병렬화하는 파이프라인.</li>
 <li><code>results/</code> 디렉토리에 게시되는 결과.</li>
 </ul>
 <h3 id="_4">습득한 기술<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
@@ -5189,7 +5197,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
           
-          <a href="../survey/" class="md-footer__link md-footer__link--prev" aria-label="이전: 피드백 설문조사">
+          <a href="../03_joint_calling/" class="md-footer__link md-footer__link--prev" aria-label="이전: 파트 3: 코호트에 대한 조인트 호출">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -5199,20 +5207,20 @@ window.mkdocsQuizConfig = {
                 이전
               </span>
               <div class="md-ellipsis">
-                피드백 설문조사
+                파트 3: 코호트에 대한 조인트 호출
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../rnaseq/" class="md-footer__link md-footer__link--next" aria-label="다음: RNAseq을 위한 Nextflow">
+          <a href="../survey/" class="md-footer__link md-footer__link--next" aria-label="다음: 피드백 설문조사">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 다음
               </span>
               <div class="md-ellipsis">
-                RNAseq을 위한 Nextflow
+                피드백 설문조사
               </div>
             </div>
             <div class="md-footer__button md-icon">
