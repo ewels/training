@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://training.nextflow.io/ko/side_quests/working_with_files/">
       
       
-        <link rel="prev" href="../metadata/">
+        <link rel="prev" href="../workflows_of_workflows/">
       
       
-        <link rel="next" href="../splitting_and_grouping/">
+        <link rel="next" href="../debugging/">
       
       
         
@@ -43,11 +43,11 @@
       
       
       <link rel="icon" href="../../assets/img/nextflow-icon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>파일 입력 처리 - training.nextflow.io</title>
+        <title>File input processing - training.nextflow.io</title>
       
     
     
@@ -157,7 +157,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#file-input-processing" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -196,7 +196,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              파일 입력 처리
+              File input processing
             
           </span>
         </div>
@@ -2345,7 +2345,35 @@
   <span class="md-ellipsis">
     
   
-    개발 환경
+    Development Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../essential_scripting_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Essential Nextflow Scripting Patterns
   
 
     
@@ -2373,7 +2401,91 @@
   <span class="md-ellipsis">
     
   
-    메타데이터와 메타 맵
+    Metadata and meta maps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../splitting_and_grouping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Splitting and Grouping
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nf_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing with nf-test
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows_of_workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflows of Workflows
   
 
     
@@ -2410,7 +2522,7 @@
   <span class="md-ellipsis">
     
   
-    파일 입력 처리
+    File input processing
   
 
     
@@ -2428,7 +2540,7 @@
   <span class="md-ellipsis">
     
   
-    파일 입력 처리
+    File input processing
   
 
     
@@ -2448,40 +2560,40 @@
   </label>
   <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
      <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#learning-goals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        학습 목표
+        Learning goals
       
     </span>
   </a>
   
 </li>  <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        사전 요구 사항
+        Prerequisites
       
     </span>
   </a>
   
 </li>  <li class="md-nav__item">
-  <a href="#0" class="md-nav__link">
+  <a href="#0-get-started" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0. 시작하기
+        0. Get started
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="0. 시작하기">
+    <nav class="md-nav" aria-label="0. Get started">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#open-the-training-codespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        교육 코드스페이스 열기
+        Open the training codespace
       
     </span>
   </a>
@@ -2489,10 +2601,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#move-into-the-project-directory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        프로젝트 디렉토리로 이동
+        Move into the project directory
       
     </span>
   </a>
@@ -2500,10 +2612,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#review-the-materials" class="md-nav__link">
     <span class="md-ellipsis">
       
-        자료 검토
+        Review the materials
       
     </span>
   </a>
@@ -2511,10 +2623,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#review-the-assignment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        과제 검토
+        Review the assignment
       
     </span>
   </a>
@@ -2522,147 +2634,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#readiness-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
-        준비 체크리스트
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>  <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 기본 파일 작업
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 기본 파일 작업">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. .class로 객체의 타입 식별
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-file-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. file()로 Path 객체 생성
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. 파일 속성 접근
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. process에 파일 제공
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4. process에 파일 제공">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#141-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.1. process 가져오기 및 코드 검토
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#142-count_lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.2. COUNT_LINES 호출 추가
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. 기본 파일 입력 오류 문제 해결
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.5. 기본 파일 입력 오류 문제 해결">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.1. 워크플로우 수준 오류
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.2. Process 수준 오류
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        핵심 정리
+        Readiness checklist
       
     </span>
   </a>
@@ -2673,22 +2648,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#1-basic-file-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 원격 파일 사용
+        1. Basic file operations
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. 원격 파일 사용">
+    <nav class="md-nav" aria-label="1. Basic file operations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
+  <a href="#11-identify-the-type-of-an-object-with-class" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. 인터넷의 파일 사용
+        1.1. Identify the type of an object with .class
       
     </span>
   </a>
@@ -2696,10 +2671,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#12-create-a-path-object-with-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. 로컬 파일로 다시 전환
+        1.2. Create a Path object with file()
       
     </span>
   </a>
@@ -2707,10 +2682,99 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#13-access-file-attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        핵심 정리
+        1.3. Access file attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-feed-the-file-to-a-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Feed the file to a process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Feed the file to a process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-import-the-process-and-examine-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Import the process and examine the code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-add-a-call-to-count_lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. Add a call to COUNT_LINES
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-troubleshoot-basic-file-input-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Troubleshoot basic file input errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Troubleshoot basic file input errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-workflow-level-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Workflow-level error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-process-level-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Process-level error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaway
       
     </span>
   </a>
@@ -2721,22 +2785,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#3-frompath" class="md-nav__link">
+  <a href="#2-using-remote-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. fromPath() 채널 팩토리 사용
+        2. Using remote files
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. fromPath() 채널 팩토리 사용">
+    <nav class="md-nav" aria-label="2. Using remote files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
+  <a href="#21-use-a-file-from-the-internet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. 채널 팩토리 추가
+        2.1. Use a file from the internet
       
     </span>
   </a>
@@ -2744,10 +2808,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
+  <a href="#22-switch-back-to-the-local-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. 채널의 파일 속성 보기
+        2.2. Switch back to the local file
       
     </span>
   </a>
@@ -2755,21 +2819,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-glob" class="md-nav__link">
+  <a href="#takeaway_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. glob을 사용하여 여러 파일 매칭
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        핵심 정리
+        Takeaway
       
     </span>
   </a>
@@ -2780,22 +2833,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#3-using-the-frompath-channel-factory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 파일 이름에서 기본 메타데이터 추출
+        3. Using the fromPath() channel factory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 파일 이름에서 기본 메타데이터 추출">
+    <nav class="md-nav" aria-label="3. Using the fromPath() channel factory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-simplename" class="md-nav__link">
+  <a href="#31-add-the-channel-factory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. simpleName 검색
+        3.1. Add the channel factory
       
     </span>
   </a>
@@ -2803,10 +2856,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-simplename" class="md-nav__link">
+  <a href="#32-view-attributes-of-files-in-channel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. simplename에서 메타데이터 추출
+        3.2. View attributes of files in channel
       
     </span>
   </a>
@@ -2814,10 +2867,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-map" class="md-nav__link">
+  <a href="#33-using-a-glob-to-match-multiple-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. map을 사용하여 메타데이터 구성
+        3.3. Using a glob to match multiple files
       
     </span>
   </a>
@@ -2825,10 +2878,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#takeaway_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        핵심 정리
+        Takeaway
       
     </span>
   </a>
@@ -2839,22 +2892,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
+  <a href="#4-extracting-basic-metadata-from-filenames" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 페어드 데이터 파일 처리
+        4. Extracting basic metadata from filenames
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. 페어드 데이터 파일 처리">
+    <nav class="md-nav" aria-label="4. Extracting basic metadata from filenames">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-channelfromfilepairs" class="md-nav__link">
+  <a href="#41-retrieve-the-simplename" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. 채널 팩토리를 channel.fromFilePairs()로 전환
+        4.1. Retrieve the simpleName
       
     </span>
   </a>
@@ -2862,10 +2915,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
+  <a href="#42-extract-the-metadata-from-the-simplename" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. 파일 쌍에서 메타데이터 추출 및 구성
+        4.2. Extract the metadata from the simplename
       
     </span>
   </a>
@@ -2873,10 +2926,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#43-use-a-map-to-organize-the-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        핵심 정리
+        4.3. Use a map to organize the metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaway
       
     </span>
   </a>
@@ -2887,22 +2951,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#6-process" class="md-nav__link">
+  <a href="#5-handling-paired-data-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. process에서 파일 작업 사용
+        5. Handling paired data files
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. process에서 파일 작업 사용">
+    <nav class="md-nav" aria-label="5. Handling paired data files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-process" class="md-nav__link">
+  <a href="#51-switch-the-channel-factory-to-channelfromfilepairs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. process 가져오기 및 코드 검토
+        5.1. Switch the channel factory to channel.fromFilePairs()
       
     </span>
   </a>
@@ -2910,22 +2974,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-process" class="md-nav__link">
+  <a href="#52-extract-and-organize-metadata-from-file-pairs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. 워크플로우에서 process 호출
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6.2. 워크플로우에서 process 호출">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#621" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2.1. 재매핑된 입력 채널 이름 지정
+        5.2. Extract and organize metadata from file pairs
       
     </span>
   </a>
@@ -2933,48 +2985,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#622-process" class="md-nav__link">
+  <a href="#takeaway_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2.2. 데이터에서 process 호출
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.3. 더 많은 환자 포함
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#64" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.4. 게시된 파일을 고유하게 만들기
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        핵심 정리
+        Takeaway
       
     </span>
   </a>
@@ -2985,22 +2999,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#6-using-file-operations-in-processes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        요약
+        6. Using file operations in processes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="요약">
+    <nav class="md-nav" aria-label="6. Using file operations in processes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#61-import-the-process-and-examine-the-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        주요 패턴
+        6.1. Import the process and examine the code
       
     </span>
   </a>
@@ -3008,10 +3022,71 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#62-call-the-process-in-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        추가 자료
+        6.2. Call the process in the workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2. Call the process in the workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-name-the-remapped-input-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.1. Name the remapped input channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-call-the-process-on-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.2. Call the process on the data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-include-many-more-patients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Include many more patients
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-make-the-published-files-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. Make the published files unique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaway
       
     </span>
   </a>
@@ -3022,10 +3097,47 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        다음 단계
+        Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>  <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's next?
       
     </span>
   </a>
@@ -3233,62 +3345,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../splitting_and_grouping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    데이터 분할 및 그룹화
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflows_of_workflows/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    워크플로우의 워크플로우
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../debugging/" class="md-nav__link">
         
   
@@ -3296,7 +3352,82 @@
   <span class="md-ellipsis">
     
   
-    워크플로우 디버깅
+    Debugging Workflows
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_11" id="__nav_6_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugin Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugin Development
   
 
     
@@ -3317,14 +3448,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../essential_scripting_patterns/" class="md-nav__link">
+      <a href="../plugin_development/01_plugin_basics/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    필수 Nextflow 스크립팅 패턴
+    Part 1: Plugin Basics
   
 
     
@@ -3345,14 +3476,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../nf-test/" class="md-nav__link">
+      <a href="../plugin_development/02_create_project/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    nf-test로 테스트하기
+    Part 2: Create a Plugin Project
   
 
     
@@ -3361,6 +3492,182 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/03_custom_functions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 3: Custom Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/04_build_and_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 4: Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/05_observers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 5: Trace Observers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/06_configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Part 6: Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Summary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin_development/next_steps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Next Steps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3809,40 +4116,40 @@
   </label>
   <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
      <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#learning-goals" class="md-nav__link">
     <span class="md-ellipsis">
       
-        학습 목표
+        Learning goals
       
     </span>
   </a>
   
 </li>  <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        사전 요구 사항
+        Prerequisites
       
     </span>
   </a>
   
 </li>  <li class="md-nav__item">
-  <a href="#0" class="md-nav__link">
+  <a href="#0-get-started" class="md-nav__link">
     <span class="md-ellipsis">
       
-        0. 시작하기
+        0. Get started
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="0. 시작하기">
+    <nav class="md-nav" aria-label="0. Get started">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#open-the-training-codespace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        교육 코드스페이스 열기
+        Open the training codespace
       
     </span>
   </a>
@@ -3850,10 +4157,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#move-into-the-project-directory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        프로젝트 디렉토리로 이동
+        Move into the project directory
       
     </span>
   </a>
@@ -3861,10 +4168,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#review-the-materials" class="md-nav__link">
     <span class="md-ellipsis">
       
-        자료 검토
+        Review the materials
       
     </span>
   </a>
@@ -3872,10 +4179,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#review-the-assignment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        과제 검토
+        Review the assignment
       
     </span>
   </a>
@@ -3883,147 +4190,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#readiness-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
-        준비 체크리스트
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>  <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. 기본 파일 작업
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. 기본 파일 작업">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#11-class" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.1. .class로 객체의 타입 식별
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-file-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.2. file()로 Path 객체 생성
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.3. 파일 속성 접근
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4. process에 파일 제공
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.4. process에 파일 제공">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#141-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.1. process 가져오기 및 코드 검토
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#142-count_lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.4.2. COUNT_LINES 호출 추가
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5. 기본 파일 입력 오류 문제 해결
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1.5. 기본 파일 입력 오류 문제 해결">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#151" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.1. 워크플로우 수준 오류
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#152-process" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1.5.2. Process 수준 오류
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        핵심 정리
+        Readiness checklist
       
     </span>
   </a>
@@ -4034,22 +4204,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#2" class="md-nav__link">
+  <a href="#1-basic-file-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. 원격 파일 사용
+        1. Basic file operations
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. 원격 파일 사용">
+    <nav class="md-nav" aria-label="1. Basic file operations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
+  <a href="#11-identify-the-type-of-an-object-with-class" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1. 인터넷의 파일 사용
+        1.1. Identify the type of an object with .class
       
     </span>
   </a>
@@ -4057,10 +4227,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
+  <a href="#12-create-a-path-object-with-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.2. 로컬 파일로 다시 전환
+        1.2. Create a Path object with file()
       
     </span>
   </a>
@@ -4068,10 +4238,99 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#13-access-file-attributes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        핵심 정리
+        1.3. Access file attributes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-feed-the-file-to-a-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4. Feed the file to a process
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4. Feed the file to a process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-import-the-process-and-examine-the-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.1. Import the process and examine the code
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-add-a-call-to-count_lines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4.2. Add a call to COUNT_LINES
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-troubleshoot-basic-file-input-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5. Troubleshoot basic file input errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5. Troubleshoot basic file input errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-workflow-level-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1. Workflow-level error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-process-level-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.2. Process-level error
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaway
       
     </span>
   </a>
@@ -4082,22 +4341,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#3-frompath" class="md-nav__link">
+  <a href="#2-using-remote-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. fromPath() 채널 팩토리 사용
+        2. Using remote files
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. fromPath() 채널 팩토리 사용">
+    <nav class="md-nav" aria-label="2. Using remote files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
+  <a href="#21-use-a-file-from-the-internet" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1. 채널 팩토리 추가
+        2.1. Use a file from the internet
       
     </span>
   </a>
@@ -4105,10 +4364,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
+  <a href="#22-switch-back-to-the-local-file" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2. 채널의 파일 속성 보기
+        2.2. Switch back to the local file
       
     </span>
   </a>
@@ -4116,21 +4375,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33-glob" class="md-nav__link">
+  <a href="#takeaway_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3. glob을 사용하여 여러 파일 매칭
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        핵심 정리
+        Takeaway
       
     </span>
   </a>
@@ -4141,22 +4389,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
+  <a href="#3-using-the-frompath-channel-factory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 파일 이름에서 기본 메타데이터 추출
+        3. Using the fromPath() channel factory
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. 파일 이름에서 기본 메타데이터 추출">
+    <nav class="md-nav" aria-label="3. Using the fromPath() channel factory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-simplename" class="md-nav__link">
+  <a href="#31-add-the-channel-factory" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1. simpleName 검색
+        3.1. Add the channel factory
       
     </span>
   </a>
@@ -4164,10 +4412,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#42-simplename" class="md-nav__link">
+  <a href="#32-view-attributes-of-files-in-channel" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. simplename에서 메타데이터 추출
+        3.2. View attributes of files in channel
       
     </span>
   </a>
@@ -4175,10 +4423,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#43-map" class="md-nav__link">
+  <a href="#33-using-a-glob-to-match-multiple-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. map을 사용하여 메타데이터 구성
+        3.3. Using a glob to match multiple files
       
     </span>
   </a>
@@ -4186,10 +4434,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#takeaway_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        핵심 정리
+        Takeaway
       
     </span>
   </a>
@@ -4200,22 +4448,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
+  <a href="#4-extracting-basic-metadata-from-filenames" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. 페어드 데이터 파일 처리
+        4. Extracting basic metadata from filenames
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5. 페어드 데이터 파일 처리">
+    <nav class="md-nav" aria-label="4. Extracting basic metadata from filenames">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-channelfromfilepairs" class="md-nav__link">
+  <a href="#41-retrieve-the-simplename" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.1. 채널 팩토리를 channel.fromFilePairs()로 전환
+        4.1. Retrieve the simpleName
       
     </span>
   </a>
@@ -4223,10 +4471,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
+  <a href="#42-extract-the-metadata-from-the-simplename" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5.2. 파일 쌍에서 메타데이터 추출 및 구성
+        4.2. Extract the metadata from the simplename
       
     </span>
   </a>
@@ -4234,10 +4482,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#43-use-a-map-to-organize-the-metadata" class="md-nav__link">
     <span class="md-ellipsis">
       
-        핵심 정리
+        4.3. Use a map to organize the metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaway
       
     </span>
   </a>
@@ -4248,22 +4507,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#6-process" class="md-nav__link">
+  <a href="#5-handling-paired-data-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. process에서 파일 작업 사용
+        5. Handling paired data files
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. process에서 파일 작업 사용">
+    <nav class="md-nav" aria-label="5. Handling paired data files">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-process" class="md-nav__link">
+  <a href="#51-switch-the-channel-factory-to-channelfromfilepairs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. process 가져오기 및 코드 검토
+        5.1. Switch the channel factory to channel.fromFilePairs()
       
     </span>
   </a>
@@ -4271,22 +4530,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-process" class="md-nav__link">
+  <a href="#52-extract-and-organize-metadata-from-file-pairs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. 워크플로우에서 process 호출
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6.2. 워크플로우에서 process 호출">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#621" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.2.1. 재매핑된 입력 채널 이름 지정
+        5.2. Extract and organize metadata from file pairs
       
     </span>
   </a>
@@ -4294,48 +4541,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#622-process" class="md-nav__link">
+  <a href="#takeaway_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2.2. 데이터에서 process 호출
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#63" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.3. 더 많은 환자 포함
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#64" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6.4. 게시된 파일을 고유하게 만들기
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        핵심 정리
+        Takeaway
       
     </span>
   </a>
@@ -4346,22 +4555,22 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#6-using-file-operations-in-processes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        요약
+        6. Using file operations in processes
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="요약">
+    <nav class="md-nav" aria-label="6. Using file operations in processes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#61-import-the-process-and-examine-the-code" class="md-nav__link">
     <span class="md-ellipsis">
       
-        주요 패턴
+        6.1. Import the process and examine the code
       
     </span>
   </a>
@@ -4369,10 +4578,71 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#62-call-the-process-in-the-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        추가 자료
+        6.2. Call the process in the workflow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2. Call the process in the workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-name-the-remapped-input-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.1. Name the remapped input channel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-call-the-process-on-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.2. Call the process on the data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-include-many-more-patients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Include many more patients
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-make-the-published-files-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4. Make the published files unique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#takeaway_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Takeaway
       
     </span>
   </a>
@@ -4383,10 +4653,47 @@
     </nav>
   
 </li>  <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        다음 단계
+        Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key patterns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>  <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's next?
       
     </span>
   </a>
@@ -4632,7 +4939,7 @@
 
  
 <a
-  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/working_with_files.md"
+  href="https://github.com/nextflow-io/training/edit/master/docs/side_quests/working_with_files/index.md"
   title="이 페이지를 편집"
   class="md-content__button md-icon"
   rel="edit"
@@ -4649,47 +4956,54 @@
 </a>
  
 
-<h1 id="_1">파일 입력 처리<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p><span class="ai-translation-notice"><span class="twemoji ai-translation-notice-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span> AI 지원 번역 - <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">자세히 알아보기 및 개선 제안</a></span></p>
-<p>과학 분석 워크플로우는 종종 대량의 파일 처리를 포함합니다.
-Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 제공하여, 최소한의 코드로 데이터를 구성하고 처리할 수 있도록 돕습니다.</p>
-<h3 id="_2">학습 목표<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>이 사이드 퀘스트에서는 기본 파일 작업부터 파일 컬렉션 작업을 위한 고급 기술까지 Nextflow가 파일을 처리하는 방법을 다룹니다.
-과학 분석 파이프라인에서 일반적으로 요구되는 파일 이름에서 메타데이터를 추출하는 방법을 배우게 됩니다.</p>
-<p>이 사이드 퀘스트를 마치면 다음을 수행할 수 있습니다:</p>
+<h1 id="file-input-processing">File input processing<a class="headerlink" href="#file-input-processing" title="Permanent link">&para;</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Translation in Progress</p>
+<p>This page has not yet been translated into your language.
+You are viewing the original English content.</p>
+<p>Want to help? See our <a href="https://github.com/nextflow-io/training/blob/master/TRANSLATING.md">translation guide</a>.</p>
+</div>
+<p>Scientific analysis workflows often involve processing large numbers of files.
+Nextflow provides powerful tools to handle files efficiently, helping you organize and process your data with minimal code.</p>
+<h3 id="learning-goals">Learning goals<a class="headerlink" href="#learning-goals" title="Permanent link">&para;</a></h3>
+<p>In this side quest, we'll explore how Nextflow handles files, from basic file operations to more advanced techniques for working with file collections.
+You'll learn how to extract metadata from filenames, which is a common requirement in scientific analysis pipelines.</p>
+<p>By the end of this side quest, you'll be able to:</p>
 <ul>
-<li>Nextflow의 <code>file()</code> 메서드를 사용하여 파일 경로 문자열에서 Path 객체 생성하기</li>
-<li>이름, 확장자, 상위 디렉토리와 같은 파일 속성에 접근하기</li>
-<li>URI를 사용하여 로컬 파일과 원격 파일을 투명하게 처리하기</li>
-<li><code>channel.fromPath()</code> 및 <code>channel.fromFilePairs()</code>를 사용하여 채널로 파일 처리 자동화하기</li>
-<li>문자열 조작을 사용하여 파일 이름에서 메타데이터 추출 및 구조화하기</li>
-<li>패턴 매칭과 glob 표현식을 사용하여 관련 파일 그룹화하기</li>
-<li>적절한 입력 처리로 파일 작업을 Nextflow process에 통합하기</li>
-<li>메타데이터 기반 디렉토리 구조를 사용하여 process 출력 구성하기</li>
+<li>Create Path objects from file path strings using Nextflow's <code>file()</code> method</li>
+<li>Access file attributes such as name, extension, and parent directory</li>
+<li>Handle both local and remote files transparently using URIs</li>
+<li>Use channels to automate file handling with <code>channel.fromPath()</code> and <code>channel.fromFilePairs()</code></li>
+<li>Extract and structure metadata from filenames using string manipulation</li>
+<li>Group related files using pattern matching and glob expressions</li>
+<li>Integrate file operations into Nextflow processes with proper input handling</li>
+<li>Organize process outputs using metadata-driven directory structures</li>
 </ul>
-<p>이러한 기술은 다양한 종류의 파일 입력을 뛰어난 유연성으로 처리할 수 있는 워크플로우를 구축하는 데 도움이 됩니다.</p>
-<h3 id="_3">사전 요구 사항<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>이 사이드 퀘스트를 시작하기 전에 다음을 완료해야 합니다:</p>
+<p>These skills will help you build workflows that can handle different kinds of file inputs with great flexibility.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>Before taking on this side quest, you should:</p>
 <ul>
-<li><a href="../../hello_nextflow/">Hello Nextflow</a> 튜토리얼 또는 이에 상응하는 초급 과정을 완료했어야 합니다.</li>
-<li>기본 Nextflow 개념과 메커니즘(process, channel, operator)을 편안하게 사용할 수 있어야 합니다.</li>
+<li>Have completed the <a href="../../hello_nextflow/">Hello Nextflow</a> tutorial or equivalent beginner's course.</li>
+<li>Be comfortable using basic Nextflow concepts and mechanisms (processes, channels, operators)</li>
 </ul>
+<!-- I removed the suggestion to do the metamaps SQ first because that works more naturally after -->
+
 <hr />
-<h2 id="0">0. 시작하기<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
-<h4 id="_4">교육 코드스페이스 열기<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>아직 수행하지 않았다면, <a href="../../envsetup/">환경 설정</a>에 설명된 대로 교육 환경을 열어야 합니다.</p>
+<h2 id="0-get-started">0. Get started<a class="headerlink" href="#0-get-started" title="Permanent link">&para;</a></h2>
+<h4 id="open-the-training-codespace">Open the training codespace<a class="headerlink" href="#open-the-training-codespace" title="Permanent link">&para;</a></h4>
+<p>If you haven't yet done so, make sure to open the training environment as described in the <a href="../envsetup/index.md">Environment Setup</a>.</p>
 <p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
-<h4 id="_5">프로젝트 디렉토리로 이동<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
-<p>이 튜토리얼의 파일이 있는 디렉토리로 이동하겠습니다.</p>
+<h4 id="move-into-the-project-directory">Move into the project directory<a class="headerlink" href="#move-into-the-project-directory" title="Permanent link">&para;</a></h4>
+<p>Let's move into the directory where the files for this tutorial are located.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>side-quests/working_with_files
 </code></pre></div>
-<p>VSCode가 이 디렉토리에 집중하도록 설정할 수 있습니다:</p>
+<p>You can set VSCode to focus on this directory:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>code<span class="w"> </span>.
 </code></pre></div>
-<h4 id="_6">자료 검토<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
-<p><code>main.nf</code>라는 간단한 워크플로우 파일, 두 개의 모듈 파일이 포함된 <code>modules</code> 디렉토리, 그리고 일부 예제 데이터 파일이 포함된 <code>data</code> 디렉토리를 찾을 수 있습니다.</p>
+<h4 id="review-the-materials">Review the materials<a class="headerlink" href="#review-the-materials" title="Permanent link">&para;</a></h4>
+<p>You'll find a simple workflow file called <code>main.nf</code>, a <code>modules</code> directory containing two module files, and a <code>data</code> directory containing some example data files.</p>
 <details class="abstract">
-<summary>디렉토리 내용</summary>
+<summary>Directory contents</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="go">.</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">├── data</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">│   ├── patientA_rep1_normal_R1_001.fastq.gz</span>
@@ -4714,34 +5028,34 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="go">    └── count_lines.nf</span>
 </code></pre></div>
 </details>
-<p>이 디렉토리에는 세 명의 환자(A, B, C)로부터 얻은 페어드 엔드 시퀀싱 데이터가 포함되어 있습니다.</p>
-<p>각 환자에 대해 <code>tumor</code>(일반적으로 종양 생검에서 유래) 또는 <code>normal</code>(건강한 조직이나 혈액에서 채취) 타입의 샘플이 있습니다.
-암 분석에 익숙하지 않다면, 이것이 대조 분석을 수행하기 위해 페어드 tumor/normal 샘플을 사용하는 실험 모델에 해당한다는 것만 알아두시면 됩니다.</p>
-<p>특히 환자 A의 경우, 두 세트의 기술적 복제(반복)가 있습니다.</p>
-<p>시퀀싱 데이터 파일은 '정방향 리드'와 '역방향 리드'로 알려진 것에 대한 일반적인 <code>_R1_</code> 및 <code>_R2_</code> 규칙으로 명명되어 있습니다.</p>
-<p><em>이 실험 설계에 익숙하지 않더라도 걱정하지 마십시오. 이 튜토리얼을 이해하는 데 중요하지 않습니다.</em></p>
-<h4 id="_7">과제 검토<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
-<p>여러분의 과제는 다음을 수행하는 Nextflow 워크플로우를 작성하는 것입니다:</p>
+<p>This directory contains paired-end sequencing data from three patients (A, B, C).</p>
+<p>For each patient, we have samples that are of type <code>tumor</code> (typically originating from tumor biopsies) or <code>normal</code> (taken from healthy tissue or blood).
+If you're not familiar with cancer analysis, just know that this corresponds to an experimental model that uses paired tumor/normal samples to perform contrastive analyses.</p>
+<p>For patient A specifically, we have two sets of technical replicates (repeats).</p>
+<p>The sequencing data files are named with a typical <code>_R1_</code> and <code>_R2_</code> convention for what are known as 'forward reads' and 'reverse reads'.</p>
+<p><em>Don't worry if you're not familiar with this experimental design, it's not critical for understanding this tutorial.</em></p>
+<h4 id="review-the-assignment">Review the assignment<a class="headerlink" href="#review-the-assignment" title="Permanent link">&para;</a></h4>
+<p>Your challenge is to write a Nextflow workflow that will:</p>
 <ol>
-<li>Nextflow의 파일 처리 메서드를 사용하여 입력 파일 <strong>로드</strong></li>
-<li>파일 이름 구조에서 메타데이터(환자 ID, 복제, 샘플 타입) <strong>추출</strong></li>
-<li><code>channel.fromFilePairs()</code>를 사용하여 페어드 파일(R1/R2) <strong>그룹화</strong></li>
-<li>제공된 분석 모듈로 파일 <strong>처리</strong></li>
-<li>추출된 메타데이터를 기반으로 디렉토리 구조로 출력 <strong>구성</strong></li>
+<li><strong>Load</strong> input files using Nextflow's file handling methods</li>
+<li><strong>Extract</strong> metadata (patient ID, replicate, sample type) from the filename structure</li>
+<li><strong>Group</strong> paired files (R1/R2) together using <code>channel.fromFilePairs()</code></li>
+<li><strong>Process</strong> the files with a provided analysis module</li>
+<li><strong>Organize</strong> outputs into a directory structure based on the extracted metadata</li>
 </ol>
-<h4 id="_8">준비 체크리스트<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
-<p>준비가 되었다고 생각하십니까?</p>
+<h4 id="readiness-checklist">Readiness checklist<a class="headerlink" href="#readiness-checklist" title="Permanent link">&para;</a></h4>
+<p>Think you're ready to dive in?</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 이 과정의 목표와 사전 요구 사항을 이해합니다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 코드스페이스가 실행 중입니다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 작업 디렉토리를 적절하게 설정했습니다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> 과제를 이해합니다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> I understand the goal of this course and its prerequisites</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> My codespace is up and running</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> I've set my working directory appropriately</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox"/><span class="task-list-indicator"></span></label> I understand the assignment</li>
 </ul>
-<p>모든 항목을 체크할 수 있다면 시작할 준비가 된 것입니다.</p>
+<p>If you can check all the boxes, you're good to go.</p>
 <hr />
-<h2 id="1">1. 기본 파일 작업<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<h3 id="11-class">1.1. <code>.class</code>로 객체의 타입 식별<a class="headerlink" href="#11-class" title="Permanent link">&para;</a></h3>
-<p>워크플로우 파일 <code>main.nf</code>를 살펴보십시오:</p>
+<h2 id="1-basic-file-operations">1. Basic file operations<a class="headerlink" href="#1-basic-file-operations" title="Permanent link">&para;</a></h2>
+<h3 id="11-identify-the-type-of-an-object-with-class">1.1. Identify the type of an object with <code>.class</code><a class="headerlink" href="#11-identify-the-type-of-an-object-with-class" title="Permanent link">&para;</a></h3>
+<p>Take a look at the workflow file <code>main.nf</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -4760,17 +5074,17 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">println</span><span class="w"> </span><span class="s2">&quot;${myFile} is of class ${myFile.class}&quot;</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p>이것은 워크플로우에서 단일 파일 경로를 참조한 다음, 해당 클래스와 함께 콘솔에 출력하는 미니 워크플로우(process 없이)입니다.</p>
+<p>This is a mini-workflow (without any processes) that refers to a single file path in its workflow, then prints it to the console, along with its class.</p>
 <details class="info">
-<summary><code>.class</code>란 무엇입니까?</summary>
-<p>Nextflow에서 <code>.class</code>는 우리가 다루고 있는 객체의 타입을 알려줍니다. 이것은 문자열인지, 숫자인지, 파일인지, 아니면 다른 것인지 알아보기 위해 "이것이 무엇인가요?"라고 묻는 것과 같습니다.
-이것은 다음 섹션에서 일반 문자열과 Path 객체의 차이를 설명하는 데 도움이 됩니다.</p>
+<summary>What is <code>.class</code>?</summary>
+<p>In Nextflow, <code>.class</code> tells us what type of object we're working with. It's like asking "what kind of thing is this?" to find out whether it's a string, a number, a file, or something else.
+This will help us illustrate the difference between a plain string and a Path object in the next sections.</p>
 </details>
-<p>워크플로우를 실행해 보겠습니다:</p>
+<p>Let's run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">Launching `main.nf` [romantic_chandrasekhar] DSL2 - revision: 5a4a89bc3a</span>
@@ -4778,15 +5092,15 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">data/patientA_rep1_normal_R1_001.fastq.gz is of class java.lang.String</span>
 </code></pre></div>
 </details>
-<p>보시다시피, Nextflow는 우리가 작성한 대로 문자열 경로를 정확히 출력했습니다.</p>
-<p>이것은 단지 텍스트 출력입니다. Nextflow는 아직 이것으로 특별한 작업을 수행하지 않았습니다.
-또한 Nextflow에 관한 한 이것은 문자열(<code>java.lang.String</code> 클래스)일 뿐이라는 것을 확인했습니다.
-이것은 이해가 됩니다. 우리는 아직 Nextflow에게 이것이 파일에 해당한다고 말하지 않았기 때문입니다.</p>
-<h3 id="12-file-path">1.2. file()로 Path 객체 생성<a class="headerlink" href="#12-file-path" title="Permanent link">&para;</a></h3>
-<p>경로 문자열에서 <a href="https://www.nextflow.io/docs/latest/reference/stdlib-types.html#path">Path 객체</a>를 생성하여 Nextflow에게 파일을 처리하는 방법을 알려줄 수 있습니다.</p>
-<p>워크플로우에서 <code>file()</code> 메서드를 사용하여 문자열 경로 <code>data/patientA_rep1_normal_R1_001.fastq.gz</code>를 Path 객체로 변환할 수 있으며, 이는 파일 속성 및 작업에 대한 접근을 제공합니다.</p>
-<p><code>main.nf</code>를 다음과 같이 편집하여 문자열을 <code>file()</code>로 감싸십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">수정 후</label><label for="__tabbed_1_2">수정 전</label></div>
+<p>As you can see, Nextflow printed the string path exactly as we wrote it.</p>
+<p>This is just text output; Nextflow hasn't done anything special with it yet.
+We've also confirmed that as far as Nextflow is concerned, this is only a string (of class <code>java.lang.String</code>).
+That makes sense, since we haven't yet told Nextflow that it corresponds to a file.</p>
+<h3 id="12-create-a-path-object-with-file">1.2. Create a Path object with file()<a class="headerlink" href="#12-create-a-path-object-with-file" title="Permanent link">&para;</a></h3>
+<p>We can tell Nextflow how to handle files by creating <a href="https://www.nextflow.io/docs/latest/reference/stdlib-types.html#path">Path objects</a> from path strings.</p>
+<p>In our workflow, we can convert the string path <code>data/patientA_rep1_normal_R1_001.fastq.gz</code> to a Path object using the <code>file()</code> method, which provides access to file properties and operations.</p>
+<p>Edit the <code>main.nf</code> to wrap the string with <code>file()</code> as follows:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">After</label><label for="__tabbed_1_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-5">5</a></span>
@@ -4810,11 +5124,11 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </div>
 </div>
 </div>
-<p>이제 워크플로우를 다시 실행하십시오:</p>
+<p>Now run the workflow again:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="go">Launching `main.nf` [kickass_coulomb] DSL2 - revision: 5af44b1b59</span>
@@ -4822,24 +5136,24 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="go">/workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz is of class class sun.nio.fs.UnixPath</span>
 </code></pre></div>
 </details>
-<p>이번에는 입력으로 제공한 상대 경로 대신 전체 절대 경로를 볼 수 있습니다.</p>
-<p>Nextflow는 우리의 문자열을 Path 객체로 변환하고 시스템의 실제 파일 위치로 확인했습니다.
-파일 경로는 이제 <code>/workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz</code>와 같이 절대 경로가 됩니다.</p>
-<p>또한 Path 객체 클래스가 <code>sun.nio.fs.UnixPath</code>임을 주목하십시오. 이것은 Nextflow가 로컬 파일을 표현하는 방식입니다.
-나중에 보겠지만, 원격 파일은 다른 클래스 이름(예: HTTP 파일의 경우 <code>nextflow.file.http.XPath</code>)을 가지지만, 모두 정확히 동일한 방식으로 작동하며 워크플로우에서 동일하게 사용할 수 있습니다.</p>
+<p>This time, you see the full absolute path instead of the relative path we provided as input.</p>
+<p>Nextflow has converted our string into a Path object and resolved it to the actual file location on the system.
+The file path will now be absolute, as in <code>/workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz</code>.</p>
+<p>Notice also that the Path object class is <code>sun.nio.fs.UnixPath</code>: this is Nextflow's way of representing local files.
+As we'll see later, remote files will have different class names (such as <code>nextflow.file.http.XPath</code> for HTTP files), but they all work exactly the same way and can be used identically in your workflows.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><strong>주요 차이점:</strong></p>
+<p><strong>The key difference:</strong></p>
 <ul>
-<li><strong>경로 문자열</strong>: Nextflow가 문자로 처리하는 텍스트일 뿐입니다</li>
-<li><strong>Path 객체</strong>: Nextflow가 작업할 수 있는 스마트 파일 참조입니다</li>
+<li><strong>Path string</strong>: Just text that Nextflow treats as characters</li>
+<li><strong>Path object</strong>: A smart file reference that Nextflow can work with</li>
 </ul>
-<p>이렇게 생각하십시오: 경로 문자열은 종이에 주소를 쓰는 것과 같고, Path 객체는 해당 위치로 이동하는 방법을 알고 여정에 대한 세부 정보를 알려줄 수 있는 GPS 장치에 주소를 로드한 것과 같습니다.</p>
+<p>Think of it like this: a path string is like writing an address on paper, while a Path object is like having the address loaded in a GPS device that knows how to navigate to there and can tell you details about the journey.</p>
 </div>
-<h3 id="13">1.3. 파일 속성 접근<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
-<p>이것이 왜 유용할까요? 이제 Nextflow가 <code>myFile</code>이 단순한 문자열이 아니라 Path 객체라는 것을 이해하므로, Path 객체의 다양한 속성에 접근할 수 있습니다.</p>
-<p>워크플로우를 업데이트하여 내장 파일 속성을 출력해 봅시다:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">수정 후</label><label for="__tabbed_2_2">수정 전</label></div>
+<h3 id="13-access-file-attributes">1.3. Access file attributes<a class="headerlink" href="#13-access-file-attributes" title="Permanent link">&para;</a></h3>
+<p>Why is this helpful? Well, now that Nextflow understands that <code>myFile</code> is a Path object and not just a string, we can access the various attributes of the Path object.</p>
+<p>Let's update our workflow to print out the built-in file attributes:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">After</label><label for="__tabbed_2_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
@@ -4873,11 +5187,11 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </div>
 </div>
 </div>
-<p>워크플로우를 실행하십시오:</p>
+<p>Run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="go">Launching `main.nf` [ecstatic_ampere] DSL2 - revision: f3fa3dcb48</span>
@@ -4889,14 +5203,14 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="go">Parent directory: /workspaces/training/side-quests/working_with_files/data</span>
 </code></pre></div>
 </details>
-<p>위 콘솔에 출력된 다양한 파일 속성을 볼 수 있습니다.</p>
-<h3 id="14-process">1.4. process에 파일 제공<a class="headerlink" href="#14-process" title="Permanent link">&para;</a></h3>
-<p>문자열과 Path 객체의 차이는 process를 사용하여 실제 워크플로우를 구축하기 시작할 때 중요해집니다.
-지금까지 Nextflow가 입력 파일을 파일로 처리하고 있다는 것을 확인했지만, process에서 실제로 해당 파일에 대해 무언가를 실행할 수 있는지 살펴봅시다.</p>
-<h4 id="141-process">1.4.1. process 가져오기 및 코드 검토<a class="headerlink" href="#141-process" title="Permanent link">&para;</a></h4>
-<p>파일 입력을 받아 포함된 줄 수를 세는 <code>COUNT_LINES</code>라는 미리 작성된 process 모듈을 제공합니다.</p>
-<p>워크플로우에서 process를 사용하려면 workflow 블록 앞에 include 문을 추가하기만 하면 됩니다:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">수정 후</label><label for="__tabbed_3_2">수정 전</label></div>
+<p>You see the various file attributes printed to the console above.</p>
+<h3 id="14-feed-the-file-to-a-process">1.4. Feed the file to a process<a class="headerlink" href="#14-feed-the-file-to-a-process" title="Permanent link">&para;</a></h3>
+<p>The difference between strings and Path objects becomes critical when you start building actual workflows with processes.
+So far we've verified that Nextflow is now treating our input file as a file, but let's see if we can actually run something on that file in a process.</p>
+<h4 id="141-import-the-process-and-examine-the-code">1.4.1. Import the process and examine the code<a class="headerlink" href="#141-import-the-process-and-examine-the-code" title="Permanent link">&para;</a></h4>
+<p>We provide you with a pre-written process module called <code>COUNT_LINES</code> that takes a file input and counts how many lines are in it.</p>
+<p>To use the process in the workflow, you just need to add an include statement before the workflow block:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">After</label><label for="__tabbed_3_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
@@ -4920,7 +5234,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </div>
 </div>
 </div>
-<p>모듈 파일을 열어 코드를 검토할 수 있습니다:</p>
+<p>You can open the module file to examine its code:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/count_lines.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -4951,17 +5265,17 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="s2">    &quot;&quot;&quot;</span>
 <a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
-<p>보시다시피, 파일의 압축을 풀고 포함된 줄 수를 세는 상당히 간단한 작은 스크립트입니다.</p>
+<p>As you can see, it's a fairly straightforward little script that unzips the file and counts how many lines it contains.</p>
 <details class="info">
-<summary><code>debug true</code>는 무엇을 합니까?</summary>
-<p>process 정의의 <code>debug true</code> 지시문은 Nextflow가 스크립트의 출력(줄 수 "40"과 같은)을 실행 로그에 직접 출력하도록 합니다.
-이것이 없으면 process 실행 상태만 볼 수 있고 스크립트의 실제 출력은 볼 수 없습니다.</p>
-<p>Nextflow process 디버깅에 대한 자세한 내용은 <a href="../debugging/">Debugging Nextflow Workflows</a> 사이드 퀘스트를 참조하십시오.</p>
+<summary>What does <code>debug true</code> do?</summary>
+<p>The <code>debug true</code> directive in the process definition causes Nextflow to print the output from your script (like the line count "40") directly in the execution log.
+Without this, you would only see the process execution status but not the actual output from your script.</p>
+<p>For more information on debugging Nextflow processes, see the <a href="debugging.md">Debugging Nextflow Workflows</a> side quest.</p>
 </details>
-<h4 id="142-count_lines">1.4.2. <code>COUNT_LINES</code> 호출 추가<a class="headerlink" href="#142-count_lines" title="Permanent link">&para;</a></h4>
-<p>이제 process를 워크플로우에서 사용할 수 있으므로, 입력 파일에서 실행하기 위해 <code>COUNT_LINES</code> process에 대한 호출을 추가할 수 있습니다.</p>
-<p>워크플로우를 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">수정 후</label><label for="__tabbed_4_2">수정 전</label></div>
+<h4 id="142-add-a-call-to-count_lines">1.4.2. Add a call to <code>COUNT_LINES</code><a class="headerlink" href="#142-add-a-call-to-count_lines" title="Permanent link">&para;</a></h4>
+<p>Now that the process is available to the workflow, we can add a call to the <code>COUNT_LINES</code> process to run it on the input file.</p>
+<p>Make the following edits to the workflow:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">After</label><label for="__tabbed_4_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
@@ -5011,11 +5325,11 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </div>
 </div>
 </div>
-<p>이제 워크플로우를 실행하십시오:</p>
+<p>And now run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="go">Launching `main.nf` [cheeky_hypatia] DSL2 - revision: 281d13c414</span>
@@ -5031,22 +5345,22 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="go">40</span>
 </code></pre></div>
 </details>
-<p>이것은 process 내부에서 파일을 적절하게 조작할 수 있음을 보여줍니다.</p>
-<p>구체적으로, Nextflow는 다음 작업을 성공적으로 수행했습니다:</p>
+<p>This shows we are able to operate on the file appropriately inside a process.</p>
+<p>Specifically, Nextflow carried out the following operations successfully:</p>
 <ul>
-<li>작업 디렉토리에 파일 스테이징</li>
-<li>.gz 파일 압축 해제</li>
-<li>줄 수 세기(이 경우 40줄)</li>
-<li>오류 없이 완료</li>
+<li>Staged the file into the working directory</li>
+<li>Decompressed the .gz file</li>
+<li>Counted the lines (40 lines in this case)</li>
+<li>Completed without error</li>
 </ul>
-<p>이 원활한 작업의 핵심은 Nextflow에게 입력이 파일이며 그렇게 처리되어야 함을 명시적으로 알려주는 것입니다.</p>
-<h3 id="15">1.5. 기본 파일 입력 오류 문제 해결<a class="headerlink" href="#15" title="Permanent link">&para;</a></h3>
-<p>이것은 종종 Nextflow 초보자를 당황하게 하므로, 잘못 수행했을 때 어떤 일이 발생하는지 몇 분 동안 살펴보겠습니다.</p>
-<p>파일 처리를 잘못할 수 있는 주요 위치가 두 곳 있습니다: 워크플로우 수준과 process 수준입니다.</p>
-<h4 id="151">1.5.1. 워크플로우 수준 오류<a class="headerlink" href="#151" title="Permanent link">&para;</a></h4>
-<p>workflow 블록에서 입력을 지정할 때 파일을 문자열로 처리하도록 되돌리면 어떤 일이 발생하는지 살펴봅시다.</p>
-<p>워크플로우를 다음과 같이 편집하고, 경로 관련 print 문은 주석 처리하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">수정 후</label><label for="__tabbed_5_2">수정 전</label></div>
+<p>The key to this smooth operation is that we're explicitly telling Nextflow that our input is a file and should be treated as such.</p>
+<h3 id="15-troubleshoot-basic-file-input-errors">1.5. Troubleshoot basic file input errors<a class="headerlink" href="#15-troubleshoot-basic-file-input-errors" title="Permanent link">&para;</a></h3>
+<p>This often trips up newcomers to Nextflow, so let's take a few minutes to look at what happens when you do it wrong.</p>
+<p>There are two main places where you can get the file handling wrong: at the level of the workflow, and at the level of the process.</p>
+<h4 id="151-workflow-level-error">1.5.1. Workflow-level error<a class="headerlink" href="#151-workflow-level-error" title="Permanent link">&para;</a></h4>
+<p>Let's see what happens if we revert to treating the file as a string when we specify the input in the workflow block.</p>
+<p>Make the following edits to the workflow, making sure to comment out the path-specific print statements:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">After</label><label for="__tabbed_5_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
@@ -5106,11 +5420,11 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </div>
 </div>
 </div>
-<p>이제 워크플로우를 실행하십시오:</p>
+<p>And now run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="failure">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="go">Launching `main.nf` [friendly_goodall] DSL2 - revision: ae50609b20</span>
@@ -5128,21 +5442,21 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="go">-- Check &#39;.nextflow.log&#39; file for details</span>
 </code></pre></div>
 </details>
-<p>중요한 부분은 다음과 같습니다:</p>
+<p>This is the important bit:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="go">Not a valid path value: &#39;data/patientA_rep1_normal_R1_001.fastq.gz&#39;</span>
 </code></pre></div>
-<p><code>path</code> 입력을 지정하면 Nextflow는 단순한 문자열이 아닌 실제 파일 참조를 전달하는지 확인합니다.
-이 오류는 <code>'data/patientA_rep1_normal_R1_001.fastq.gz'</code>가 Path 객체가 아니라 문자열이기 때문에 유효한 경로 값이 아니라고 알려줍니다.</p>
-<p>Nextflow는 즉시 문제를 감지하고 process를 시작하기 전에 중지했습니다.</p>
-<h4 id="152-process">1.5.2. Process 수준 오류<a class="headerlink" href="#152-process" title="Permanent link">&para;</a></h4>
-<p>입력을 파일로 처리하도록 Nextflow에게 지정하는 것을 잊을 수 있는 다른 위치는 process 정의입니다.</p>
+<p>When you specify a <code>path</code> input, Nextflow validates that you're passing actual file references, not just strings.
+This error is telling you that <code>'data/patientA_rep1_normal_R1_001.fastq.gz'</code> is not a valid path value because it's a string, not a Path object.</p>
+<p>Nextflow immediately detected the problem and stopped before even starting the process.</p>
+<h4 id="152-process-level-error">1.5.2. Process-level error<a class="headerlink" href="#152-process-level-error" title="Permanent link">&para;</a></h4>
+<p>The other place we might forget to specify we want Nextflow to treat the input as a file is in the process definition.</p>
 <div class="admonition warning">
-<p class="admonition-title">1.5.1의 워크플로우 오류 유지</p>
-<p>이 테스트가 올바르게 작동하려면 워크플로우를 손상된 상태로 유지하십시오(<code>file()</code> 대신 일반 문자열 사용).
-process에서 <code>val</code>과 결합하면 아래에 표시된 오류가 발생합니다.</p>
+<p class="admonition-title">Keep the workflow error from 1.5.1</p>
+<p>For this test to work correctly, keep the workflow in its broken state (using a plain string instead of <code>file()</code>).
+When combined with <code>val</code> in the process, this produces the error shown below.</p>
 </div>
-<p>모듈을 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">수정 후</label><label for="__tabbed_6_2">수정 전</label></div>
+<p>Make the following edit to the module:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">After</label><label for="__tabbed_6_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/count_lines.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-3">3</a></span>
@@ -5170,11 +5484,11 @@ process에서 <code>val</code>과 결합하면 아래에 표시된 오류가 발
 </div>
 </div>
 </div>
-<p>이제 워크플로우를 다시 실행하십시오:</p>
+<p>And now run the workflow again:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="failure">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="go">Launching `main.nf` [soggy_golick] DSL2 - revision: ae50609b20</span>
@@ -5213,8 +5527,8 @@ process에서 <code>val</code>과 결합하면 아래에 표시된 오류가 발
 <a id="__codelineno-29-36" name="__codelineno-29-36" href="#__codelineno-29-36"></a><span class="go">-- Check &#39;.nextflow.log&#39; file for details</span>
 </code></pre></div>
 </details>
-<p>이것은 위에서 언급한 대로 process가 디버깅 정보를 출력하도록 설정되어 있기 때문에 오류에 대한 많은 세부 정보를 보여줍니다.</p>
-<p>가장 관련성이 높은 섹션은 다음과 같습니다:</p>
+<p>This shows a lot of details about the error because the process is set to output debugging information, as noted above.</p>
+<p>These are the most relevant sections:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="go">Command executed:</span>
 <a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
 <a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="go">  set -o pipefail</span>
@@ -5226,47 +5540,47 @@ process에서 <code>val</code>과 결합하면 아래에 표시된 오류가 발
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="go">  gzip: data/patientA_rep1_normal_R1_001.fastq.gz: No such file or directory</span>
 <a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="go">  0</span>
 </code></pre></div>
-<p>시스템이 파일을 찾을 수 없다고 말합니다. 그러나 경로를 찾아보면 해당 위치에 그 이름의 파일이 있습니다.</p>
-<p>이것을 실행했을 때, Nextflow는 문자열 값을 스크립트로 전달했지만 작업 디렉토리에 실제 파일을 <em>스테이징</em>하지 않았습니다.
-따라서 process는 상대 문자열 <code>data/patientA_rep1_normal_R1_001.fastq.gz</code>를 사용하려고 했지만, 해당 파일은 process 작업 디렉토리 내에 존재하지 않습니다.</p>
-<p>이 두 예제를 종합하면, 입력을 파일로 처리해야 한다고 Nextflow에게 알려주는 것이 얼마나 중요한지 알 수 있습니다.</p>
+<p>This says the system couldn't find the file; however if you look up the path, there is a file by that name in that location.</p>
+<p>When we ran this, Nextflow passed the string value through to the script, but it didn't <em>stage</em> the actual file in the working directory.
+So the process tried to use the relative string, <code>data/patientA_rep1_normal_R1_001.fastq.gz</code>, but that file doesn't exist within the process working directory.</p>
+<p>Taken together, these two examples show you how important it is to tell Nextflow if an input should be handled as a file.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>다음 섹션으로 계속하기 전에 두 의도적 오류를 모두 수정하십시오.</p>
+<p>Make sure to go back and fix both intentional errors before continuing to the next section.</p>
 </div>
-<h3 id="_9">핵심 정리<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="takeaway">Takeaway<a class="headerlink" href="#takeaway" title="Permanent link">&para;</a></h3>
 <ul>
-<li>경로 문자열 vs Path 객체: 문자열은 단순한 텍스트이고, Path 객체는 스마트 파일 참조입니다</li>
-<li><code>file()</code> 메서드는 문자열 경로를 Nextflow가 작업할 수 있는 Path 객체로 변환합니다</li>
-<li><code>name</code>, <code>simpleName</code>, <code>extension</code>, <code>parent</code>와 같은 파일 속성에 <a href="https://www.nextflow.io/docs/latest/working-with-files.html#getting-file-attributes">파일 속성을 사용하여</a> 접근할 수 있습니다</li>
-<li>문자열 대신 Path 객체를 사용하면 Nextflow가 워크플로우에서 파일을 적절하게 관리할 수 있습니다</li>
-<li>Process 입력 결과: 적절한 파일 처리는 파일이 올바르게 스테이징되고 process에서 사용할 수 있도록 문자열이 아닌 Path 객체가 필요합니다</li>
+<li>Path strings vs Path objects: Strings are just text, Path objects are smart file references</li>
+<li>The <code>file()</code> method converts a string path into a Path object that Nextflow can work with</li>
+<li>You can access file properties like <code>name</code>, <code>simpleName</code>, <code>extension</code>, and <code>parent</code> <a href="https://www.nextflow.io/docs/latest/working-with-files.html#getting-file-attributes">using file attributes</a></li>
+<li>Using Path objects instead of strings allows Nextflow to properly manage files in your workflow</li>
+<li>Process Input Outcomes: Proper file handling requires Path objects, not strings, to ensure files are correctly staged and accessible for use by processes.</li>
 </ul>
 <hr />
-<h2 id="2">2. 원격 파일 사용<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>Nextflow의 주요 기능 중 하나는 로컬 파일(동일한 머신에 있는)에서 인터넷을 통해 접근할 수 있는 원격 파일로 원활하게 전환할 수 있다는 것입니다.</p>
-<p>올바르게 수행하면 다른 위치에서 오는 파일을 수용하기 위해 워크플로우의 로직을 변경할 필요가 없어야 합니다.
-원격 파일을 사용하기 위해 해야 할 일은 워크플로우에 파일을 제공할 때 파일 경로에 적절한 접두사를 지정하는 것뿐입니다.</p>
-<p>예를 들어, <code>/path/to/data</code>에는 접두사가 없어 '일반' 로컬 파일 경로임을 나타내는 반면, <code>s3://path/to/data</code>에는 Amazon의 S3 객체 스토리지에 위치함을 나타내는 <code>s3://</code> 접두사가 포함되어 있습니다.</p>
-<p>다양한 프로토콜이 지원됩니다:</p>
+<h2 id="2-using-remote-files">2. Using remote files<a class="headerlink" href="#2-using-remote-files" title="Permanent link">&para;</a></h2>
+<p>One of the key features of Nextflow is the ability to switch seamlessly between local files (on the same machine) to remote files accessible over the internet.</p>
+<p>If you're doing it right, you should never need to change the logic of your workflow to accommodate files coming from different locations.
+All you need to do to use a remote file is to specify the appropriate prefix in the file path when you're supplying it to the workflow.</p>
+<p>For example, <code>/path/to/data</code> has no prefix, indicating that it's a 'normal' local file path, whereas <code>s3://path/to/data</code> includes the <code>s3://</code> prefix, indicating that it's located in Amazon's S3 object storage.</p>
+<p>Many different protocols are supported:</p>
 <ul>
 <li>HTTP(S)/FTP (http://, https://, ftp://)</li>
 <li>Amazon S3 (s3://)</li>
 <li>Azure Blob Storage (az://)</li>
 <li>Google Cloud Storage (gs://)</li>
 </ul>
-<p>이들 중 하나를 사용하려면 문자열에 관련 접두사를 지정하기만 하면 되며, 이는 기술적으로 파일 경로 대신 URI(Uniform Resource Identifier)라고 불립니다.
-Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 또는 업로드 및 예상되는 모든 다른 파일 작업을 처리합니다.</p>
-<p>이 시스템의 주요 강점은 환경 간 전환 시 파이프라인 로직을 변경하지 않고도 가능하다는 것입니다.
-예를 들어, URI만 변경하여 작고 로컬인 테스트 세트로 개발한 후 원격 스토리지에 있는 전체 규모 테스트 세트로 전환할 수 있습니다.</p>
-<h3 id="21">2.1. 인터넷의 파일 사용<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
-<p>워크플로우에 제공하는 로컬 경로를 Github에 저장된 동일한 데이터의 사본을 가리키는 HTTPS 경로로 전환하여 이것을 테스트해 봅시다.</p>
+<p>To use any of these, simply specify the relevant prefix in the string, which is then technically called a Uniform Resource Identifier (URI) instead of a file path.
+Nextflow will handle authentication and staging the files to the right place, downloading or uploading and all other file operations you would expect.</p>
+<p>The key strength of this system is that it enables us to switch between environments without changing any pipeline logic.
+For example, you can develop with a small, local test set before switching to a full-scale test set located in remote storage simply by changing the URI.</p>
+<h3 id="21-use-a-file-from-the-internet">2.1. Use a file from the internet<a class="headerlink" href="#21-use-a-file-from-the-internet" title="Permanent link">&para;</a></h3>
+<p>Let's test this out by switching the local path we're providing to our workflow with an HTTPS path pointing to a copy of the same data that is stored in Github.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>이것은 활성 인터넷 연결이 있는 경우에만 작동합니다.</p>
+<p>This will only work if you have an active internet connection.</p>
 </div>
-<p><code>main.nf</code>를 다시 열고 다음과 같이 입력 경로를 변경하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">수정 후</label><label for="__tabbed_7_2">수정 전</label></div>
+<p>Open <code>main.nf</code> again and change the input path as follows:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">After</label><label for="__tabbed_7_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
@@ -5310,11 +5624,11 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p>워크플로우를 실행해 봅시다:</p>
+<p>Let's run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="go">Launching `main.nf` [insane_swartz] DSL2 - revision: fff18abe6d</span>
@@ -5330,15 +5644,15 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-35-13" name="__codelineno-35-13" href="#__codelineno-35-13"></a><span class="go">40</span>
 </code></pre></div>
 </details>
-<p>작동합니다! 콘솔 출력에서 변경된 것이 거의 없음을 볼 수 있습니다.</p>
-<p>콘솔 출력의 한 가지 차이점은 경로 객체 클래스가 이제 <code>nextflow.file.http.XPath</code>인 반면 로컬 경로의 경우 클래스는 <code>sun.nio.fs.UnixPath</code>였다는 것입니다.
-이러한 클래스를 기억할 필요는 없습니다. Nextflow가 다른 위치를 적절하게 식별하고 처리한다는 것을 보여주기 위해 언급하는 것입니다.</p>
-<p>백그라운드에서 Nextflow는 work 디렉토리 내에 있는 스테이징 디렉토리로 파일을 다운로드했습니다.
-그런 다음 스테이징된 파일은 로컬 파일로 처리되어 관련 process 디렉토리에 심볼릭 링크될 수 있습니다.</p>
-<p>process의 해시 값에 있는 작업 디렉토리의 내용을 살펴보면 이것이 발생했음을 확인할 수 있습니다.</p>
+<p>It works! You can see that very little has changed.</p>
+<p>The one difference in the console output is that the path object class is now <code>nextflow.file.http.XPath</code>, whereas for the local path the class was <code>sun.nio.fs.UnixPath</code>.
+You don't need to remember these classes; we just mention this to demonstrate that Nextflow identifies and handles the different locations appropriately.</p>
+<p>Behind the scenes, Nextflow downloaded the file to a staging directory located within the work directory.
+That staged file can then be treated as a local file and symlinked into the relevant process directory.</p>
+<p>You can verify that that happened here by looking at the contents of the working directory located at the hash value of the process.</p>
 <details class="abstract">
-<summary>작업 디렉토리 내용</summary>
-<p>process 해시가 <code>8a/2ab7ca</code>인 경우 작업 디렉토리를 탐색할 수 있습니다:</p>
+<summary>Work directory contents</summary>
+<p>If the process hash was <code>8a/2ab7ca</code>, you could explore the work directory:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="gp">$ </span>ls<span class="w"> </span>-la<span class="w"> </span>work/8a/2ab7ca*/
 <a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="go">total 16</span>
 <a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="go">drwxr-xr-x  6 user  staff   192 Jan 28 10:00 .</span>
@@ -5347,31 +5661,31 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="go">-rw-r--r--  1 user  staff   127 Jan 28 10:00 .command.sh</span>
 <a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="go">lrwxr-xr-x  1 user  staff    89 Jan 28 10:00 patientA_rep1_normal_R1_001.fastq.gz -&gt; /path/to/work/stage/.../patientA_rep1_normal_R1_001.fastq.gz</span>
 </code></pre></div>
-<p>심볼릭 링크는 Nextflow가 자동으로 다운로드한 원격 파일의 스테이징된 사본을 가리킵니다.</p>
+<p>The symlink points to a staged copy of the remote file that Nextflow downloaded automatically.</p>
 </details>
-<p>더 큰 파일의 경우 다운로드 단계가 로컬 파일에서 실행하는 것에 비해 추가 시간이 걸립니다.
-그러나 Nextflow는 불필요한 다운로드를 피하기 위해 이미 스테이징된 사본이 있는지 확인합니다.
-따라서 동일한 파일에서 다시 실행하고 스테이징된 파일을 삭제하지 않았다면 Nextflow는 스테이징된 사본을 사용합니다.</p>
-<p>이것은 Nextflow를 사용하여 로컬 및 원격 데이터 간을 전환하는 것이 얼마나 쉬운지 보여주며, 이것이 Nextflow의 주요 기능입니다.</p>
+<p>Note that for larger files, the downloading step will take some extra time compared to running on local files.
+However, Nextflow checks whether it already has a staged copy to avoid unnecessary downloads.
+So if you run again on the same file and haven't deleted the staged file, Nextflow will use the staged copy.</p>
+<p>This shows how easy it is to switch between local and remote data using Nextflow, which is a key feature of Nextflow.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>이 원칙에 대한 한 가지 중요한 예외는 HTTPS가 여러 파일을 나열할 수 없기 때문에 HTTPS에서 glob 패턴이나 디렉토리 경로를 사용할 수 없다는 것입니다. 따라서 정확한 파일 URL을 지정해야 합니다.
-그러나 blob 스토리지(<code>s3://</code>, <code>az://</code>, <code>gs://</code>)와 같은 다른 스토리지 프로토콜은 glob과 디렉토리 경로를 모두 사용할 수 있습니다.</p>
-<p>클라우드 스토리지에서 glob 패턴을 사용하는 방법은 다음과 같습니다:</p>
-<div class="highlight"><span class="filename">클라우드 스토리지 예제 (이 환경에서 실행 불가)</span><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1">// glob 패턴을 사용한 S3 - 여러 파일과 일치</span>
+<p>The one important exception to this principle is that you can't use glob patterns or directory paths with HTTPS because HTTPS cannot list multiple files, so you must specify exact file URLs.
+However, other storage protocols such as blob storage (<code>s3://</code>, <code>az://</code>, <code>gs://</code>) can use both globs and directory paths.</p>
+<p>Here's how you could use glob patterns with cloud storage:</p>
+<div class="highlight"><span class="filename">Cloud storage examples (not runnable in this environment)</span><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1">// S3 with glob patterns - would match multiple files</span>
 <a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="n">ch_s3_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="s1">&#39;s3://my-bucket/data/*.fastq.gz&#39;</span><span class="o">)</span>
 <a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>
-<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="c1">// glob 패턴을 사용한 Azure Blob Storage</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="c1">// Azure Blob Storage with glob patterns</span>
 <a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="n">ch_azure_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="s1">&#39;az://container/data/patient*_R{1,2}.fastq.gz&#39;</span><span class="o">)</span>
 <a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>
-<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="c1">// glob 패턴을 사용한 Google Cloud Storage</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="c1">// Google Cloud Storage with glob patterns</span>
 <a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a><span class="n">ch_gcs_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="s1">&#39;gs://bucket/data/sample_*.fastq.gz&#39;</span><span class="o">)</span>
 </code></pre></div>
-<p>다음 섹션에서 glob를 실제로 사용하는 방법을 보여드리겠습니다.</p>
+<p>We'll show you how to work with globs in practice in the next section.</p>
 </div>
-<h3 id="22">2.2. 로컬 파일로 다시 전환<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
-<p>이 사이드 퀘스트의 나머지 부분에서는 로컬 예제 파일을 사용할 것이므로 워크플로우 입력을 원래 파일로 다시 전환하겠습니다:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">수정 후</label><label for="__tabbed_8_2">수정 전</label></div>
+<h3 id="22-switch-back-to-the-local-file">2.2. Switch back to the local file<a class="headerlink" href="#22-switch-back-to-the-local-file" title="Permanent link">&para;</a></h3>
+<p>We're going to go back to using our local example files for the rest of this side quest, so let's switch the workflow input back to the original file:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">After</label><label for="__tabbed_8_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
@@ -5402,7 +5716,7 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <span class="normal"><a href="#__codelineno-39-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-39-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-39-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-39-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="w">    </span><span class="c1">// Using a remote file from the internet</span>
+<span class="normal"><a href="#__codelineno-39-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="w">    </span><span class="c1">// Create a Path object from a string path</span>
 <a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="hll"><span class="w">    </span><span class="n">myFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;https://raw.github.com/nextflow-io/training/master/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz&#39;</span><span class="o">)</span>
 </span><a id="__codelineno-39-4" name="__codelineno-39-4"></a>
 <a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">    </span><span class="c1">// Print file attributes</span>
@@ -5415,35 +5729,35 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<h3 id="_10">핵심 정리<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h3 id="takeaway_1">Takeaway<a class="headerlink" href="#takeaway_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>원격 데이터는 URI를 사용하여 접근합니다(HTTP, FTP, S3, Azure, Google Cloud)</li>
-<li>이러한 경로를 process에 제공하는 한 Nextflow는 자동으로 데이터를 다운로드하고 적절한 위치로 스테이징합니다</li>
-<li>원격 파일을 다운로드하거나 업로드하는 로직을 작성하지 마십시오!</li>
-<li>로컬 및 원격 파일은 다른 객체 타입을 생성하지만 동일하게 작동합니다</li>
-<li><strong>중요</strong>: HTTP/HTTPS는 단일 파일에서만 작동합니다(glob 패턴 없음)</li>
-<li>클라우드 스토리지(S3, Azure, GCS)는 단일 파일과 glob 패턴을 모두 지원합니다</li>
-<li>프로토콜이 필요한 작업을 지원하는 한 코드 로직을 변경하지 않고 로컬 및 원격 데이터 소스 간을 원활하게 전환할 수 있습니다</li>
+<li>Remote data is accessed using a URI (HTTP, FTP, S3, Azure, Google Cloud)</li>
+<li>Nextflow will automatically download and stage the data to the right place, as long as these paths are being fed to processes</li>
+<li>Do not write logic to download or upload remote files!</li>
+<li>Local and remote files produce different object types but work identically</li>
+<li><strong>Important</strong>: HTTP/HTTPS only work with single files (no glob patterns)</li>
+<li>Cloud storage (S3, Azure, GCS) supports both single files and glob patterns</li>
+<li>You can seamlessly switch between local and remote data sources without changing code logic (as long as the protocol supports your required operations)</li>
 </ul>
 <hr />
-<h2 id="3-frompath">3. <code>fromPath()</code> 채널 팩토리 사용<a class="headerlink" href="#3-frompath" title="Permanent link">&para;</a></h2>
-<p>지금까지 우리는 한 번에 하나의 파일로 작업했지만, Nextflow에서는 일반적으로 처리할 여러 입력 파일이 있는 입력 채널을 생성하려고 합니다.</p>
-<p>이를 수행하는 단순한 방법은 <code>file()</code> 메서드를 다음과 같이 <a href="https://www.nextflow.io/docs/latest/reference/channel.html#of"><code>channel.of()</code></a>와 결합하는 것입니다:</p>
-<div class="highlight"><span class="filename">구문 예제</span><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">of</span><span class="o">([</span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R1_001.fastq.gz&#39;</span><span class="o">)],</span>
+<h2 id="3-using-the-frompath-channel-factory">3. Using the <code>fromPath()</code> channel factory<a class="headerlink" href="#3-using-the-frompath-channel-factory" title="Permanent link">&para;</a></h2>
+<p>So far we've been working with a single file at a time, but in Nextflow, we're typically going to want to create an input channel with multiple input files to process.</p>
+<p>A naive way to do that would be to combine the <code>file()</code> method with <a href="https://www.nextflow.io/docs/latest/reference/channel.html#of"><code>channel.of()</code></a> like this:</p>
+<div class="highlight"><span class="filename">Syntax example</span><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">of</span><span class="o">([</span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R1_001.fastq.gz&#39;</span><span class="o">)],</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">                      </span><span class="o">[</span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R1_001.fastq.gz&#39;</span><span class="o">)])</span>
 </code></pre></div>
-<p>이것은 작동하지만 투박합니다.</p>
+<p>That works, but it's clunky.</p>
 <div class="admonition tip">
-<p class="admonition-title"><code>file()</code> vs <code>channel.fromPath()</code>를 사용할 때</p>
+<p class="admonition-title">When to use <code>file()</code> vs <code>channel.fromPath()</code></p>
 <ul>
-<li>단일 Path 객체를 직접 조작해야 할 때(파일이 존재하는지 확인, 속성 읽기 또는 단일 process 호출로 전달) <code>file()</code>을 사용하십시오</li>
-<li>여러 파일을 보유할 수 있는 채널이 필요할 때, 특히 glob 패턴을 사용하거나 파일이 여러 process를 통해 흐를 때 <code>channel.fromPath()</code>를 사용하십시오</li>
+<li>Use <code>file()</code> when you need a single Path object for direct manipulation (checking if a file exists, reading its attributes, or passing to a single process invocation)</li>
+<li>Use <code>channel.fromPath()</code> when you need a channel that can hold multiple files, especially with glob patterns, or when files will flow through multiple processes</li>
 </ul>
 </div>
-<p>여기서 <a href="https://www.nextflow.io/docs/latest/reference/channel.html#frompath"><code>channel.fromPath()</code></a>가 등장합니다: 하나 이상의 정적 파일 문자열뿐만 아니라 glob 패턴에서 채널을 생성하는 데 필요한 모든 기능을 번들로 제공하는 편리한 채널 팩토리입니다.</p>
-<h3 id="31">3.1. 채널 팩토리 추가<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
-<p><code>channel.fromPath</code>를 사용하도록 워크플로우를 업데이트해 봅시다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">수정 후</label><label for="__tabbed_9_2">수정 전</label></div>
+<p>This is where <a href="https://www.nextflow.io/docs/latest/reference/channel.html#frompath"><code>channel.fromPath()</code></a> comes in: a convenient channel factory that bundles all the functionality we need to generate a channel from one or more static file strings as well as glob patterns.</p>
+<h3 id="31-add-the-channel-factory">3.1. Add the channel factory<a class="headerlink" href="#31-add-the-channel-factory" title="Permanent link">&para;</a></h3>
+<p>Let's update our workflow to use <code>channel.fromPath</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">After</label><label for="__tabbed_9_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-7"> 7</a></span>
@@ -5505,12 +5819,12 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p>또한 지금은 속성을 출력하는 코드를 주석 처리했으며 대신 파일 이름만 출력하는 <code>.view</code> 문을 추가했습니다.</p>
-<p>워크플로우를 실행하십시오:</p>
+<p>We've also commented out the code that prints out the attributes for now, and added a <code>.view</code> statement to print out just the filename instead.</p>
+<p>Run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
 <a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="go">Launching `main.nf` [grave_meucci] DSL2 - revision: b09964a583</span>
@@ -5518,13 +5832,13 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="go">Found file: /workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz</span>
 </code></pre></div>
 </details>
-<p>보시다시피, 파일 경로가 채널에 <code>Path</code> 타입 객체로 로드되고 있습니다.
-이것은 <code>file()</code>이 했을 것과 유사하지만, 이제 원한다면 더 많은 파일을 로드할 수 있는 채널이 있습니다.</p>
-<p><code>channel.fromPath()</code>를 사용하는 것은 파일 목록으로 채워진 새 채널을 생성하는 편리한 방법입니다.</p>
-<h3 id="32">3.2. 채널의 파일 속성 보기<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
-<p>채널 팩토리를 사용한 첫 번째 시도에서는 코드를 단순화하고 파일 이름만 출력했습니다.</p>
-<p>전체 파일 속성을 출력하는 것으로 돌아가 봅시다:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">수정 후</label><label for="__tabbed_10_2">수정 전</label></div>
+<p>As you can see, the file path is being loaded as a <code>Path</code> type object in the channel.
+This is similar to what <code>file()</code> would have done, except now we have a channel that we can load more files into if we want.</p>
+<p>Using <code>channel.fromPath()</code> is a convenient way of creating a new channel populated by a list of files.</p>
+<h3 id="32-view-attributes-of-files-in-channel">3.2. View attributes of files in channel<a class="headerlink" href="#32-view-attributes-of-files-in-channel" title="Permanent link">&para;</a></h3>
+<p>In our first pass at using the channel factory, we simplified the code and just printed out the file name.</p>
+<p>Let's go back to printing out the full file attributes:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">After</label><label for="__tabbed_10_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-7"> 7</a></span>
@@ -5568,12 +5882,12 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p>또한 채널 기반 접근 방식으로 파일 처리가 여전히 올바르게 작동하는지 확인하기 위해 <code>COUNT_LINES</code> process 호출을 다시 활성화하고 있습니다.</p>
-<p>워크플로우를 실행하십시오:</p>
+<p>We're also re-enabling the <code>COUNT_LINES</code> process call to verify that file processing still works correctly with our channel-based approach.</p>
+<p>Run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>
 <a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="go">Launching `main.nf` [furious_swanson] DSL2 - revision: c35c34950d</span>
@@ -5589,25 +5903,25 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-48-13" name="__codelineno-48-13" href="#__codelineno-48-13"></a><span class="go">40</span>
 </code></pre></div>
 </details>
-<p>이제 파일이 채널에 있으므로 이전과 동일한 결과를 얻었으며, 더 많이 추가할 수 있습니다.</p>
-<h3 id="33-glob">3.3. glob을 사용하여 여러 파일 매칭<a class="headerlink" href="#33-glob" title="Permanent link">&para;</a></h3>
-<p>채널에 더 많은 파일을 로드할 수 있는 여러 방법이 있습니다.
-여기서는 와일드카드 문자를 기반으로 파일 및 디렉토리 이름을 매칭하고 검색하는 편리한 방법인 glob 패턴을 사용하는 방법을 보여드리겠습니다.
-이러한 패턴을 매칭하는 프로세스를 "globbing" 또는 "filename expansion"이라고 합니다.</p>
+<p>And there you are, same results as before but now we have the file in a channel, so we can add more.</p>
+<h3 id="33-using-a-glob-to-match-multiple-files">3.3. Using a glob to match multiple files<a class="headerlink" href="#33-using-a-glob-to-match-multiple-files" title="Permanent link">&para;</a></h3>
+<p>There are several ways we could load more files into the channel.
+Here we're going to show you how to use glob patterns, which are a convenient way to match and retrieve file and directory names based on wildcard characters.
+The process of matching these patterns is called "globbing" or "filename expansion".</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>이전에 언급했듯이, HTTPS가 여러 파일을 나열할 수 없기 때문에 HTTPS 파일 경로를 제외한 대부분의 경우 Nextflow는 입력 및 출력 파일을 관리하기 위한 globbing을 지원합니다.</p>
+<p>As noted previously, Nextflow supports globbing to manage input and output files in the majority of cases, except with HTTPS filepaths because HTTPS cannot list multiple files.</p>
 </div>
-<p>특정 환자 <code>patientA</code>와 관련된 파일 쌍의 두 파일을 모두 검색하고 싶다고 가정해 봅시다:</p>
+<p>Let's say we want to retrieve both files in a pair of files associated with a given patient, <code>patientA</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="go">patientA_rep1_normal_R1_001.fastq.gz</span>
 <a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="go">patientA_rep1_normal_R2_001.fastq.gz</span>
 </code></pre></div>
-<p>파일 이름 간의 유일한 차이점은 복제 번호, 즉 <code>R</code> 뒤의 숫자이므로 다음과 같이 와일드카드 문자 <code>*</code>를 사용하여 숫자를 대신할 수 있습니다:</p>
+<p>Since the only difference between the filenames is the replicate number, <em>i.e.</em> the number after <code>R</code>, we can use the wildcard character <code>*</code> to stand in for the number as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="go">patientA_rep1_normal_R*_001.fastq.gz</span>
 </code></pre></div>
-<p>이것이 우리에게 필요한 glob 패턴입니다.</p>
-<p>이제 채널 팩토리의 파일 경로를 다음과 같이 해당 glob 패턴을 사용하도록 업데이트하기만 하면 됩니다:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">수정 후</label><label for="__tabbed_11_2">수정 전</label></div>
+<p>That is the glob pattern we need.</p>
+<p>Now all we need to do is update the file path in the channel factory to use that glob pattern as follows:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">After</label><label for="__tabbed_11_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-7">7</a></span>
@@ -5623,12 +5937,12 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p>Nextflow는 이것이 glob 패턴임을 자동으로 인식하고 적절하게 처리합니다.</p>
-<p>워크플로우를 실행하여 테스트하십시오:</p>
+<p>Nextflow will automatically recognize that this is a glob pattern and will handle it appropriately.</p>
+<p>Run the workflow to test that out:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="go">Launching `main.nf` [boring_sammet] DSL2 - revision: d2aa789c9a</span>
@@ -5652,44 +5966,44 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-54-21" name="__codelineno-54-21" href="#__codelineno-54-21"></a><span class="go">40</span>
 </code></pre></div>
 </details>
-<p>보시다시피, 이제 채널에 두 개의 Path 객체가 있으며, 이는 Nextflow가 파일 이름 확장을 올바르게 수행했고 예상대로 두 파일을 모두 로드하고 처리했음을 보여줍니다.</p>
-<p>이 방법을 사용하면 glob 패턴을 변경하기만 하면 원하는 만큼 많은 파일을 검색할 수 있습니다. 예를 들어 파일 이름의 모든 가변 부분을 <code>*</code>로 바꾸어 더 관대하게 만들면(<em>예:</em> <code>data/patient*_rep*_*_R*_001.fastq.gz</code>) <code>data</code> 디렉토리의 모든 예제 파일을 가져올 수 있습니다.</p>
-<h3 id="_11">핵심 정리<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p>As you can see, we now have two Path objects in our channel, which shows that Nextflow has done the filename expansion correctly, and has loaded and processed both files as expected.</p>
+<p>Using this method, we can retrieve as many or as few files as we want just by changing the glob pattern. If we made it more generous, for example by replacing all the variable parts of the filenames by <code>*</code> (<em>e.g.</em> <code>data/patient*_rep*_*_R*_001.fastq.gz</code>) we could grab all the example files in the <code>data</code> directory.</p>
+<h3 id="takeaway_2">Takeaway<a class="headerlink" href="#takeaway_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>channel.fromPath()</code>는 패턴과 매칭하는 파일로 채널을 생성합니다</li>
-<li>각 파일은 채널의 별도 요소로 방출됩니다</li>
-<li>glob 패턴을 사용하여 여러 파일을 매칭할 수 있습니다</li>
-<li>파일은 전체 속성을 가진 Path 객체로 자동 변환됩니다</li>
-<li><code>.view()</code> 메서드를 사용하면 채널 내용을 검사할 수 있습니다</li>
+<li><code>channel.fromPath()</code> creates a channel with files matching a pattern</li>
+<li>Each file is emitted as a separate element in the channel</li>
+<li>We can use a glob pattern to match multiple files</li>
+<li>Files are automatically converted to Path objects with full attributes</li>
+<li>The <code>.view()</code> method allows inspection of channel contents</li>
 </ul>
 <hr />
-<h2 id="4">4. 파일 이름에서 기본 메타데이터 추출<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p>대부분의 과학 분야에서 데이터를 포함하는 파일 이름에 메타데이터가 인코딩되어 있는 것이 매우 일반적입니다.
-예를 들어 생물정보학에서는 시퀀싱 데이터를 포함하는 파일이 샘플, 조건, 복제 및 리드 번호에 대한 정보를 인코딩하는 방식으로 명명되는 경우가 많습니다.</p>
-<p>파일 이름이 일관된 규칙에 따라 구성된 경우, 표준화된 방식으로 해당 메타데이터를 추출하고 분석 과정에서 사용할 수 있습니다.
-물론 이것은 큰 '만약'이며, 파일 이름 구조에 의존할 때마다 매우 조심해야 합니다. 그러나 현실은 이 접근 방식이 매우 널리 사용되므로 Nextflow에서 어떻게 수행되는지 살펴보겠습니다.</p>
-<p>예제 데이터의 경우, 파일 이름에 일관되게 구조화된 메타데이터가 포함되어 있다는 것을 알고 있습니다.
-예를 들어 파일 이름 <code>patientA_rep1_normal_R2_001</code>은 다음을 인코딩합니다:</p>
+<h2 id="4-extracting-basic-metadata-from-filenames">4. Extracting basic metadata from filenames<a class="headerlink" href="#4-extracting-basic-metadata-from-filenames" title="Permanent link">&para;</a></h2>
+<p>In most scientific domains, it's very common to have metadata encoded in the names of the files that contain the data.
+For example, in bioinformatics, files containing sequencing data are often named in a way that encodes information about the sample, condition, replicate, and read number.</p>
+<p>If the filenames are constructed according to a consistent convention, you can extract that metadata in a standardized manner and use it in the course of your analysis.
+That is a big 'if', of course, and you should be very cautious whenever you rely on filename structure; but the reality is that this approach is very widely used, so let's have a look at how it's done in Nextflow.</p>
+<p>In the case of our example data, we know that the filenames include consistently structured metadata.
+For example, the filename <code>patientA_rep1_normal_R2_001</code> encodes the following:</p>
 <ul>
-<li>환자 ID: <code>patientA</code></li>
-<li>복제 ID: <code>rep1</code></li>
-<li>샘플 타입: <code>normal</code> (<code>tumor</code>와 대조적으로)</li>
-<li>리드 세트: <code>R1</code> (<code>R2</code>와 대조적으로)</li>
+<li>patient ID: <code>patientA</code></li>
+<li>replicate ID: <code>rep1</code></li>
+<li>sample type: <code>normal</code> (as opposed to <code>tumor</code>)</li>
+<li>read set: <code>R1</code> (as opposed to <code>R2</code>)</li>
 </ul>
-<p>워크플로우를 수정하여 다음 세 단계로 이 정보를 검색할 것입니다:</p>
+<p>We're going to modify our workflow to retrieve this information in three steps:</p>
 <ol>
-<li>메타데이터를 포함하는 파일의 <code>simpleName</code> 검색</li>
-<li><code>tokenize()</code>라는 메서드를 사용하여 메타데이터 분리</li>
-<li>map을 사용하여 메타데이터 구성</li>
+<li>Retrieve the <code>simpleName</code> of the file, which includes the metadata</li>
+<li>Separate the metadata using a method called <code>tokenize()</code></li>
+<li>Use a map to organize the metadata</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>파일 이름에는 환자 이름이나 기타 식별 특성과 같은 민감한 정보를 인코딩해서는 안 됩니다. 이는 환자 프라이버시나 기타 관련 보안 제한을 침해할 수 있기 때문입니다.</p>
+<p>You should never encode sensitive information into filenames, such as patient names or other identifying characteristics, as that can compromise patient privacy or other relevant security restrictions.</p>
 </div>
-<h3 id="41-simplename">4.1. <code>simpleName</code> 검색<a class="headerlink" href="#41-simplename" title="Permanent link">&para;</a></h3>
-<p><code>simpleName</code>은 경로와 확장자가 제거된 파일 이름에 해당하는 파일 속성입니다.</p>
-<p>워크플로우를 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">수정 후</label><label for="__tabbed_12_2">수정 전</label></div>
+<h3 id="41-retrieve-the-simplename">4.1. Retrieve the <code>simpleName</code><a class="headerlink" href="#41-retrieve-the-simplename" title="Permanent link">&para;</a></h3>
+<p>The <code>simpleName</code> is a file attribute that corresponds to the filename stripped of its path and extension.</p>
+<p>Make the following edits to the workflow:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">After</label><label for="__tabbed_12_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-7"> 7</a></span>
@@ -5727,12 +6041,12 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p>이것은 <code>simpleName</code>을 검색하고 <code>map()</code> 작업을 사용하여 전체 파일 객체와 연결합니다.</p>
-<p>작동하는지 테스트하기 위해 워크플로우를 실행하십시오:</p>
+<p>This retrieves the <code>simpleName</code> and associates it with the full file object using a <code>map()</code> operation.</p>
+<p>Run the workflow to test that it works:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>
 <a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="go">Launching `main.nf` [suspicious_mahavira] DSL2 - revision: ae8edc4e48</span>
@@ -5748,13 +6062,13 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-58-13" name="__codelineno-58-13" href="#__codelineno-58-13"></a><span class="go">40</span>
 </code></pre></div>
 </details>
-<p>채널의 각 요소는 이제 <code>simpleName</code>과 원본 파일 객체를 포함하는 튜플입니다.</p>
-<h3 id="42-simplename">4.2. <code>simplename</code>에서 메타데이터 추출<a class="headerlink" href="#42-simplename" title="Permanent link">&para;</a></h3>
-<p>이 시점에서 우리가 원하는 메타데이터는 <code>simplename</code>에 포함되어 있지만, 개별 항목에 직접 접근할 수 없습니다.
-따라서 <code>simplename</code>을 구성 요소로 분할해야 합니다.
-다행히도 이러한 구성 요소는 원본 파일 이름에서 단순히 밑줄로 구분되어 있으므로, 이 작업에 완벽한 <code>tokenize()</code>라는 일반적인 Nextflow 메서드를 적용할 수 있습니다.</p>
-<p>워크플로우를 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">수정 후</label><label for="__tabbed_13_2">수정 전</label></div>
+<p>Each element in the channel is now a tuple containing the <code>simpleName</code> and the original file object.</p>
+<h3 id="42-extract-the-metadata-from-the-simplename">4.2. Extract the metadata from the <code>simplename</code><a class="headerlink" href="#42-extract-the-metadata-from-the-simplename" title="Permanent link">&para;</a></h3>
+<p>At this point, the metadata we want is embedded in the <code>simplename</code>, but we can't access individual items directly.
+So we need to split the <code>simplename</code> into its components.
+Fortunately, those components are simply separated by underscores in the original filename, so we can apply a common Nextflow method called <code>tokenize()</code> that is perfect for this task.</p>
+<p>Make the following edits to the workflow:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">After</label><label for="__tabbed_13_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-7"> 7</a></span>
@@ -5782,12 +6096,12 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p><code>tokenize()</code> 메서드는 밑줄을 찾을 때마다 <code>simpleName</code> 문자열을 분할하고 부분 문자열을 포함하는 리스트를 반환합니다.</p>
-<p>워크플로우를 실행하십시오:</p>
+<p>The <code>tokenize()</code> method will split the <code>simpleName</code> string wherever it finds underscores, and will return a list containing the substrings.</p>
+<p>Run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="go">Launching `main.nf` [gigantic_gauss] DSL2 - revision: a39baabb57</span>
@@ -5803,31 +6117,31 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-62-13" name="__codelineno-62-13" href="#__codelineno-62-13"></a><span class="go">40</span>
 </code></pre></div>
 </details>
-<p>이제 채널의 각 요소에 대한 튜플에는 메타데이터 리스트(<em>예:</em> <code>[patientA, rep1, normal, R1, 001]</code>)와 원본 파일 객체가 포함됩니다.</p>
-<p>훌륭합니다!
-환자 정보를 단일 문자열에서 문자열 리스트로 분해했습니다.
-이제 환자 정보의 각 부분을 별도로 처리할 수 있습니다.</p>
-<h3 id="43-map">4.3. map을 사용하여 메타데이터 구성<a class="headerlink" href="#43-map" title="Permanent link">&para;</a></h3>
-<p>우리의 메타데이터는 현재 평면 리스트일 뿐입니다.
-사용하기는 충분히 쉽지만 읽기는 어렵습니다.</p>
+<p>Now the tuple for each element in our channel contains the list of metadata (<em>e.g.</em> <code>[patientA, rep1, normal, R1, 001]</code>) and the original file object.</p>
+<p>That's great!
+We've broken down our patient information from a single string into a list of strings.
+We can now handle each part of the patient information separately.</p>
+<h3 id="43-use-a-map-to-organize-the-metadata">4.3. Use a map to organize the metadata<a class="headerlink" href="#43-use-a-map-to-organize-the-metadata" title="Permanent link">&para;</a></h3>
+<p>Our metadata is just a flat list at the moment.
+It's easy enough to use but difficult to read.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="go">[patientA, rep1, normal, R1, 001]</span>
 </code></pre></div>
-<p>인덱스 3의 항목은 무엇입니까? 원래 메타데이터 구조 설명을 다시 참조하지 않고 말할 수 있습니까?</p>
-<p>이것은 키-값 저장소를 사용할 수 있는 좋은 기회입니다. 여기서 모든 항목에는 키 세트와 관련 값이 있으므로 각 키를 쉽게 참조하여 해당 값을 가져올 수 있습니다.</p>
-<p>예제에서 이것은 이 구성에서:</p>
+<p>What is the item at index 3? Can you tell without referring back to the original explanation of the metadata structure?</p>
+<p>This is a great opportunity to use a key-value store, where every item has a set of keys and their associated values, so you can easily refer to each key to get the corresponding value.</p>
+<p>In our example, that means going from this organization:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="n">patientA</span><span class="o">,</span><span class="w"> </span><span class="mi">1</span><span class="o">,</span><span class="w"> </span><span class="n">normal</span><span class="o">,</span><span class="w"> </span><span class="n">R1</span><span class="o">]</span>
 <a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>
 <a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a><span class="n">println</span><span class="w"> </span><span class="n">data</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>
 </code></pre></div>
-<p>다음 구성으로 이동하는 것을 의미합니다:</p>
+<p>To this one:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="nl">id:</span><span class="w"> </span><span class="n">patientA</span><span class="o">,</span><span class="w"> </span><span class="nl">replicate:</span><span class="w"> </span><span class="mi">1</span><span class="o">,</span><span class="w"> </span><span class="nl">type:</span><span class="w"> </span><span class="n">normal</span><span class="o">,</span><span class="w"> </span><span class="nl">readNum:</span><span class="w"> </span><span class="mi">1</span><span class="o">]</span>
 <a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>
 <a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="n">println</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="na">readNum</span>
 </code></pre></div>
-<p>Nextflow에서는 이것을 <a href="https://nextflow.io/docs/latest/script.html#maps">map</a>이라고 합니다.</p>
-<p>이제 평면 리스트를 map으로 변환해 봅시다.
-워크플로우를 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">수정 후</label><label for="__tabbed_14_2">수정 전</label></div>
+<p>In Nextflow, that's called a <a href="https://nextflow.io/docs/latest/script.html#maps">map</a>.</p>
+<p>Let's convert our flat list into a map now.
+Make the following edits to the workflow:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">After</label><label for="__tabbed_14_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-66-7"> 7</a></span>
@@ -5873,18 +6187,18 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p>여기서 주요 변경 사항은 다음과 같습니다:</p>
+<p>The key changes here are:</p>
 <ul>
-<li><strong>구조 분해 할당</strong>: <code>def (patient, replicate, type, readNum) = ...</code>는 토큰화된 값을 한 줄에서 명명된 변수로 추출합니다</li>
-<li><strong>Map 리터럴 구문</strong>: <code>[id: patient, replicate: ...]</code>는 각 키(예: <code>id</code>)가 값(예: <code>patient</code>)과 연결된 map을 생성합니다</li>
-<li><strong>중첩 구조</strong>: 외부 리스트 <code>[..., myFile]</code>는 메타데이터 map을 원본 파일 객체와 쌍으로 만듭니다</li>
+<li><strong>Destructuring assignment</strong>: <code>def (patient, replicate, type, readNum) = ...</code> extracts the tokenized values into named variables in one line</li>
+<li><strong>Map literal syntax</strong>: <code>[id: patient, replicate: ...]</code> creates a map where each key (like <code>id</code>) is associated with a value (like <code>patient</code>)</li>
+<li><strong>Nested structure</strong>: The outer list <code>[..., myFile]</code> pairs the metadata map with the original file object</li>
 </ul>
-<p>또한 <code>replace()</code>라는 문자열 대체 메서드를 사용하여 불필요한 일부 문자를 제거하여 메타데이터 문자열 중 일부를 단순화했습니다(<em>예:</em> <code>replicate.replace('rep', '')</code>는 복제 ID에서 숫자만 유지).</p>
-<p>워크플로우를 다시 실행해 봅시다:</p>
+<p>We also simplified a couple of the metadata strings using a string replacement method called <code>replace()</code> to remove some characters that are unnecessary (<em>e.g.</em> <code>replicate.replace('rep', '')</code> to keep only the number from the replicate IDs).</p>
+<p>Let's run the workflow again:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>
 <a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a><span class="go">Launching `main.nf` [infallible_swartz] DSL2 - revision: 7f4e68c0cb</span>
@@ -5900,40 +6214,40 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-69-13" name="__codelineno-69-13" href="#__codelineno-69-13"></a><span class="go">40</span>
 </code></pre></div>
 </details>
-<p>이제 메타데이터가 깔끔하게 레이블링되어(<em>예:</em> <code>[id:patientA, replicate:1, type:normal, readNum:2]</code>) 무엇이 무엇인지 훨씬 쉽게 구분할 수 있습니다.</p>
-<p>또한 워크플로우에서 메타데이터의 요소를 실제로 사용하는 것이 훨씬 쉬워지고 코드를 더 읽기 쉽고 유지 관리하기 쉬워집니다.</p>
-<h3 id="_12">핵심 정리<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>Now the metadata is neatly labeled (<em>e.g.</em> <code>[id:patientA, replicate:1, type:normal, readNum:2]</code>) so it's a lot easier to tell what is what.</p>
+<p>It'll also be a lot easier to actually make use of elements of metadata in the workflow, and will make our code easier to read and more maintainable.</p>
+<h3 id="takeaway_3">Takeaway<a class="headerlink" href="#takeaway_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Nextflow에서 전체 프로그래밍 언어의 기능으로 파일 이름을 처리할 수 있습니다</li>
-<li>파일 이름을 문자열로 취급하여 관련 정보를 추출할 수 있습니다</li>
-<li><code>tokenize()</code> 및 <code>replace()</code>와 같은 메서드를 사용하면 파일 이름의 문자열을 조작할 수 있습니다</li>
-<li><code>.map()</code> 작업은 구조를 보존하면서 채널 요소를 변환합니다</li>
-<li>구조화된 메타데이터(map)는 위치 리스트보다 코드를 더 읽기 쉽고 유지 관리하기 쉽게 만듭니다</li>
+<li>We can handle filenames in Nextflow with the power of a full programming language</li>
+<li>We can treat the filenames as strings to extract relevant information</li>
+<li>Use of methods like <code>tokenize()</code> and <code>replace()</code> allows us to manipulate strings in the filename</li>
+<li>The <code>.map()</code> operation transforms channel elements while preserving structure</li>
+<li>Structured metadata (maps) makes code more readable and maintainable than positional lists</li>
 </ul>
-<p>다음으로 페어드 데이터 파일을 처리하는 방법을 살펴보겠습니다.</p>
+<p>Next up, we will look at how to handle paired data files.</p>
 <hr />
-<h2 id="5">5. 페어드 데이터 파일 처리<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<p>많은 실험 설계는 명시적으로 페어드 방식으로 처리하는 것이 유리한 페어드 데이터 파일을 생성합니다.
-예를 들어 생물정보학에서 시퀀싱 데이터는 종종 페어드 리드의 형태로 생성되는데, 이는 동일한 DNA 단편에서 유래한 서열 문자열을 의미합니다(반대쪽 끝에서 읽기 때문에 종종 '정방향' 및 '역방향'이라고 함).</p>
-<p>이것이 R1과 R2가 두 세트의 리드를 참조하는 예제 데이터의 경우입니다.</p>
+<h2 id="5-handling-paired-data-files">5. Handling paired data files<a class="headerlink" href="#5-handling-paired-data-files" title="Permanent link">&para;</a></h2>
+<p>Many experimental designs produce paired data files that benefit from being handled in an explicitly paired way.
+For example, in bioinformatics, sequencing data is often generated in the form of paired reads, meaning sequence strings that originate from the same fragment of DNA (often called 'forward' and 'reverse' because they are read from opposite ends).</p>
+<p>That is the case of our example data, where R1 and R2 refer to the two sets of reads.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="go">data/patientA_rep1_normal_R1_001.fastq.gz</span>
 <a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a><span class="go">data/patientA_rep1_normal_R2_001.fastq.gz</span>
 </code></pre></div>
-<p>Nextflow는 공유된 명명 패턴을 기반으로 파일을 자동으로 그룹화하는 <code>channel.fromFilePairs()</code>라는 페어드 파일 작업을 위한 전문 채널 팩토리를 제공합니다. 이를 통해 페어드 파일을 적은 노력으로 더 긴밀하게 연결할 수 있습니다.</p>
-<p>이를 활용하도록 워크플로우를 수정할 것입니다.
-두 단계가 필요합니다:</p>
+<p>Nextflow provides a specialized channel factory for working with paired files like this called <code>channel.fromFilePairs()</code>, which automatically groups files based on a shared naming pattern. That allows you to associate the paired files more tightly with less effort.</p>
+<p>We're going to modify our workflow to take advantage of this.
+It's going to take two steps:</p>
 <ol>
-<li>채널 팩토리를 <code>channel.fromFilePairs()</code>로 전환</li>
-<li>메타데이터 추출 및 매핑</li>
+<li>Switch the channel factory to <code>channel.fromFilePairs()</code></li>
+<li>Extract and map the metadata</li>
 </ol>
-<h3 id="51-channelfromfilepairs">5.1. 채널 팩토리를 <code>channel.fromFilePairs()</code>로 전환<a class="headerlink" href="#51-channelfromfilepairs" title="Permanent link">&para;</a></h3>
-<p><code>channel.fromFilePairs</code>를 사용하려면 Nextflow가 쌍의 두 멤버를 식별하는 데 사용해야 하는 패턴을 지정해야 합니다.</p>
-<p>예제 데이터로 돌아가서, 명명 패턴을 다음과 같이 공식화할 수 있습니다:</p>
+<h3 id="51-switch-the-channel-factory-to-channelfromfilepairs">5.1. Switch the channel factory to <code>channel.fromFilePairs()</code><a class="headerlink" href="#51-switch-the-channel-factory-to-channelfromfilepairs" title="Permanent link">&para;</a></h3>
+<p>To use <code>channel.fromFilePairs</code>, we need to specify the pattern that Nextflow should use to identify the two members in a pair.</p>
+<p>Going back to our example data, we can formalize the naming pattern as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="go">data/patientA_rep1_normal_R{1,2}_001.fastq.gz</span>
 </code></pre></div>
-<p>이것은 이전에 사용한 glob 패턴과 유사하지만, 쌍의 두 멤버를 식별하는 부분 문자열(R 바로 뒤에 오는 <code>1</code> 또는 <code>2</code>)을 구체적으로 열거합니다.</p>
-<p>워크플로우 <code>main.nf</code>를 적절하게 업데이트해 봅시다:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">수정 후</label><label for="__tabbed_15_2">수정 전</label></div>
+<p>This is similar to the glob pattern we used earlier, except this specifically enumerates the substrings (either <code>1</code> or <code>2</code> coming right after the R) that identify the two members of the pair.</p>
+<p>Let's update the workflow <code>main.nf</code> accordingly:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">After</label><label for="__tabbed_15_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-72-7"> 7</a></span>
@@ -5986,7 +6300,7 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <span class="normal"><a href="#__codelineno-73-18">18</a></span>
 <span class="normal"><a href="#__codelineno-73-19">19</a></span>
 <span class="normal"><a href="#__codelineno-73-20">20</a></span>
-<span class="normal"><a href="#__codelineno-73-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-73-7" name="__codelineno-73-7"></a><span class="hll"><span class="w">    </span><span class="c1">// Load files with channel.fromPath</span>
+<span class="normal"><a href="#__codelineno-73-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-73-7" name="__codelineno-73-7"></a><span class="hll"><span class="w">    </span><span class="c1">// Load files with channel.fromFilePairs</span>
 </span><a id="__codelineno-73-8" name="__codelineno-73-8"></a><span class="hll"><span class="w">    </span><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R*_001.fastq.gz&#39;</span><span class="o">)</span>
 </span><a id="__codelineno-73-9" name="__codelineno-73-9"></a><span class="w">    </span><span class="n">ch_files</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">myFile</span><span class="w"> </span><span class="o">-&gt;</span>
 <a id="__codelineno-73-10" name="__codelineno-73-10"></a><span class="w">        </span><span class="kt">def</span><span class="w"> </span><span class="o">(</span><span class="n">sample</span><span class="o">,</span><span class="w"> </span><span class="n">replicate</span><span class="o">,</span><span class="w"> </span><span class="n">type</span><span class="o">,</span><span class="w"> </span><span class="n">readNum</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFile</span><span class="o">.</span><span class="na">simpleName</span><span class="o">.</span><span class="na">tokenize</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">)</span>
@@ -6005,13 +6319,13 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 </div>
 </div>
 </div>
-<p>채널 팩토리를 전환하고 파일 매칭 패턴을 조정했으며, 동시에 map 작업을 주석 처리했습니다.
-나중에 몇 가지 수정 사항과 함께 다시 추가하겠습니다.</p>
-<p>테스트하기 위해 워크플로우를 실행하십시오:</p>
+<p>We've switched the channel factory and adapted the file matching pattern, and while we were at it, we commented out the map operation.
+We'll add that back in later, with a few modifications.</p>
+<p>Run the workflow to test it:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="failure">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>
 <a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="go">Launching `main.nf` [angry_koch] DSL2 - revision: 44fdf66105</span>
@@ -6031,21 +6345,21 @@ Nextflow는 인증 및 파일을 적절한 위치로 스테이징, 다운로드 
 <a id="__codelineno-75-17" name="__codelineno-75-17" href="#__codelineno-75-17"></a><span class="go">-- Check &#39;.nextflow.log&#39; file for details</span>
 </code></pre></div>
 </details>
-<p>어라, 이번에는 실행이 실패했습니다!</p>
-<p>오류 메시지의 관련 부분은 다음과 같습니다:</p>
+<p>Uh-oh, this time the run failed!</p>
+<p>The relevant bit of the error message is here:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="go">Not a valid path value: &#39;patientA_rep1_normal_R&#39;</span>
 </code></pre></div>
-<p>이것은 채널 팩토리를 변경했기 때문입니다.
-지금까지 원본 입력 채널에는 파일 경로만 포함되어 있었습니다.
-우리가 수행한 모든 메타데이터 조작은 실제로 채널 내용에 영향을 미치지 않았습니다.</p>
-<p>이제 <code>.fromFilePairs</code> 채널 팩토리를 사용하고 있으므로 결과 채널의 내용이 다릅니다.
-두 파일이 공유하는 <code>simpleName</code> 부분(식별자 역할을 함)과 두 파일 객체를 포함하는 튜플로 구성된 하나의 채널 요소만 보입니다. 형식은 <code>id, [ file1, file2 ]</code>입니다.</p>
-<p>이것은 좋습니다. Nextflow가 공유 접두사를 검사하여 환자 이름을 추출하고 이를 환자 식별자로 사용하는 어려운 작업을 수행했기 때문입니다.</p>
-<p>그러나 이것은 현재 워크플로우를 중단시킵니다.
-process를 변경하지 않고 여전히 <code>COUNT_LINES</code>를 동일한 방식으로 실행하려면 파일 경로를 추출하기 위해 매핑 작업을 적용해야 합니다.
-그러나 우리는 그렇게 하지 않을 것입니다. 왜냐하면 우리의 궁극적인 목표는 파일 쌍을 적절하게 처리하는 다른 process인 <code>ANALYZE_READS</code>를 사용하는 것이기 때문입니다.</p>
-<p>따라서 <code>COUNT_LINES</code> 호출을 주석 처리(또는 삭제)하고 계속 진행하겠습니다.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">수정 후</label><label for="__tabbed_16_2">수정 전</label></div>
+<p>That is because we've changed the channel factory.
+Until now, the original input channel only contained the file paths.
+All the metadata manipulation we've been doing didn't actually affect the channel contents.</p>
+<p>Now that we're using the <code>.fromFilePairs</code> channel factory, the contents of the resulting channel are different.
+We see only one channel element, composed of a tuple containing two items: the part of the <code>simpleName</code> shared by the two files, which serves as an identifier, and a tuple containing the two file objects, in the format <code>id, [ file1, file2 ]</code>.</p>
+<p>That's great, because Nextflow has done the hard work of extracting the patient name by examining the shared prefix and using it as a patient identifier.</p>
+<p>However, it does break our current workflow.
+If we wanted to still run <code>COUNT_LINES</code> the same way without changing the process, we would have to apply a mapping operation to extract the file paths.
+But we're not going to do that, because our ultimate goal is to use a different process, <code>ANALYZE_READS</code>, that handles file pairs appropriately.</p>
+<p>So let's simply comment out (or delete) the call to <code>COUNT_LINES</code> and move on.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">After</label><label for="__tabbed_16_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-77-26">26</a></span>
@@ -6061,12 +6375,12 @@ process를 변경하지 않고 여전히 <code>COUNT_LINES</code>를 동일한 �
 </div>
 </div>
 </div>
-<p><code>COUNT_LINES</code> include 문도 주석 처리하거나 삭제할 수 있지만, 그것은 기능적 영향이 없습니다.</p>
-<p>이제 워크플로우를 다시 실행해 봅시다:</p>
+<p>You can also comment out or delete the <code>COUNT_LINES</code> include statement, but that will have no functional effect.</p>
+<p>Now let's run the workflow again:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a>
 <a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a><span class="go">Launching `main.nf` [fabulous_davinci] DSL2 - revision: 22b53268dc</span>
@@ -6074,13 +6388,13 @@ process를 변경하지 않고 여전히 <code>COUNT_LINES</code>를 동일한 �
 <a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a><span class="hll"><span class="go">[patientA_rep1_normal_R, [/workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz, /workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R2_001.fastq.gz]]</span>
 </span></code></pre></div>
 </details>
-<p>야호, 이번에는 워크플로우가 성공합니다!</p>
-<p>그러나 <code>id</code> 필드에서 나머지 메타데이터를 추출해야 합니다.</p>
-<h3 id="52">5.2. 파일 쌍에서 메타데이터 추출 및 구성<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
-<p>이전의 <code>map</code> 작업은 데이터 구조와 일치하지 않기 때문에 작동하지 않지만, 작동하도록 수정할 수 있습니다.</p>
-<p><code>fromFilePairs()</code>가 식별자로 사용한 문자열에 실제 환자 식별자에 이미 접근할 수 있으므로, 이전처럼 Path 객체에서 <code>simpleName</code>을 가져오지 않고 이를 사용하여 메타데이터를 추출할 수 있습니다.</p>
-<p>워크플로우에서 map 작업의 주석을 제거하고 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">수정 후</label><label for="__tabbed_17_2">수정 전</label></div>
+<p>Yay, this time the workflow succeeds!</p>
+<p>However, we still need to get the rest of the metadata out of the <code>id</code> field.</p>
+<h3 id="52-extract-and-organize-metadata-from-file-pairs">5.2. Extract and organize metadata from file pairs<a class="headerlink" href="#52-extract-and-organize-metadata-from-file-pairs" title="Permanent link">&para;</a></h3>
+<p>Our <code>map</code> operation from before won't work because it doesn't match the data structure, but we can modify it to work.</p>
+<p>We already have access to the actual patient identifier in the string that <code>fromFilePairs()</code> used as an identifier, so we can use that to extract the metadata without getting the <code>simpleName</code> from the Path object like we did before.</p>
+<p>Uncomment the map operation in the workflow and make the following edits:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">After</label><label for="__tabbed_17_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-81-7"> 7</a></span>
@@ -6150,14 +6464,14 @@ process를 변경하지 않고 여전히 <code>COUNT_LINES</code>를 동일한 �
 </div>
 </div>
 </div>
-<p>이번에는 map이 <code>myFile</code>만이 아닌 <code>id, files</code>에서 시작하고, <code>tokenize()</code>가 <code>myFile.simpleName</code> 대신 <code>id</code>에 적용됩니다.</p>
-<p>또한 <code>tokenize()</code> 줄에서 <code>readNum</code>을 제거했습니다. 명시적으로 명명하지 않은 부분 문자열(왼쪽에서 시작)은 자동으로 삭제됩니다.
-페어드 파일이 이제 긴밀하게 연결되어 있으므로 메타데이터 map에 <code>readNum</code>이 더 이상 필요하지 않기 때문에 이렇게 할 수 있습니다.</p>
-<p>워크플로우를 실행해 봅시다:</p>
+<p>This time the map starts from <code>id, files</code> instead of just <code>myFile</code>, and <code>tokenize()</code> is applied to <code>id</code> instead of to <code>myFile.simpleName</code>.</p>
+<p>Notice also that we've dropped <code>readNum</code> from the <code>tokenize()</code> line; any substrings that we don't specifically name (starting from the left) will be silently dropped.
+We can do this because the paired files are now tightly associated, so we no longer need <code>readNum</code> in the metadata map.</p>
+<p>Let's run the workflow:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a>
 <a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="go">Launching `main.nf` [prickly_stonebraker] DSL2 - revision: f62ab10a3f</span>
@@ -6165,27 +6479,27 @@ process를 변경하지 않고 여전히 <code>COUNT_LINES</code>를 동일한 �
 <a id="__codelineno-84-5" name="__codelineno-84-5" href="#__codelineno-84-5"></a><span class="go">[[id:patientA, replicate:1, type:normal], [/workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz, /workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R2_001.fastq.gz]]</span>
 </code></pre></div>
 </details>
-<p>그리고 여기 있습니다: 출력 튜플의 첫 번째 위치에 메타데이터 map(<code>[id:patientA, replicate:1, type:normal]</code>)이 있고, 그 뒤에 의도한 대로 페어드 파일의 튜플이 있습니다.</p>
-<p>물론 이것은 특정 파일 쌍만 선택하고 처리합니다.
-여러 쌍을 처리하는 것을 실험하고 싶다면 입력 패턴에 와일드카드를 추가하고 어떤 일이 발생하는지 확인해 볼 수 있습니다.
-예를 들어 <code>data/patientA_rep1_*_R{1,2}_001.fastq.gz</code>를 사용해 보십시오.</p>
-<h3 id="_13">핵심 정리<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>And there it is: we have the metadata map (<code>[id:patientA, replicate:1, type:normal]</code>) in the first position of the output tuple, followed by the tuple of paired files, as intended.</p>
+<p>Of course, this will only pick up and process that specific pair of files.
+If you want to experiment with processing multiple pairs, you can try adding wildcards into the input pattern and see what happens.
+Foe example, try using <code>data/patientA_rep1_*_R{1,2}_001.fastq.gz</code></p>
+<h3 id="takeaway_4">Takeaway<a class="headerlink" href="#takeaway_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://www.nextflow.io/docs/latest/reference/channel.html#fromfilepairs"><code>channel.fromFilePairs()</code>는 관련 파일을 자동으로 찾아 페어링합니다</a></li>
-<li>이것은 파이프라인에서 페어드 엔드 리드 처리를 단순화합니다</li>
-<li>페어드 파일은 <code>[id, [file1, file2]]</code> 튜플로 그룹화될 수 있습니다</li>
-<li>메타데이터 추출은 개별 파일이 아닌 페어드 파일 ID에서 수행할 수 있습니다</li>
+<li><a href="https://www.nextflow.io/docs/latest/reference/channel.html#fromfilepairs"><code>channel.fromFilePairs()</code> automatically finds and pairs related files</a></li>
+<li>This simplifies handling paired-end reads in your pipeline</li>
+<li>Paired files can be grouped as <code>[id, [file1, file2]]</code> tuples</li>
+<li>Metadata extraction can be done from the paired file ID rather than individual files</li>
 </ul>
 <hr />
-<h2 id="6-process">6. process에서 파일 작업 사용<a class="headerlink" href="#6-process" title="Permanent link">&para;</a></h2>
-<p>이제 이 모든 것을 간단한 process에 통합하여 Nextflow process 내에서 파일 작업을 사용하는 방법을 강화해 봅시다.</p>
-<p>메타데이터 튜플과 입력 파일 쌍을 받아 이를 분석하는 <code>ANALYZE_READS</code>라는 미리 작성된 process 모듈을 제공합니다.
-이것이 시퀀스 정렬이나 변이 호출 또는 이 데이터 타입에 적합한 다른 단계를 수행한다고 상상할 수 있습니다.</p>
-<p>시작해 봅시다.</p>
-<h3 id="61-process">6.1. process 가져오기 및 코드 검토<a class="headerlink" href="#61-process" title="Permanent link">&para;</a></h3>
-<p>워크플로우에서 이 process를 사용하려면 workflow 블록 앞에 모듈 include 문을 추가하기만 하면 됩니다.</p>
-<p>워크플로우를 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">수정 후</label><label for="__tabbed_18_2">수정 전</label></div>
+<h2 id="6-using-file-operations-in-processes">6. Using file operations in processes<a class="headerlink" href="#6-using-file-operations-in-processes" title="Permanent link">&para;</a></h2>
+<p>Now let's put all this together in a simple process to reinforce how to use file operations inside a Nextflow process.</p>
+<p>We provide you with a pre-written process module called <code>ANALYZE_READS</code> that takes a tuple of metadata and a pair of input files and analyzes them.
+We could imagine this is doing sequence alignment, or variant calling or any other step that makes sense for this data type.</p>
+<p>Let's get started.</p>
+<h3 id="61-import-the-process-and-examine-the-code">6.1. Import the process and examine the code<a class="headerlink" href="#61-import-the-process-and-examine-the-code" title="Permanent link">&para;</a></h3>
+<p>To use this process in the workflow, we just need to add a module include statement before the workflow block.</p>
+<p>Make the following edit to the workflow:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">After</label><label for="__tabbed_18_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-85-1">1</a></span>
@@ -6209,7 +6523,7 @@ process를 변경하지 않고 여전히 <code>COUNT_LINES</code>를 동일한 �
 </div>
 </div>
 </div>
-<p>모듈 파일을 열어 코드를 검토할 수 있습니다:</p>
+<p>You can open the module file to examine its code:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/analyze_reads.nf - process example</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-87-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-87-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-87-3"> 3</a></span>
@@ -6260,28 +6574,28 @@ process를 변경하지 않고 여전히 <code>COUNT_LINES</code>를 동일한 �
 </code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code>tag</code> 및 <code>publishDir</code> 지시문은 문자열 보간(<code>"${...}"</code>) 대신 클로저 구문(<code>{ ... }</code>)을 사용합니다.
-이것은 이러한 지시문이 런타임까지 사용할 수 없는 입력 변수(<code>meta</code>)를 참조하기 때문입니다.
-클로저 구문은 process가 실제로 실행될 때까지 평가를 연기합니다.</p>
+<p>The <code>tag</code> and <code>publishDir</code> directives use closure syntax (<code>{ ... }</code>) instead of string interpolation (<code>"${...}"</code>).
+This is because these directives reference input variables (<code>meta</code>) that aren't available until runtime.
+The closure syntax defers evaluation until the process actually runs.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>관례에 따라 메타데이터 map을 <code>meta</code>라고 부릅니다.
-meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta maps</a> 사이드 퀘스트를 참조하십시오.</p>
+<p>We are calling our metadata map <code>meta</code> by convention.
+For a deeper dive into meta maps, see the <a href="../metadata/">Metadata and meta maps</a> side quest.</p>
 </div>
-<h3 id="62-process">6.2. 워크플로우에서 process 호출<a class="headerlink" href="#62-process" title="Permanent link">&para;</a></h3>
-<p>이제 process를 워크플로우에서 사용할 수 있으므로, 실행하기 위해 <code>ANALYZE_READS</code> process에 대한 호출을 추가할 수 있습니다.</p>
-<p>예제 데이터에서 실행하려면 두 가지 작업을 수행해야 합니다:</p>
+<h3 id="62-call-the-process-in-the-workflow">6.2. Call the process in the workflow<a class="headerlink" href="#62-call-the-process-in-the-workflow" title="Permanent link">&para;</a></h3>
+<p>Now that the process is available to the workflow, we can add a call to the <code>ANALYZE_READS</code> process to run it.</p>
+<p>To run it on our example data, we'll need to do two things:</p>
 <ol>
-<li>재매핑된 채널에 이름 지정</li>
-<li>process 호출 추가</li>
+<li>Give a name to the remapped channel</li>
+<li>Add a call to the process</li>
 </ol>
-<h4 id="621">6.2.1. 재매핑된 입력 채널 이름 지정<a class="headerlink" href="#621" title="Permanent link">&para;</a></h4>
-<p>이전에는 입력 채널에 직접 매핑 조작을 적용했습니다.
-재매핑된 내용을 <code>ANALYZE_READS</code> process에 제공하기 위해(그리고 명확하고 읽기 쉬운 방식으로 수행하기 위해) <code>ch_samples</code>라는 새 채널을 생성하려고 합니다.</p>
-<p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#set"><code>set</code></a> 연산자를 사용하여 이를 수행할 수 있습니다.</p>
-<p>메인 워크플로우에서 <code>.view()</code> 연산자를 <code>.set { ch_samples }</code>로 바꾸고, 이름으로 채널을 참조할 수 있는지 테스트하는 줄을 추가하십시오.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">수정 후</label><label for="__tabbed_19_2">수정 전</label></div>
+<h4 id="621-name-the-remapped-input-channel">6.2.1. Name the remapped input channel<a class="headerlink" href="#621-name-the-remapped-input-channel" title="Permanent link">&para;</a></h4>
+<p>We previously applied the mapping manipulations directly to the input channel.
+In order to feed the remapped contents to the <code>ANALYZE_READS</code> process (and do so in a way that is clear and easy to read) we want to create a new channel named <code>ch_samples</code>.</p>
+<p>We can do that using the <a href="https://www.nextflow.io/docs/latest/reference/operator.html#set"><code>set</code></a> operator.</p>
+<p>In the main workflow, replace the <code>.view()</code> operator with <code>.set { ch_samples }</code>, and add a line testing that we can refer to the channel by name.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">After</label><label for="__tabbed_19_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-88-7"> 7</a></span>
@@ -6353,11 +6667,11 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </div>
 </div>
 </div>
-<p>이것을 실행해 봅시다:</p>
+<p>Let's run this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-90-1" name="__codelineno-90-1" href="#__codelineno-90-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-91-2" name="__codelineno-91-2" href="#__codelineno-91-2"></a>
 <a id="__codelineno-91-3" name="__codelineno-91-3" href="#__codelineno-91-3"></a><span class="go">Launching `main.nf` [goofy_kirch] DSL2 - revision: 3313283e42</span>
@@ -6365,11 +6679,11 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-91-5" name="__codelineno-91-5" href="#__codelineno-91-5"></a><span class="go">[[id:patientA, replicate:1, type:normal], [/workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R1_001.fastq.gz, /workspaces/training/side-quests/working_with_files/data/patientA_rep1_normal_R2_001.fastq.gz]]</span>
 </code></pre></div>
 </details>
-<p>이것은 이제 이름으로 채널을 참조할 수 있음을 확인합니다.</p>
-<h4 id="622-process">6.2.2. 데이터에서 process 호출<a class="headerlink" href="#622-process" title="Permanent link">&para;</a></h4>
-<p>이제 실제로 <code>ch_samples</code> 채널에서 <code>ANALYZE_READS</code> process를 호출해 봅시다.</p>
-<p>메인 워크플로우에서 다음 코드 변경을 수행하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">수정 후</label><label for="__tabbed_20_2">수정 전</label></div>
+<p>This confirms we can now refer to the channel by name.</p>
+<h4 id="622-call-the-process-on-the-data">6.2.2. Call the process on the data<a class="headerlink" href="#622-call-the-process-on-the-data" title="Permanent link">&para;</a></h4>
+<p>Now let's actually call the <code>ANALYZE_READS</code> process on the <code>ch_samples</code> channel.</p>
+<p>In the main workflow, make the following code changes:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">After</label><label for="__tabbed_20_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-23">23</a></span>
@@ -6385,11 +6699,11 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </div>
 </div>
 </div>
-<p>이것을 실행해 봅시다:</p>
+<p>Let's run this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a>
 <a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a><span class="go">Launching `./main.nf` [shrivelled_cori] DSL2 - revision: b546a31769</span>
@@ -6398,9 +6712,9 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-95-6" name="__codelineno-95-6" href="#__codelineno-95-6"></a><span class="go">[b5/110360] process &gt; ANALYZE_READS (patientA) [100%] 1 of 1 ✔</span>
 </code></pre></div>
 </details>
-<p>이 process는 출력을 <code>results</code> 디렉토리에 게시하도록 설정되어 있으므로 그곳을 살펴보십시오.</p>
+<p>This process is set up to publish its outputs to a <code>results</code> directory, so have a look in there.</p>
 <details class="abstract">
-<summary>디렉토리 및 파일 내용</summary>
+<summary>Directory and file contents</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="go">results</span>
 <a id="__codelineno-96-2" name="__codelineno-96-2" href="#__codelineno-96-2"></a><span class="go">└── patientA</span>
 <a id="__codelineno-96-3" name="__codelineno-96-3" href="#__codelineno-96-3"></a><span class="go">    └── patientA_stats.txt</span>
@@ -6414,16 +6728,16 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-97-7" name="__codelineno-97-7" href="#__codelineno-97-7"></a>Read 2 size: 10 reads
 </code></pre></div>
 </details>
-<p>process는 입력을 받아 설계된 대로 환자 메타데이터를 포함하는 새 파일을 생성했습니다.
-훌륭합니다!</p>
-<h3 id="63">6.3. 더 많은 환자 포함<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
-<p>물론 이것은 단일 환자의 단일 파일 쌍만 처리하고 있는데, 이것은 Nextflow로 얻고자 하는 높은 처리량과는 거리가 멉니다.
-아마도 한 번에 훨씬 더 많은 데이터를 처리하고 싶을 것입니다.</p>
-<p><code>channel.fromPath()</code>는 <em>glob</em>을 입력으로 받아들이므로 패턴과 일치하는 파일을 몇 개든 받아들일 수 있다는 것을 기억하십시오.
-따라서 모든 환자를 포함하고 싶다면 더 많은 환자를 포함하도록 입력 문자열을 수정하기만 하면 됩니다. 이전에 지나가면서 언급한 것처럼요.</p>
-<p>가능한 한 욕심나게 하고 싶다고 가정해 봅시다.
-워크플로우를 다음과 같이 편집하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">수정 후</label><label for="__tabbed_21_2">수정 전</label></div>
+<p>The process took our inputs and created a new file containing the patient metadata, as designed.
+Splendid!</p>
+<h3 id="63-include-many-more-patients">6.3. Include many more patients<a class="headerlink" href="#63-include-many-more-patients" title="Permanent link">&para;</a></h3>
+<p>Of course, this is just processing a single pair of files for a single patient, which is not exactly the kind of high throughput you're hoping to get with Nextflow.
+You'll probably want to process a lot more data at a time.</p>
+<p>Remember <code>channel.fromPath()</code> accepts a <em>glob</em> as input, which means it can accept any number of files that match the pattern.
+Therefore if we want to include all the patients, we can simply modify the input string to include more patients, as noted in passing earlier.</p>
+<p>Let's pretend we want to be as greedy as possible.
+Make the following edits to the workflow:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">After</label><label for="__tabbed_21_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-98-7">7</a></span>
@@ -6439,11 +6753,11 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </div>
 </div>
 </div>
-<p>파이프라인을 다시 실행하십시오:</p>
+<p>Run the pipeline again:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-100-1" name="__codelineno-100-1" href="#__codelineno-100-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-101-2" name="__codelineno-101-2" href="#__codelineno-101-2"></a>
 <a id="__codelineno-101-3" name="__codelineno-101-3" href="#__codelineno-101-3"></a><span class="go">Launching `./main.nf` [big_stonebraker] DSL2 - revision: f7f9b8a76c</span>
@@ -6452,9 +6766,9 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-101-6" name="__codelineno-101-6" href="#__codelineno-101-6"></a><span class="go">[d5/441891] process &gt; ANALYZE_READS (patientC) [100%] 8 of 8 ✔</span>
 </code></pre></div>
 </details>
-<p>결과 디렉토리에는 이제 사용 가능한 모든 데이터에 대한 결과가 포함되어야 합니다.</p>
+<p>The results directory should now contain results for all the available data.</p>
 <details class="abstract">
-<summary>디렉토리 내용</summary>
+<summary>Directory contents</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-102-1" name="__codelineno-102-1" href="#__codelineno-102-1"></a><span class="go">results</span>
 <a id="__codelineno-102-2" name="__codelineno-102-2" href="#__codelineno-102-2"></a><span class="go">├── patientA</span>
 <a id="__codelineno-102-3" name="__codelineno-102-3" href="#__codelineno-102-3"></a><span class="go">│   └── patientA_stats.txt</span>
@@ -6464,14 +6778,14 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-102-7" name="__codelineno-102-7" href="#__codelineno-102-7"></a><span class="go">    └── patientC_stats.txt</span>
 </code></pre></div>
 </details>
-<p>성공! 모든 환자를 한 번에 분석했습니다! 맞나요?</p>
-<p>아닐 수도 있습니다.
-더 자세히 살펴보면 문제가 있습니다: patientA에 대한 복제가 두 개 있지만 출력 파일은 하나뿐입니다!
-매번 출력 파일을 덮어쓰고 있습니다.</p>
-<h3 id="64">6.4. 게시된 파일을 고유하게 만들기<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
-<p>환자 메타데이터에 접근할 수 있으므로, 디렉토리 구조나 파일 이름 자체에 구분 메타데이터를 포함하여 게시된 파일을 고유하게 만들 수 있습니다.</p>
-<p>워크플로우를 다음과 같이 변경하십시오:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">수정 후</label><label for="__tabbed_22_2">수정 전</label></div>
+<p>Success! We have analyzed all the patients in one go! Right?</p>
+<p>Maybe not.
+If you look more closely, we have a problem: we have two replicates for patientA, but only one output file!
+We are overwriting the output file each time.</p>
+<h3 id="64-make-the-published-files-unique">6.4. Make the published files unique<a class="headerlink" href="#64-make-the-published-files-unique" title="Permanent link">&para;</a></h3>
+<p>Since we have access to the patient metadata, we can use it to make the published files unique by including differentiating metadata, either in the directory structure or in the filenames themselves.</p>
+<p>Make the following change to the workflow:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">After</label><label for="__tabbed_22_2">Before</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/analyze_reads.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-103-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-103-6" name="__codelineno-103-6"></a><span class="w">    </span><span class="n">publishDir</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;results/${meta.type}/${meta.id}/${meta.replicate}&quot;</span><span class="w"> </span><span class="o">},</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
@@ -6483,13 +6797,13 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </div>
 </div>
 </div>
-<p>여기서는 샘플 타입과 복제를 고려하기 위해 추가 디렉토리 레벨을 사용하는 옵션을 보여주지만, 파일 이름 레벨에서 수행하는 것을 실험해 볼 수도 있습니다.</p>
-<p>이제 파이프라인을 한 번 더 실행하되, 먼저 results 디렉토리를 제거하여 깨끗한 작업 공간을 확보하십시오:</p>
+<p>Here we show the option of using additional directory levels to account for sample types and replicates, but you could experiment with doing it at the filename level as well.</p>
+<p>Now run the pipeline one more time, but be sure to remove the results directory first to give yourself a clean workspace:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-105-1" name="__codelineno-105-1" href="#__codelineno-105-1"></a>rm<span class="w"> </span>-r<span class="w"> </span>results
 <a id="__codelineno-105-2" name="__codelineno-105-2" href="#__codelineno-105-2"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
-<summary>명령 출력</summary>
+<summary>Command output</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
 <a id="__codelineno-106-2" name="__codelineno-106-2" href="#__codelineno-106-2"></a>
 <a id="__codelineno-106-3" name="__codelineno-106-3" href="#__codelineno-106-3"></a><span class="go">Launching `./main.nf` [insane_swartz] DSL2 - revision: fff18abe6d</span>
@@ -6498,9 +6812,9 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-106-6" name="__codelineno-106-6" href="#__codelineno-106-6"></a><span class="go">[e3/449081] process &gt; ANALYZE_READS (patientC) [100%] 8 of 8 ✔</span>
 </code></pre></div>
 </details>
-<p>이제 결과 디렉토리를 확인하십시오:</p>
+<p>Check the results directory now:</p>
 <details class="abstract">
-<summary>디렉토리 내용</summary>
+<summary>Directory contents</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-107-1" name="__codelineno-107-1" href="#__codelineno-107-1"></a><span class="go">results/</span>
 <a id="__codelineno-107-2" name="__codelineno-107-2" href="#__codelineno-107-2"></a><span class="go">├── normal</span>
 <a id="__codelineno-107-3" name="__codelineno-107-3" href="#__codelineno-107-3"></a><span class="go">│   ├── patientA</span>
@@ -6528,39 +6842,39 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-107-25" name="__codelineno-107-25" href="#__codelineno-107-25"></a><span class="go">            └── patientC_stats.txt</span>
 </code></pre></div>
 </details>
-<p>그리고 여기 있습니다, 모든 메타데이터가 깔끔하게 구성되어 있습니다. 성공입니다!</p>
-<p>이와 같이 map에 메타데이터를 로드하면 더 많은 작업을 수행할 수 있습니다:</p>
+<p>And there it is, all our metadata, neatly organized. That's success!</p>
+<p>There's a lot more you can do once you have your metadata loaded into a map like this:</p>
 <ol>
-<li>환자 속성을 기반으로 구성된 출력 디렉토리 생성</li>
-<li>환자 속성을 기반으로 process에서 결정</li>
-<li>메타데이터 값을 기반으로 데이터 분할, 조인 및 재결합</li>
+<li>Create organized output directories based on patient attributes</li>
+<li>Make decisions in processes based on patient properties</li>
+<li>Split, join, and recombine data based on metadata values</li>
 </ol>
-<p>메타데이터를 명시적으로 유지하고 데이터에 첨부하는(파일 이름에 인코딩하는 대신) 이 패턴은 강력하고 유지 관리 가능한 분석 워크플로우를 구축할 수 있게 하는 Nextflow의 핵심 모범 사례입니다.
-이에 대한 자세한 내용은 <a href="../metadata/">Metadata and meta maps</a> 사이드 퀘스트에서 학습할 수 있습니다.</p>
-<h3 id="_14">핵심 정리<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<p>This pattern of keeping metadata explicit and attached to the data (rather than encoded in filenames) is a core best practice in Nextflow that enables building robust, maintainable analysis workflows.
+You can learn more about this in the <a href="../metadata/">Metadata and meta maps</a> side quest.</p>
+<h3 id="takeaway_5">Takeaway<a class="headerlink" href="#takeaway_5" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>publishDir</code> 지시문은 메타데이터 값을 기반으로 출력을 구성할 수 있습니다</li>
-<li>튜플의 메타데이터는 결과의 구조화된 구성을 가능하게 합니다</li>
-<li>이 접근 방식은 명확한 데이터 출처를 가진 유지 관리 가능한 워크플로우를 생성합니다</li>
-<li>Process는 메타데이터와 파일의 튜플을 입력으로 받을 수 있습니다</li>
-<li><code>tag</code> 지시문은 실행 로그에 process 식별을 제공합니다</li>
-<li>워크플로우 구조는 채널 생성과 process 실행을 분리합니다</li>
+<li>The <code>publishDir</code> directive can organize outputs based on metadata values</li>
+<li>Metadata in tuples enables structured organization of results</li>
+<li>This approach creates maintainable workflows with clear data provenance</li>
+<li>Processes can take tuples of metadata and files as input</li>
+<li>The <code>tag</code> directive provides process identification in execution logs</li>
+<li>Workflow structure separates channel creation from process execution</li>
 </ul>
 <hr />
-<h2 id="_15">요약<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h2>
-<p>이 사이드 퀘스트에서는 기본 작업부터 파일 컬렉션을 처리하기 위한 고급 기술까지 Nextflow에서 파일을 작업하는 방법을 학습했습니다.</p>
-<p>이러한 기술을 자신의 작업에 적용하면 특히 복잡한 명명 규칙을 가진 대량의 파일로 작업할 때 더 효율적이고 유지 관리 가능한 워크플로우를 구축할 수 있습니다.</p>
-<h3 id="_16">주요 패턴<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>In this side quest, you've learned how to work with files in Nextflow, from basic operations to more advanced techniques for handling collections of files.</p>
+<p>Applying these techniques in your own work will enable you to build more efficient and maintainable workflows, especially when working with large numbers of files with complex naming conventions.</p>
+<h3 id="key-patterns">Key patterns<a class="headerlink" href="#key-patterns" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p><strong>기본 파일 작업:</strong> <code>file()</code>로 Path 객체를 생성하고 이름, 확장자, 상위 디렉토리와 같은 파일 속성에 접근하여 문자열과 Path 객체의 차이를 학습했습니다.</p>
+<p><strong>Basic File Operations:</strong> We created Path objects with <code>file()</code> and accessed file attributes like name, extension, and parent directory, learning the difference between strings and Path objects.</p>
 <ul>
-<li><code>file()</code>로 Path 객체 생성</li>
+<li>Create a Path object with <code>file()</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-108-1" name="__codelineno-108-1" href="#__codelineno-108-1"></a><span class="n">myFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;path/to/file.txt&#39;</span><span class="o">)</span>
 </code></pre></div>
 <ul>
-<li>파일 속성 가져오기</li>
+<li>Get file attributes</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-109-1" name="__codelineno-109-1" href="#__codelineno-109-1"></a><span class="n">println</span><span class="w"> </span><span class="n">myFile</span><span class="o">.</span><span class="na">name</span><span class="w">       </span><span class="c1">// file.txt</span>
 <a id="__codelineno-109-2" name="__codelineno-109-2" href="#__codelineno-109-2"></a><span class="n">println</span><span class="w"> </span><span class="n">myFile</span><span class="o">.</span><span class="na">baseName</span><span class="w">   </span><span class="c1">// file</span>
@@ -6569,9 +6883,9 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </code></pre></div>
 </li>
 <li>
-<p><strong>원격 파일 사용</strong>: URI를 사용하여 로컬 및 원격 파일 간을 투명하게 전환하는 방법을 학습하여, 워크플로우 로직을 변경하지 않고 다양한 소스에서 파일을 처리하는 Nextflow의 능력을 시연했습니다.</p>
+<p><strong>Using Remote Files</strong>: We learned how to transparently switch between local and remote files using URIs, demonstrating Nextflow's ability to handle files from various sources without changing workflow logic.</p>
 <ul>
-<li>로컬 파일</li>
+<li>Local file</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-110-1" name="__codelineno-110-1" href="#__codelineno-110-1"></a><span class="n">myFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">(</span><span class="s1">&#39;path/to/file.txt&#39;</span><span class="o">)</span>
 </code></pre></div>
@@ -6602,14 +6916,14 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </code></pre></div>
 </li>
 <li>
-<p><strong><code>fromPath()</code> 채널 팩토리를 사용하여 파일 로드:</strong> <code>channel.fromPath()</code>로 파일 패턴에서 채널을 생성하고 객체 타입을 포함한 파일 속성을 확인했습니다.</p>
+<p><strong>Loading files using the <code>fromPath()</code> channel factory:</strong> We created channels from file patterns with <code>channel.fromPath()</code> and viewed their file attributes, including object types.</p>
 <ul>
-<li>파일 패턴에서 채널 생성</li>
+<li>Create a channel from a file pattern</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-116-1" name="__codelineno-116-1" href="#__codelineno-116-1"></a><span class="w"> </span><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromPath</span><span class="o">(</span><span class="s1">&#39;data/*.fastq.gz&#39;</span><span class="o">)</span>
 </code></pre></div>
 <ul>
-<li>파일 속성 가져오기</li>
+<li>Get file attributes</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a><span class="w"> </span><span class="n">ch_files</span><span class="o">.</span><span class="na">view</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">myFile</span><span class="w"> </span><span class="o">-&gt;</span>
 <a id="__codelineno-117-2" name="__codelineno-117-2" href="#__codelineno-117-2"></a><span class="w">    </span><span class="n">println</span><span class="w"> </span><span class="s2">&quot;File object class: ${myFile.class}&quot;</span>
@@ -6621,7 +6935,7 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </code></pre></div>
 </li>
 <li>
-<p><strong>파일 이름에서 환자 메타데이터 추출:</strong> <code>tokenize()</code> 및 <code>replace()</code>를 사용하여 파일 이름에서 메타데이터를 추출하고 구조화하여 구성된 map으로 변환했습니다.</p>
+<p><strong>Extracting Patient Metadata from Filenames:</strong> We used <code>tokenize()</code> and <code>replace()</code> to extract and structure metadata from filenames, converting them to organized maps.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a><span class="kt">def</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="na">name</span><span class="o">.</span><span class="na">tokenize</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">)</span>
 <a id="__codelineno-118-2" name="__codelineno-118-2" href="#__codelineno-118-2"></a><span class="kt">def</span><span class="w"> </span><span class="n">patientId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
 <a id="__codelineno-118-3" name="__codelineno-118-3" href="#__codelineno-118-3"></a><span class="kt">def</span><span class="w"> </span><span class="n">replicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="o">[</span><span class="mi">1</span><span class="o">].</span><span class="na">replace</span><span class="o">(</span><span class="s1">&#39;rep&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">)</span>
@@ -6630,14 +6944,14 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 </code></pre></div>
 </li>
 <li>
-<p><strong>channel.fromFilePairs로 단순화:</strong> <code>channel.fromFilePairs()</code>를 사용하여 관련 파일을 자동으로 페어링하고 페어드 파일 ID에서 메타데이터를 추출했습니다.</p>
+<p><strong>Simplifying with channel.fromFilePairs:</strong> We used <code>channel.fromFilePairs()</code> to automatically pair related files and extract metadata from paired file IDs.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-119-1" name="__codelineno-119-1" href="#__codelineno-119-1"></a><span class="n">ch_pairs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromFilePairs</span><span class="o">(</span><span class="s1">&#39;data/*_R{1,2}_001.fastq.gz&#39;</span><span class="o">)</span>
 </code></pre></div>
 </li>
 <li>
-<p><strong>Process에서 파일 작업 사용:</strong> 파일 작업을 적절한 입력 처리로 Nextflow process에 통합하고, <code>publishDir</code>을 사용하여 메타데이터를 기반으로 출력을 구성했습니다.</p>
+<p><strong>Using File Operations in Processes:</strong> We integrated file operations into Nextflow processes with proper input handling, using <code>publishDir</code> to organize outputs based on metadata.</p>
 <ul>
-<li>process 입력과 meta map 연결</li>
+<li>Associate a meta map with the process inputs</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromFilePairs</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R{1,2}_001.fastq.gz&#39;</span><span class="o">)</span>
 <a id="__codelineno-120-2" name="__codelineno-120-2" href="#__codelineno-120-2"></a><span class="n">ch_files</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">id</span><span class="o">,</span><span class="w">  </span><span class="n">files</span><span class="w"> </span><span class="o">-&gt;</span>
@@ -6656,21 +6970,21 @@ meta map에 대한 더 깊은 내용은 <a href="../metadata/">Metadata and meta
 <a id="__codelineno-120-15" name="__codelineno-120-15" href="#__codelineno-120-15"></a><span class="n">ANALYZE_READS</span><span class="o">(</span><span class="n">ch_samples</span><span class="o">)</span>
 </code></pre></div>
 <ul>
-<li>메타데이터를 기반으로 출력 구성</li>
+<li>Organize outputs based on metadata</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a><span class="n">publishDir</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;results/${meta.type}/${meta.id}/${meta.replicate}&quot;</span><span class="w"> </span><span class="o">},</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
 </code></pre></div>
 </li>
 </ol>
-<h3 id="_17">추가 자료<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<h3 id="additional-resources">Additional resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://www.nextflow.io/docs/latest/working-with-files.html">Nextflow Documentation: Working with Files</a></li>
 <li><a href="https://www.nextflow.io/docs/latest/reference/channel.html#frompath">channel.fromPath</a></li>
 <li><a href="https://www.nextflow.io/docs/latest/reference/channel.html#fromfilepairs">channel.fromFilePairs</a></li>
 </ul>
 <hr />
-<h2 id="_18">다음 단계<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
-<p><a href="../">사이드 퀘스트 메뉴</a>로 돌아가거나 페이지 하단 오른쪽의 버튼을 클릭하여 목록의 다음 주제로 이동하십시오.</p><style type="text/css">.quiz {
+<h2 id="whats-next">What's next?<a class="headerlink" href="#whats-next" title="Permanent link">&para;</a></h2>
+<p>Return to the <a href="../">menu of Side Quests</a> or click the button in the bottom right of the page to move on to the next topic in the list.</p><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -8368,7 +8682,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
           
-          <a href="../metadata/" class="md-footer__link md-footer__link--prev" aria-label="이전: 메타데이터와 메타 맵">
+          <a href="../workflows_of_workflows/" class="md-footer__link md-footer__link--prev" aria-label="이전: Workflows of Workflows">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -8378,20 +8692,20 @@ window.mkdocsQuizConfig = {
                 이전
               </span>
               <div class="md-ellipsis">
-                메타데이터와 메타 맵
+                Workflows of Workflows
               </div>
             </div>
           </a>
         
         
           
-          <a href="../splitting_and_grouping/" class="md-footer__link md-footer__link--next" aria-label="다음: 데이터 분할 및 그룹화">
+          <a href="../debugging/" class="md-footer__link md-footer__link--next" aria-label="다음: Debugging Workflows">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 다음
               </span>
               <div class="md-ellipsis">
-                데이터 분할 및 그룹화
+                Debugging Workflows
               </div>
             </div>
             <div class="md-footer__button md-icon">
