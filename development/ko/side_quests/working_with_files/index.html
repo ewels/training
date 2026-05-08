@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://training.nextflow.io/ko/side_quests/working_with_files/">
       
       
-        <link rel="prev" href="../workflows_of_workflows/">
+        <link rel="prev" href="../essential_scripting_patterns/">
       
       
-        <link rel="next" href="../debugging/">
+        <link rel="next" href="../metadata/">
       
       
         
@@ -163,6 +163,64 @@
       
     </div>
     <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
       
     </div>
     
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -2317,7 +2348,7 @@
   <span class="md-ellipsis">
     
   
-    오리엔테이션
+    시작하기
   
 
     
@@ -2373,119 +2404,7 @@
   <span class="md-ellipsis">
     
   
-    필수 Nextflow 스크립팅 패턴
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../metadata/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    메타데이터와 메타 맵
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../splitting_and_grouping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    분할 및 그룹화
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nf_test/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    nf-test를 활용한 테스트
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../workflows_of_workflows/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    워크플로우의 워크플로우
+    필수 스크립팅 패턴
   
 
     
@@ -3345,6 +3264,90 @@
   
   
     <li class="md-nav__item">
+      <a href="../metadata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    메타데이터와 메타 맵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../splitting_and_grouping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    분할 및 그룹화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nf_test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    nf-test를 활용한 테스트
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../debugging/" class="md-nav__link">
         
   
@@ -3352,7 +3355,35 @@
   <span class="md-ellipsis">
     
   
-    워크플로우 디버깅
+    워크플로우 문제 해결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../workflows_of_workflows/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    워크플로우의 워크플로우
   
 
     
@@ -4893,43 +4924,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -4981,12 +4975,10 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <li><a href="../../hello_nextflow/">Hello Nextflow</a> 튜토리얼 또는 동급의 입문 과정 완료</li>
 <li>기본적인 Nextflow 개념과 메커니즘(프로세스, 채널, 연산자)에 익숙할 것</li>
 </ul>
-<!-- I removed the suggestion to do the metamaps SQ first because that works more naturally after -->
-
 <hr />
 <h2 id="0">0. 시작하기<a class="headerlink" href="#0" title="Permanent link">&para;</a></h2>
 <h4 id="_4">교육 코드스페이스 열기<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
-<p>아직 열지 않았다면, <a href="../envsetup/index.md">환경 설정</a>에 설명된 대로 교육 환경을 열어 주세요.</p>
+<p>아직 열지 않았다면, <a href="../../envsetup/">환경 설정</a>에 설명된 대로 교육 환경을 열어 주세요.</p>
 <p><a href="https://codespaces.new/nextflow-io/training?quickstart=1&amp;ref=master"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
 <h4 id="_5">프로젝트 디렉토리로 이동<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <p>이 튜토리얼의 파일이 있는 디렉토리로 이동합니다.</p>
@@ -4995,6 +4987,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <p>VSCode에서 이 디렉토리를 포커스로 설정할 수 있습니다:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>code<span class="w"> </span>.
 </code></pre></div>
+<p>편집기가 프로젝트 디렉토리를 포커스로 열립니다.</p>
 <h4 id="_6">자료 검토<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p><code>main.nf</code>라는 간단한 워크플로우 파일, 두 개의 모듈 파일이 있는 <code>modules</code> 디렉토리, 그리고 예제 데이터 파일이 있는 <code>data</code> 디렉토리를 확인할 수 있습니다.</p>
 <details class="abstract">
@@ -5051,23 +5044,39 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <h2 id="1">1. 기본 파일 작업<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <h3 id="11-class">1.1. <code>.class</code>로 객체 유형 확인<a class="headerlink" href="#11-class" title="Permanent link">&para;</a></h3>
 <p>워크플로우 파일 <code>main.nf</code>를 살펴봅니다:</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span>
-<span class="normal"><a href="#__codelineno-3-6">6</a></span>
-<span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#!/usr/bin/env nextflow</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#!/usr/bin/env nextflow</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="nl">main:</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="c1">// 문자열 경로에서 Path 객체 생성</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">myFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;data/patientA_rep1_normal_R1_001.fastq.gz&#39;</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="n">println</span><span class="w"> </span><span class="s2">&quot;${myFile} is of class ${myFile.class}&quot;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="o">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="nl">publish:</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="n">analysis_results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">empty</span><span class="o">()</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="o">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="n">output</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span><span class="n">analysis_results</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <p>이것은 워크플로우에서 단일 파일 경로를 참조한 다음, 해당 클래스와 함께 콘솔에 출력하는 간단한 미니 워크플로우(프로세스 없음)입니다.</p>
 <details class="info">
@@ -5080,11 +5089,11 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="go">Launching `main.nf` [romantic_chandrasekhar] DSL2 - revision: 5a4a89bc3a</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">data/patientA_rep1_normal_R1_001.fastq.gz is of class java.lang.String</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="go">data/patientA_rep1_normal_R1_001.fastq.gz is of class class java.lang.String</span>
 </code></pre></div>
 </details>
 <p>보시다시피, Nextflow는 우리가 작성한 그대로 문자열 경로를 출력했습니다.</p>
@@ -5124,7 +5133,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="go">Launching `main.nf` [kickass_coulomb] DSL2 - revision: 5af44b1b59</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
@@ -5145,6 +5154,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </ul>
 <p>이렇게 생각해 보세요: 경로 문자열은 종이에 주소를 적는 것과 같고, Path 객체는 GPS 장치에 주소를 입력하여 경로를 안내받고 여정에 대한 세부 정보를 알 수 있는 것과 같습니다.</p>
 </div>
+<p>Nextflow에서 파일 작업을 올바르게 사용하려면 이 차이를 이해하는 것이 중요합니다.</p>
 <h3 id="13">1.3. 파일 속성 접근<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
 <p>이것이 왜 유용할까요? Nextflow가 <code>myFile</code>이 단순한 문자열이 아닌 Path 객체임을 이해하면, Path 객체의 다양한 속성에 접근할 수 있습니다.</p>
 <p>내장 파일 속성을 출력하도록 워크플로우를 업데이트합니다:</p>
@@ -5187,11 +5197,11 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
 <a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="go">Launching `main.nf` [ecstatic_ampere] DSL2 - revision: f3fa3dcb48</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="go">File object class: sun.nio.fs.UnixPath</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="go">File object class: class sun.nio.fs.UnixPath</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="go">File name: patientA_rep1_normal_R1_001.fastq.gz</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="go">Simple name: patientA_rep1_normal_R1_001</span>
 <a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="go">Extension: gz</span>
@@ -5242,31 +5252,28 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <span class="normal"><a href="#__codelineno-16-10">10</a></span>
 <span class="normal"><a href="#__codelineno-16-11">11</a></span>
 <span class="normal"><a href="#__codelineno-16-12">12</a></span>
-<span class="normal"><a href="#__codelineno-16-13">13</a></span>
-<span class="normal"><a href="#__codelineno-16-14">14</a></span>
-<span class="normal"><a href="#__codelineno-16-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="cp">#!/usr/bin/env nextflow</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
-<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="n">process</span><span class="w"> </span><span class="n">COUNT_LINES</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="n">debug</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5"></a>
-<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="nl">input:</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="n">input_file</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8"></a>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="nl">script:</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="s2">    set -o pipefail</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="s2">    echo &quot;Processing file: $input_file&quot;</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="s2">    gzip -dc $input_file | wc -l</span>
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="s2">    &quot;&quot;&quot;</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">process</span><span class="w"> </span><span class="n">COUNT_LINES</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="n">debug</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="nl">input:</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="n">input_file</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="nl">script:</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="s2">    set -o pipefail</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="s2">    echo &quot;Processing file: $input_file&quot;</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="s2">    gzip -dc $input_file | wc -l</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <p>보시다시피, 파일의 압축을 풀고 줄 수를 세는 간단한 스크립트입니다.</p>
 <details class="info">
 <summary><code>debug true</code>는 무엇을 하나요?</summary>
 <p>프로세스 정의의 <code>debug true</code> 지시문은 Nextflow가 스크립트의 출력(예: 줄 수 "40")을 실행 로그에 직접 출력하도록 합니다.
 이 지시문이 없으면 프로세스 실행 상태만 볼 수 있고 스크립트의 실제 출력은 볼 수 없습니다.</p>
-<p>Nextflow 프로세스 디버깅에 대한 자세한 내용은 <a href="debugging.md">Nextflow 워크플로우 디버깅</a> 사이드 퀘스트를 참조하세요.</p>
+<p>Nextflow 프로세스 디버깅에 대한 자세한 내용은 <a href="../debugging/">Nextflow 워크플로우 디버깅</a> 사이드 퀘스트를 참조하세요.</p>
 </details>
+<p>모듈을 가져오고 코드를 검토했으므로, 이제 워크플로우에서 프로세스를 실행할 수 있습니다.</p>
 <h4 id="142-count_lines">1.4.2. <code>COUNT_LINES</code> 실행 추가<a class="headerlink" href="#142-count_lines" title="Permanent link">&para;</a></h4>
 <p>프로세스를 워크플로우에서 사용할 수 있게 되었으므로, 입력 파일에 대해 <code>COUNT_LINES</code> 프로세스를 실행하는 호출을 추가할 수 있습니다.</p>
 <p>워크플로우를 다음과 같이 편집합니다:</p>
@@ -5325,7 +5332,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
 <a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="go">Launching `main.nf` [cheeky_hypatia] DSL2 - revision: 281d13c414</span>
 <a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
@@ -5420,7 +5427,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </code></pre></div>
 <details class="failure">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="go">Launching `main.nf` [friendly_goodall] DSL2 - revision: ae50609b20</span>
 <a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
@@ -5454,27 +5461,27 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">후</label><label for="__tabbed_6_2">전</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/count_lines.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/count_lines.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
 <span class="normal"><a href="#__codelineno-26-4">4</a></span>
-<span class="normal"><a href="#__codelineno-26-5">5</a></span>
-<span class="normal"><a href="#__codelineno-26-6">6</a></span>
-<span class="normal"><a href="#__codelineno-26-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="n">process</span><span class="w"> </span><span class="n">COUNT_LINES</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">    </span><span class="n">debug</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a>
-<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">    </span><span class="nl">input:</span>
-<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="hll"><span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">input_file</span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">process</span><span class="w"> </span><span class="n">COUNT_LINES</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">    </span><span class="n">debug</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">    </span><span class="nl">input:</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="hll"><span class="w">    </span><span class="n">val</span><span class="w"> </span><span class="n">input_file</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/count_lines.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/count_lines.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
 <span class="normal"><a href="#__codelineno-27-4">4</a></span>
-<span class="normal"><a href="#__codelineno-27-5">5</a></span>
-<span class="normal"><a href="#__codelineno-27-6">6</a></span>
-<span class="normal"><a href="#__codelineno-27-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="n">process</span><span class="w"> </span><span class="n">COUNT_LINES</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">    </span><span class="n">debug</span><span class="w"> </span><span class="kc">true</span>
-<a id="__codelineno-27-5" name="__codelineno-27-5"></a>
-<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">    </span><span class="nl">input:</span>
-<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="hll"><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="n">input_file</span>
+<span class="normal"><a href="#__codelineno-27-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="n">process</span><span class="w"> </span><span class="n">COUNT_LINES</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">    </span><span class="n">debug</span><span class="w"> </span><span class="kc">true</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">    </span><span class="nl">input:</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="hll"><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="n">input_file</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
@@ -5484,7 +5491,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 </code></pre></div>
 <details class="failure">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
 <a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="go">Launching `main.nf` [soggy_golick] DSL2 - revision: ae50609b20</span>
 <a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a>
@@ -5543,6 +5550,7 @@ Nextflow는 파일을 효율적으로 처리할 수 있는 강력한 도구를 �
 <p class="admonition-title">참고</p>
 <p>다음 섹션으로 진행하기 전에 두 가지 의도적인 오류를 모두 수정하세요.</p>
 </div>
+<p>두 가지 수정 사항을 모두 적용하면 워크플로우가 입력 파일을 올바르게 스테이징하고 처리합니다.</p>
 <h3 id="_9">핵심 정리<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Path 문자열 vs Path 객체: 문자열은 단순한 텍스트이고, Path 객체는 스마트한 파일 참조입니다</li>
@@ -5624,7 +5632,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
 <a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="go">Launching `main.nf` [insane_swartz] DSL2 - revision: fff18abe6d</span>
 <a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>
@@ -5724,6 +5732,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </div>
 </div>
 </div>
+<p>워크플로우가 이제 로컬 입력 파일을 사용하도록 돌아왔습니다.</p>
 <h3 id="_10">핵심 정리<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <ul>
 <li>원격 데이터는 URI(HTTP, FTP, S3, Azure, Google Cloud)를 사용하여 접근합니다</li>
@@ -5820,7 +5829,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
 <a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="go">Launching `main.nf` [grave_meucci] DSL2 - revision: b09964a583</span>
 <a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>
@@ -5883,13 +5892,13 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>
 <a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a><span class="go">Launching `main.nf` [furious_swanson] DSL2 - revision: c35c34950d</span>
 <a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>
 <a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a><span class="go">executor &gt;  local (1)</span>
 <a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="go">[9d/6701a6] COUNT_LINES (1) [100%] 1 of 1 ✔</span>
-<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="go">File object class: sun.nio.fs.UnixPath</span>
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a><span class="go">File object class: class sun.nio.fs.UnixPath</span>
 <a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a><span class="go">File name: patientA_rep1_normal_R1_001.fastq.gz</span>
 <a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a><span class="go">Simple name: patientA_rep1_normal_R1_001</span>
 <a id="__codelineno-48-10" name="__codelineno-48-10" href="#__codelineno-48-10"></a><span class="go">Extension: gz</span>
@@ -5938,7 +5947,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>
 <a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="go">Launching `main.nf` [boring_sammet] DSL2 - revision: d2aa789c9a</span>
 <a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>
@@ -6042,7 +6051,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>
 <a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a><span class="go">Launching `main.nf` [suspicious_mahavira] DSL2 - revision: ae8edc4e48</span>
 <a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>
@@ -6097,7 +6106,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>
 <a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="go">Launching `main.nf` [gigantic_gauss] DSL2 - revision: a39baabb57</span>
 <a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a>
@@ -6194,7 +6203,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>
 <a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a><span class="go">Launching `main.nf` [infallible_swartz] DSL2 - revision: 7f4e68c0cb</span>
 <a id="__codelineno-69-4" name="__codelineno-69-4" href="#__codelineno-69-4"></a>
@@ -6321,7 +6330,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="failure">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a>
 <a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="go">Launching `main.nf` [angry_koch] DSL2 - revision: 44fdf66105</span>
 <a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a>
@@ -6376,7 +6385,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a>
 <a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a><span class="go">Launching `main.nf` [fabulous_davinci] DSL2 - revision: 22b53268dc</span>
 <a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a>
@@ -6467,7 +6476,7 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a>
 <a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="go">Launching `main.nf` [prickly_stonebraker] DSL2 - revision: f62ab10a3f</span>
 <a id="__codelineno-84-4" name="__codelineno-84-4" href="#__codelineno-84-4"></a>
@@ -6538,46 +6547,38 @@ Nextflow는 인증을 처리하고 파일을 올바른 위치에 스테이징하
 <span class="normal"><a href="#__codelineno-87-17">17</a></span>
 <span class="normal"><a href="#__codelineno-87-18">18</a></span>
 <span class="normal"><a href="#__codelineno-87-19">19</a></span>
-<span class="normal"><a href="#__codelineno-87-20">20</a></span>
-<span class="normal"><a href="#__codelineno-87-21">21</a></span>
-<span class="normal"><a href="#__codelineno-87-22">22</a></span>
-<span class="normal"><a href="#__codelineno-87-23">23</a></span>
-<span class="normal"><a href="#__codelineno-87-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1"></a><span class="cp">#!/usr/bin/env nextflow</span>
-<a id="__codelineno-87-2" name="__codelineno-87-2"></a>
-<a id="__codelineno-87-3" name="__codelineno-87-3"></a><span class="n">process</span><span class="w"> </span><span class="n">ANALYZE_READS</span><span class="w"> </span><span class="o">{</span>
-<a id="__codelineno-87-4" name="__codelineno-87-4"></a><span class="w">    </span><span class="n">tag</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">id</span><span class="w"> </span><span class="o">}</span>
-<a id="__codelineno-87-5" name="__codelineno-87-5"></a>
-<a id="__codelineno-87-6" name="__codelineno-87-6"></a><span class="w">    </span><span class="n">publishDir</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;results/${meta.id}&quot;</span><span class="w"> </span><span class="o">},</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
-<a id="__codelineno-87-7" name="__codelineno-87-7"></a>
-<a id="__codelineno-87-8" name="__codelineno-87-8"></a><span class="w">    </span><span class="nl">input:</span>
-<a id="__codelineno-87-9" name="__codelineno-87-9"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">meta</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">files</span><span class="o">)</span>
-<a id="__codelineno-87-10" name="__codelineno-87-10"></a>
-<a id="__codelineno-87-11" name="__codelineno-87-11"></a><span class="w">    </span><span class="nl">output:</span>
-<a id="__codelineno-87-12" name="__codelineno-87-12"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">meta</span><span class="o">.</span><span class="na">id</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;${meta.id}_stats.txt&quot;</span><span class="o">)</span>
-<a id="__codelineno-87-13" name="__codelineno-87-13"></a>
-<a id="__codelineno-87-14" name="__codelineno-87-14"></a><span class="w">    </span><span class="nl">script:</span>
-<a id="__codelineno-87-15" name="__codelineno-87-15"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
-<a id="__codelineno-87-16" name="__codelineno-87-16"></a><span class="s2">    echo &quot;Sample metadata: ${meta.id}&quot; &gt; ${meta.id}_stats.txt</span>
-<a id="__codelineno-87-17" name="__codelineno-87-17"></a><span class="s2">    echo &quot;Replicate: ${meta.replicate}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
-<a id="__codelineno-87-18" name="__codelineno-87-18"></a><span class="s2">    echo &quot;Type: ${meta.type}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
-<a id="__codelineno-87-19" name="__codelineno-87-19"></a><span class="s2">    echo &quot;Read 1: ${files[0]}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
-<a id="__codelineno-87-20" name="__codelineno-87-20"></a><span class="s2">    echo &quot;Read 2: ${files[1]}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
-<a id="__codelineno-87-21" name="__codelineno-87-21"></a><span class="s2">    echo &quot;Read 1 size: \$(gunzip -dc ${files[0]} | wc -l | awk &#39;{print \$1/4}&#39;) reads&quot; &gt;&gt; ${meta.id}_stats.txt</span>
-<a id="__codelineno-87-22" name="__codelineno-87-22"></a><span class="s2">    echo &quot;Read 2 size: \$(gunzip -dc ${files[1]} | wc -l | awk &#39;{print \$1/4}&#39;) reads&quot; &gt;&gt; ${meta.id}_stats.txt</span>
-<a id="__codelineno-87-23" name="__codelineno-87-23"></a><span class="s2">    &quot;&quot;&quot;</span>
-<a id="__codelineno-87-24" name="__codelineno-87-24"></a><span class="o">}</span>
+<span class="normal"><a href="#__codelineno-87-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-87-1" name="__codelineno-87-1"></a><span class="n">process</span><span class="w"> </span><span class="n">ANALYZE_READS</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-87-2" name="__codelineno-87-2"></a><span class="w">    </span><span class="n">tag</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">.</span><span class="na">id</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-87-3" name="__codelineno-87-3"></a>
+<a id="__codelineno-87-4" name="__codelineno-87-4"></a><span class="w">    </span><span class="nl">input:</span>
+<a id="__codelineno-87-5" name="__codelineno-87-5"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">meta</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="n">files</span><span class="o">)</span>
+<a id="__codelineno-87-6" name="__codelineno-87-6"></a>
+<a id="__codelineno-87-7" name="__codelineno-87-7"></a><span class="w">    </span><span class="nl">output:</span>
+<a id="__codelineno-87-8" name="__codelineno-87-8"></a><span class="w">    </span><span class="n">tuple</span><span class="w"> </span><span class="n">val</span><span class="o">(</span><span class="n">meta</span><span class="o">),</span><span class="w"> </span><span class="n">path</span><span class="o">(</span><span class="s2">&quot;${meta.id}_stats.txt&quot;</span><span class="o">)</span>
+<a id="__codelineno-87-9" name="__codelineno-87-9"></a>
+<a id="__codelineno-87-10" name="__codelineno-87-10"></a><span class="w">    </span><span class="nl">script:</span>
+<a id="__codelineno-87-11" name="__codelineno-87-11"></a><span class="w">    </span><span class="s2">&quot;&quot;&quot;</span>
+<a id="__codelineno-87-12" name="__codelineno-87-12"></a><span class="s2">    echo &quot;Sample metadata: ${meta.id}&quot; &gt; ${meta.id}_stats.txt</span>
+<a id="__codelineno-87-13" name="__codelineno-87-13"></a><span class="s2">    echo &quot;Replicate: ${meta.replicate}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
+<a id="__codelineno-87-14" name="__codelineno-87-14"></a><span class="s2">    echo &quot;Type: ${meta.type}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
+<a id="__codelineno-87-15" name="__codelineno-87-15"></a><span class="s2">    echo &quot;Read 1: ${files[0]}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
+<a id="__codelineno-87-16" name="__codelineno-87-16"></a><span class="s2">    echo &quot;Read 2: ${files[1]}&quot; &gt;&gt; ${meta.id}_stats.txt</span>
+<a id="__codelineno-87-17" name="__codelineno-87-17"></a><span class="s2">    echo &quot;Read 1 size: \$(gunzip -dc ${files[0]} | wc -l | awk &#39;{print \$1/4}&#39;) reads&quot; &gt;&gt; ${meta.id}_stats.txt</span>
+<a id="__codelineno-87-18" name="__codelineno-87-18"></a><span class="s2">    echo &quot;Read 2 size: \$(gunzip -dc ${files[1]} | wc -l | awk &#39;{print \$1/4}&#39;) reads&quot; &gt;&gt; ${meta.id}_stats.txt</span>
+<a id="__codelineno-87-19" name="__codelineno-87-19"></a><span class="s2">    &quot;&quot;&quot;</span>
+<a id="__codelineno-87-20" name="__codelineno-87-20"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">참고</p>
-<p><code>tag</code>와 <code>publishDir</code> 지시문은 문자열 보간(<code>"${...}"</code>) 대신 closure 문법(<code>{ ... }</code>)을 사용합니다.
-이는 이러한 지시문이 런타임까지 사용할 수 없는 입력 변수(<code>meta</code>)를 참조하기 때문입니다.
-closure 문법은 프로세스가 실제로 실행될 때까지 평가를 지연시킵니다.</p>
+<p><code>tag</code> 지시문은 프로세스가 실행될 때까지 사용할 수 없는 입력 변수(<code>meta</code>)를 참조하기 때문에 closure 문법(<code>{ ... }</code>)을 사용합니다.
+closure는 런타임까지 평가를 지연시킵니다.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">참고</p>
 <p>관례에 따라 메타데이터 map을 <code>meta</code>라고 부릅니다.
 meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와 meta map</a> 사이드 퀘스트를 참조하세요.</p>
 </div>
+<p><code>ANALYZE_READS</code> 프로세스를 가져오고 코드를 검토했으므로, 이제 워크플로우에서 프로세스를 실행하는 호출을 추가할 수 있습니다.</p>
 <h3 id="62">6.2. 워크플로우에서 프로세스 실행<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
 <p>프로세스를 워크플로우에서 사용할 수 있게 되었으므로, <code>ANALYZE_READS</code> 프로세스를 실행하는 호출을 추가할 수 있습니다.</p>
 <p>예제 데이터에서 실행하려면 두 가지 작업이 필요합니다:</p>
@@ -6589,7 +6590,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 <p>이전에는 매핑 조작을 입력 채널에 직접 적용했습니다.
 재매핑된 내용을 <code>ANALYZE_READS</code> 프로세스에 전달하기 위해(명확하고 읽기 쉬운 방식으로) <code>ch_samples</code>라는 새 채널을 생성합니다.</p>
 <p><a href="https://www.nextflow.io/docs/latest/reference/operator.html#set"><code>set</code></a> 연산자를 사용하여 이를 수행할 수 있습니다.</p>
-<p>메인 워크플로우에서 <code>.view()</code> 연산자를 <code>.set { ch_samples }</code>로 교체하고, 이름으로 채널을 참조할 수 있는지 테스트하는 줄을 추가합니다.</p>
+<p>메인 워크플로우에서 <code>.view()</code> 연산자를 <code class="highlight"><span class="o">.</span><span class="na">set</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">ch_samples</span><span class="w"> </span><span class="o">}</span></code>로 교체하고, 이름으로 채널을 참조할 수 있는지 테스트하는 줄을 추가합니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">후</label><label for="__tabbed_19_2">전</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -6642,8 +6643,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 <span class="normal"><a href="#__codelineno-89-17">17</a></span>
 <span class="normal"><a href="#__codelineno-89-18">18</a></span>
 <span class="normal"><a href="#__codelineno-89-19">19</a></span>
-<span class="normal"><a href="#__codelineno-89-20">20</a></span>
-<span class="normal"><a href="#__codelineno-89-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-89-7" name="__codelineno-89-7"></a><span class="w">    </span><span class="c1">// channel.fromFilePairs로 파일 로드</span>
+<span class="normal"><a href="#__codelineno-89-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-89-7" name="__codelineno-89-7"></a><span class="w">    </span><span class="c1">// channel.fromFilePairs로 파일 로드</span>
 <a id="__codelineno-89-8" name="__codelineno-89-8"></a><span class="w">    </span><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromFilePairs</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R{1,2}_001.fastq.gz&#39;</span><span class="o">)</span>
 <a id="__codelineno-89-9" name="__codelineno-89-9"></a><span class="w">    </span><span class="n">ch_files</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">id</span><span class="o">,</span><span class="w">  </span><span class="n">files</span><span class="w"> </span><span class="o">-&gt;</span>
 <a id="__codelineno-89-10" name="__codelineno-89-10"></a><span class="w">       </span><span class="kt">def</span><span class="w"> </span><span class="o">(</span><span class="n">sample</span><span class="o">,</span><span class="w"> </span><span class="n">replicate</span><span class="o">,</span><span class="w"> </span><span class="n">type</span><span class="o">,</span><span class="w"> </span><span class="n">readNum</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="o">.</span><span class="na">tokenize</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">)</span>
@@ -6657,8 +6657,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 <a id="__codelineno-89-18" name="__codelineno-89-18"></a><span class="w">       </span><span class="o">]</span>
 <a id="__codelineno-89-19" name="__codelineno-89-19"></a><span class="w">    </span><span class="o">}</span>
 <a id="__codelineno-89-20" name="__codelineno-89-20"></a><span class="hll"><span class="w">    </span><span class="o">.</span><span class="na">view</span><span class="o">()</span>
-</span><a id="__codelineno-89-21" name="__codelineno-89-21"></a><span class="o">}</span>
-</code></pre></div></td></tr></table></div>
+</span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
@@ -6667,7 +6666,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-91-1" name="__codelineno-91-1" href="#__codelineno-91-1"></a><span class="go"> N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-91-2" name="__codelineno-91-2" href="#__codelineno-91-2"></a>
 <a id="__codelineno-91-3" name="__codelineno-91-3" href="#__codelineno-91-3"></a><span class="go">Launching `main.nf` [goofy_kirch] DSL2 - revision: 3313283e42</span>
 <a id="__codelineno-91-4" name="__codelineno-91-4" href="#__codelineno-91-4"></a>
@@ -6678,28 +6677,140 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 <h4 id="622">6.2.2. 데이터에 프로세스 실행<a class="headerlink" href="#622" title="Permanent link">&para;</a></h4>
 <p>이제 <code>ch_samples</code> 채널에 <code>ANALYZE_READS</code> 프로세스를 실제로 실행합니다.</p>
 <p>메인 워크플로우에서 다음과 같이 코드를 변경합니다:</p>
+<ol>
+<li>채널 설정 리팩토링: <code>ch_files.map {}</code>을 <code>ch_samples = ch_files.map {}</code>으로 변경(<code>.set</code> 연산자를 제거하고 직접 할당)하고 <code>[]</code> 대신 <code>tuple()</code>을 사용합니다</li>
+<li><code>.view()</code> 호출을 <code>ANALYZE_READS(ch_samples)</code> 호출로 교체합니다</li>
+<li><code>publish:</code> 섹션에서 <code>channel.empty()</code>를 <code>ANALYZE_READS.out</code>으로 교체합니다</li>
+<li><code>output {}</code> 블록에 <code>path</code> closure를 추가합니다</li>
+</ol>
 <div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">후</label><label for="__tabbed_20_2">전</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-23">23</a></span>
-<span class="normal"><a href="#__codelineno-92-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-92-23" name="__codelineno-92-23"></a><span class="w">    </span><span class="c1">// 분석 실행</span>
-<a id="__codelineno-92-24" name="__codelineno-92-24"></a><span class="w">    </span><span class="n">ANALYZE_READS</span><span class="o">(</span><span class="n">ch_samples</span><span class="o">)</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-92-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-92-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-92-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-92-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-92-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-92-10">10</a></span>
+<span class="normal"><a href="#__codelineno-92-11">11</a></span>
+<span class="normal"><a href="#__codelineno-92-12">12</a></span>
+<span class="normal"><a href="#__codelineno-92-13">13</a></span>
+<span class="normal"><a href="#__codelineno-92-14">14</a></span>
+<span class="normal"><a href="#__codelineno-92-15">15</a></span>
+<span class="normal"><a href="#__codelineno-92-16">16</a></span>
+<span class="normal"><a href="#__codelineno-92-17">17</a></span>
+<span class="normal"><a href="#__codelineno-92-18">18</a></span>
+<span class="normal"><a href="#__codelineno-92-19">19</a></span>
+<span class="normal"><a href="#__codelineno-92-20">20</a></span>
+<span class="normal"><a href="#__codelineno-92-21">21</a></span>
+<span class="normal"><a href="#__codelineno-92-22">22</a></span>
+<span class="normal"><a href="#__codelineno-92-23">23</a></span>
+<span class="normal"><a href="#__codelineno-92-24">24</a></span>
+<span class="normal"><a href="#__codelineno-92-25">25</a></span>
+<span class="normal"><a href="#__codelineno-92-26">26</a></span>
+<span class="normal"><a href="#__codelineno-92-27">27</a></span>
+<span class="normal"><a href="#__codelineno-92-28">28</a></span>
+<span class="normal"><a href="#__codelineno-92-29">29</a></span>
+<span class="normal"><a href="#__codelineno-92-30">30</a></span>
+<span class="normal"><a href="#__codelineno-92-31">31</a></span>
+<span class="normal"><a href="#__codelineno-92-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-92-5" name="__codelineno-92-5"></a><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-92-6" name="__codelineno-92-6"></a><span class="w">    </span><span class="nl">main:</span>
+<a id="__codelineno-92-7" name="__codelineno-92-7"></a><span class="w">    </span><span class="c1">// channel.fromFilePairs로 파일 로드</span>
+<a id="__codelineno-92-8" name="__codelineno-92-8"></a><span class="w">    </span><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromFilePairs</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R{1,2}_001.fastq.gz&#39;</span><span class="o">)</span>
+<a id="__codelineno-92-9" name="__codelineno-92-9"></a><span class="hll"><span class="w">    </span><span class="n">ch_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch_files</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">id</span><span class="o">,</span><span class="w">  </span><span class="n">files</span><span class="w"> </span><span class="o">-&gt;</span>
+</span><a id="__codelineno-92-10" name="__codelineno-92-10"></a><span class="w">       </span><span class="kt">def</span><span class="w"> </span><span class="o">(</span><span class="n">sample</span><span class="o">,</span><span class="w"> </span><span class="n">replicate</span><span class="o">,</span><span class="w"> </span><span class="n">type</span><span class="o">,</span><span class="w"> </span><span class="n">readNum</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="o">.</span><span class="na">tokenize</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">)</span>
+<a id="__codelineno-92-11" name="__codelineno-92-11"></a><span class="hll"><span class="w">       </span><span class="n">tuple</span><span class="o">(</span>
+</span><a id="__codelineno-92-12" name="__codelineno-92-12"></a><span class="w">           </span><span class="o">[</span>
+<a id="__codelineno-92-13" name="__codelineno-92-13"></a><span class="w">               </span><span class="nl">id:</span><span class="w"> </span><span class="n">sample</span><span class="o">,</span>
+<a id="__codelineno-92-14" name="__codelineno-92-14"></a><span class="w">               </span><span class="nl">replicate:</span><span class="w"> </span><span class="n">replicate</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="s1">&#39;rep&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">),</span>
+<a id="__codelineno-92-15" name="__codelineno-92-15"></a><span class="w">               </span><span class="nl">type:</span><span class="w"> </span><span class="n">type</span>
+<a id="__codelineno-92-16" name="__codelineno-92-16"></a><span class="w">           </span><span class="o">],</span>
+<a id="__codelineno-92-17" name="__codelineno-92-17"></a><span class="w">           </span><span class="n">files</span>
+<a id="__codelineno-92-18" name="__codelineno-92-18"></a><span class="hll"><span class="w">       </span><span class="o">)</span>
+</span><a id="__codelineno-92-19" name="__codelineno-92-19"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-92-20" name="__codelineno-92-20"></a>
+<a id="__codelineno-92-21" name="__codelineno-92-21"></a><span class="hll"><span class="w">    </span><span class="c1">// 분석 실행</span>
+</span><a id="__codelineno-92-22" name="__codelineno-92-22"></a><span class="hll"><span class="w">    </span><span class="n">ANALYZE_READS</span><span class="o">(</span><span class="n">ch_samples</span><span class="o">)</span>
+</span><a id="__codelineno-92-23" name="__codelineno-92-23"></a>
+<a id="__codelineno-92-24" name="__codelineno-92-24"></a><span class="w">    </span><span class="nl">publish:</span>
+<a id="__codelineno-92-25" name="__codelineno-92-25"></a><span class="hll"><span class="w">    </span><span class="n">analysis_results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ANALYZE_READS</span><span class="o">.</span><span class="na">out</span>
+</span><a id="__codelineno-92-26" name="__codelineno-92-26"></a><span class="o">}</span>
+<a id="__codelineno-92-27" name="__codelineno-92-27"></a>
+<a id="__codelineno-92-28" name="__codelineno-92-28"></a><span class="n">output</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-92-29" name="__codelineno-92-29"></a><span class="w">    </span><span class="n">analysis_results</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-92-30" name="__codelineno-92-30"></a><span class="hll"><span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s2">&quot;${meta.id}&quot;</span><span class="w"> </span><span class="o">}</span>
+</span><a id="__codelineno-92-31" name="__codelineno-92-31"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-92-32" name="__codelineno-92-32"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-93-23">23</a></span>
-<span class="normal"><a href="#__codelineno-93-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-93-23" name="__codelineno-93-23"></a><span class="w">    </span><span class="c1">// 임시: ch_samples 내용 확인</span>
-<a id="__codelineno-93-24" name="__codelineno-93-24"></a><span class="w">    </span><span class="n">ch_samples</span><span class="o">.</span><span class="na">view</span><span class="o">()</span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">main.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-93-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-93-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-93-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-93-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-93-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-93-10">10</a></span>
+<span class="normal"><a href="#__codelineno-93-11">11</a></span>
+<span class="normal"><a href="#__codelineno-93-12">12</a></span>
+<span class="normal"><a href="#__codelineno-93-13">13</a></span>
+<span class="normal"><a href="#__codelineno-93-14">14</a></span>
+<span class="normal"><a href="#__codelineno-93-15">15</a></span>
+<span class="normal"><a href="#__codelineno-93-16">16</a></span>
+<span class="normal"><a href="#__codelineno-93-17">17</a></span>
+<span class="normal"><a href="#__codelineno-93-18">18</a></span>
+<span class="normal"><a href="#__codelineno-93-19">19</a></span>
+<span class="normal"><a href="#__codelineno-93-20">20</a></span>
+<span class="normal"><a href="#__codelineno-93-21">21</a></span>
+<span class="normal"><a href="#__codelineno-93-22">22</a></span>
+<span class="normal"><a href="#__codelineno-93-23">23</a></span>
+<span class="normal"><a href="#__codelineno-93-24">24</a></span>
+<span class="normal"><a href="#__codelineno-93-25">25</a></span>
+<span class="normal"><a href="#__codelineno-93-26">26</a></span>
+<span class="normal"><a href="#__codelineno-93-27">27</a></span>
+<span class="normal"><a href="#__codelineno-93-28">28</a></span>
+<span class="normal"><a href="#__codelineno-93-29">29</a></span>
+<span class="normal"><a href="#__codelineno-93-30">30</a></span>
+<span class="normal"><a href="#__codelineno-93-31">31</a></span>
+<span class="normal"><a href="#__codelineno-93-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-93-5" name="__codelineno-93-5"></a><span class="n">workflow</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-93-6" name="__codelineno-93-6"></a><span class="w">    </span><span class="nl">main:</span>
+<a id="__codelineno-93-7" name="__codelineno-93-7"></a><span class="w">    </span><span class="c1">// channel.fromFilePairs로 파일 로드</span>
+<a id="__codelineno-93-8" name="__codelineno-93-8"></a><span class="w">    </span><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromFilePairs</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R{1,2}_001.fastq.gz&#39;</span><span class="o">)</span>
+<a id="__codelineno-93-9" name="__codelineno-93-9"></a><span class="w">    </span><span class="n">ch_files</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">id</span><span class="o">,</span><span class="w">  </span><span class="n">files</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-93-10" name="__codelineno-93-10"></a><span class="w">       </span><span class="kt">def</span><span class="w"> </span><span class="o">(</span><span class="n">sample</span><span class="o">,</span><span class="w"> </span><span class="n">replicate</span><span class="o">,</span><span class="w"> </span><span class="n">type</span><span class="o">,</span><span class="w"> </span><span class="n">readNum</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="o">.</span><span class="na">tokenize</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">)</span>
+<a id="__codelineno-93-11" name="__codelineno-93-11"></a><span class="w">       </span><span class="o">[</span>
+<a id="__codelineno-93-12" name="__codelineno-93-12"></a><span class="w">           </span><span class="o">[</span>
+<a id="__codelineno-93-13" name="__codelineno-93-13"></a><span class="w">               </span><span class="nl">id:</span><span class="w"> </span><span class="n">sample</span><span class="o">,</span>
+<a id="__codelineno-93-14" name="__codelineno-93-14"></a><span class="w">               </span><span class="nl">replicate:</span><span class="w"> </span><span class="n">replicate</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="s1">&#39;rep&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">),</span>
+<a id="__codelineno-93-15" name="__codelineno-93-15"></a><span class="w">               </span><span class="nl">type:</span><span class="w"> </span><span class="n">type</span>
+<a id="__codelineno-93-16" name="__codelineno-93-16"></a><span class="w">           </span><span class="o">],</span>
+<a id="__codelineno-93-17" name="__codelineno-93-17"></a><span class="w">           </span><span class="n">files</span>
+<a id="__codelineno-93-18" name="__codelineno-93-18"></a><span class="w">       </span><span class="o">]</span>
+<a id="__codelineno-93-19" name="__codelineno-93-19"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-93-20" name="__codelineno-93-20"></a><span class="w">        </span><span class="o">.</span><span class="na">set</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">ch_samples</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-93-21" name="__codelineno-93-21"></a>
+<a id="__codelineno-93-22" name="__codelineno-93-22"></a><span class="w">    </span><span class="c1">// 임시: ch_samples 내용 확인</span>
+<a id="__codelineno-93-23" name="__codelineno-93-23"></a><span class="w">    </span><span class="n">ch_samples</span><span class="o">.</span><span class="na">view</span><span class="o">()</span>
+<a id="__codelineno-93-24" name="__codelineno-93-24"></a>
+<a id="__codelineno-93-25" name="__codelineno-93-25"></a><span class="w">    </span><span class="nl">publish:</span>
+<a id="__codelineno-93-26" name="__codelineno-93-26"></a><span class="w">    </span><span class="n">analysis_results</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">empty</span><span class="o">()</span>
+<a id="__codelineno-93-27" name="__codelineno-93-27"></a><span class="o">}</span>
+<a id="__codelineno-93-28" name="__codelineno-93-28"></a>
+<a id="__codelineno-93-29" name="__codelineno-93-29"></a><span class="n">output</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-93-30" name="__codelineno-93-30"></a><span class="w">    </span><span class="n">analysis_results</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-93-31" name="__codelineno-93-31"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-93-32" name="__codelineno-93-32"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
+<p><code>output {}</code> 블록의 <code>path</code> closure는 각 출력 요소를 받아 하위 디렉토리 구조를 결정합니다.
+여기서는 <code>meta.id</code>를 사용하여 환자별로 결과를 구성합니다.</p>
 <p>실행합니다:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a>nextflow<span class="w"> </span>run<span class="w"> </span>main.nf
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-95-1" name="__codelineno-95-1" href="#__codelineno-95-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-95-2" name="__codelineno-95-2" href="#__codelineno-95-2"></a>
 <a id="__codelineno-95-3" name="__codelineno-95-3" href="#__codelineno-95-3"></a><span class="go">Launching `./main.nf` [shrivelled_cori] DSL2 - revision: b546a31769</span>
 <a id="__codelineno-95-4" name="__codelineno-95-4" href="#__codelineno-95-4"></a>
@@ -6707,7 +6818,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 <a id="__codelineno-95-6" name="__codelineno-95-6" href="#__codelineno-95-6"></a><span class="go">[b5/110360] process &gt; ANALYZE_READS (patientA) [100%] 1 of 1 ✔</span>
 </code></pre></div>
 </details>
-<p>이 프로세스는 출력을 <code>results</code> 디렉토리에 게시하도록 설정되어 있으므로 확인해 봅니다.</p>
+<p>출력이 <code>results</code> 디렉토리에 게시되므로 확인해 봅니다.</p>
 <details class="abstract">
 <summary>디렉토리 및 파일 내용</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-96-1" name="__codelineno-96-1" href="#__codelineno-96-1"></a><span class="go">results</span>
@@ -6753,7 +6864,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-101-1" name="__codelineno-101-1" href="#__codelineno-101-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-101-2" name="__codelineno-101-2" href="#__codelineno-101-2"></a>
 <a id="__codelineno-101-3" name="__codelineno-101-3" href="#__codelineno-101-3"></a><span class="go">Launching `./main.nf` [big_stonebraker] DSL2 - revision: f7f9b8a76c</span>
 <a id="__codelineno-101-4" name="__codelineno-101-4" href="#__codelineno-101-4"></a>
@@ -6779,16 +6890,20 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 매번 출력 파일을 덮어쓰고 있습니다.</p>
 <h3 id="64">6.4. 게시된 파일을 고유하게 만들기<a class="headerlink" href="#64" title="Permanent link">&para;</a></h3>
 <p>환자 메타데이터에 접근할 수 있으므로, 디렉토리 구조나 파일 이름 자체에 차별화 메타데이터를 포함하여 게시된 파일을 고유하게 만들 수 있습니다.</p>
-<p>워크플로우를 다음과 같이 변경합니다:</p>
+<p><code>output {}</code> 블록을 다음과 같이 변경합니다:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">후</label><label for="__tabbed_22_2">전</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/analyze_reads.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-103-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-103-6" name="__codelineno-103-6"></a><span class="w">    </span><span class="n">publishDir</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;results/${meta.type}/${meta.id}/${meta.replicate}&quot;</span><span class="w"> </span><span class="o">},</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">main.nf</span><pre><span></span><code><a id="__codelineno-103-1" name="__codelineno-103-1" href="#__codelineno-103-1"></a><span class="n">analysis_results</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-103-2" name="__codelineno-103-2" href="#__codelineno-103-2"></a><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s2">&quot;${meta.type}/${meta.id}/${meta.replicate}&quot;</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-103-3" name="__codelineno-103-3" href="#__codelineno-103-3"></a><span class="hll"><span class="o">}</span>
+</span></code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">modules/analyze_reads.nf</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-104-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-104-6" name="__codelineno-104-6"></a><span class="w">    </span><span class="n">publishDir</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;results/${meta.id}&quot;</span><span class="w"> </span><span class="o">},</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
-</code></pre></div></td></tr></table></div>
+<div class="highlight"><span class="filename">main.nf</span><pre><span></span><code><a id="__codelineno-104-1" name="__codelineno-104-1" href="#__codelineno-104-1"></a><span class="n">analysis_results</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-104-2" name="__codelineno-104-2" href="#__codelineno-104-2"></a><span class="w">    </span><span class="n">path</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s2">&quot;${meta.id}&quot;</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-104-3" name="__codelineno-104-3" href="#__codelineno-104-3"></a><span class="hll"><span class="o">}</span>
+</span></code></pre></div>
 </div>
 </div>
 </div>
@@ -6799,7 +6914,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 </code></pre></div>
 <details class="success">
 <summary>명령 출력</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a><span class="go">N E X T F L O W   ~  version 25.10.2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-106-1" name="__codelineno-106-1" href="#__codelineno-106-1"></a><span class="go">N E X T F L O W   ~  version 25.10.4</span>
 <a id="__codelineno-106-2" name="__codelineno-106-2" href="#__codelineno-106-2"></a>
 <a id="__codelineno-106-3" name="__codelineno-106-3" href="#__codelineno-106-3"></a><span class="go">Launching `./main.nf` [insane_swartz] DSL2 - revision: fff18abe6d</span>
 <a id="__codelineno-106-4" name="__codelineno-106-4" href="#__codelineno-106-4"></a>
@@ -6848,7 +6963,7 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 이에 대한 자세한 내용은 <a href="../metadata/">메타데이터와 meta map</a> 사이드 퀘스트에서 확인할 수 있습니다.</p>
 <h3 id="_14">핵심 정리<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>publishDir</code> 지시문은 메타데이터 값을 기반으로 출력을 구성할 수 있습니다</li>
+<li><code>output {}</code> 블록은 동적 path closure를 사용하여 메타데이터 값을 기반으로 출력을 구성할 수 있습니다</li>
 <li>튜플의 메타데이터는 결과의 구조화된 구성을 가능하게 합니다</li>
 <li>이 접근 방식은 명확한 데이터 출처를 가진 유지 관리 가능한 워크플로우를 생성합니다</li>
 <li>프로세스는 메타데이터와 파일의 튜플을 입력으로 받을 수 있습니다</li>
@@ -6944,30 +7059,33 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 </code></pre></div>
 </li>
 <li>
-<p><strong>프로세스에서 파일 작업 사용:</strong> 적절한 입력 처리를 통해 파일 작업을 Nextflow 프로세스에 통합하고, <code>publishDir</code>을 사용하여 메타데이터를 기반으로 출력을 구성했습니다.</p>
+<p><strong>프로세스에서 파일 작업 사용:</strong> 적절한 입력 처리를 통해 파일 작업을 Nextflow 프로세스에 통합하고, <code>output {}</code> 블록을 사용하여 메타데이터를 기반으로 출력을 구성했습니다.</p>
 <ul>
 <li>프로세스 입력에 meta map 연결</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a><span class="n">ch_files</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">channel</span><span class="o">.</span><span class="na">fromFilePairs</span><span class="o">(</span><span class="s1">&#39;data/patientA_rep1_normal_R{1,2}_001.fastq.gz&#39;</span><span class="o">)</span>
-<a id="__codelineno-120-2" name="__codelineno-120-2" href="#__codelineno-120-2"></a><span class="n">ch_files</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">id</span><span class="o">,</span><span class="w">  </span><span class="n">files</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-120-2" name="__codelineno-120-2" href="#__codelineno-120-2"></a><span class="n">ch_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch_files</span><span class="o">.</span><span class="na">map</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">id</span><span class="o">,</span><span class="w">  </span><span class="n">files</span><span class="w"> </span><span class="o">-&gt;</span>
 <a id="__codelineno-120-3" name="__codelineno-120-3" href="#__codelineno-120-3"></a><span class="w">    </span><span class="kt">def</span><span class="w"> </span><span class="o">(</span><span class="n">sample</span><span class="o">,</span><span class="w"> </span><span class="n">replicate</span><span class="o">,</span><span class="w"> </span><span class="n">type</span><span class="o">,</span><span class="w"> </span><span class="n">readNum</span><span class="o">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="o">.</span><span class="na">tokenize</span><span class="o">(</span><span class="s1">&#39;_&#39;</span><span class="o">)</span>
-<a id="__codelineno-120-4" name="__codelineno-120-4" href="#__codelineno-120-4"></a><span class="w">    </span><span class="o">[</span>
+<a id="__codelineno-120-4" name="__codelineno-120-4" href="#__codelineno-120-4"></a><span class="w">    </span><span class="n">tuple</span><span class="o">(</span>
 <a id="__codelineno-120-5" name="__codelineno-120-5" href="#__codelineno-120-5"></a><span class="w">        </span><span class="o">[</span>
 <a id="__codelineno-120-6" name="__codelineno-120-6" href="#__codelineno-120-6"></a><span class="w">            </span><span class="nl">id:</span><span class="w"> </span><span class="n">sample</span><span class="o">,</span>
 <a id="__codelineno-120-7" name="__codelineno-120-7" href="#__codelineno-120-7"></a><span class="w">            </span><span class="nl">replicate:</span><span class="w"> </span><span class="n">replicate</span><span class="o">.</span><span class="na">replace</span><span class="o">(</span><span class="s1">&#39;rep&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="o">),</span>
 <a id="__codelineno-120-8" name="__codelineno-120-8" href="#__codelineno-120-8"></a><span class="w">            </span><span class="nl">type:</span><span class="w"> </span><span class="n">type</span>
 <a id="__codelineno-120-9" name="__codelineno-120-9" href="#__codelineno-120-9"></a><span class="w">        </span><span class="o">],</span>
-<a id="__codelineno-120-10" name="__codelineno-120-10" href="#__codelineno-120-10"></a><span class="w">         </span><span class="n">files</span>
-<a id="__codelineno-120-11" name="__codelineno-120-11" href="#__codelineno-120-11"></a><span class="w">    </span><span class="o">]</span>
+<a id="__codelineno-120-10" name="__codelineno-120-10" href="#__codelineno-120-10"></a><span class="w">        </span><span class="n">files</span>
+<a id="__codelineno-120-11" name="__codelineno-120-11" href="#__codelineno-120-11"></a><span class="w">    </span><span class="o">)</span>
 <a id="__codelineno-120-12" name="__codelineno-120-12" href="#__codelineno-120-12"></a><span class="o">}</span>
-<a id="__codelineno-120-13" name="__codelineno-120-13" href="#__codelineno-120-13"></a><span class="w">    </span><span class="o">.</span><span class="na">set</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">ch_samples</span><span class="w"> </span><span class="o">}</span>
-<a id="__codelineno-120-14" name="__codelineno-120-14" href="#__codelineno-120-14"></a>
-<a id="__codelineno-120-15" name="__codelineno-120-15" href="#__codelineno-120-15"></a><span class="n">ANALYZE_READS</span><span class="o">(</span><span class="n">ch_samples</span><span class="o">)</span>
+<a id="__codelineno-120-13" name="__codelineno-120-13" href="#__codelineno-120-13"></a>
+<a id="__codelineno-120-14" name="__codelineno-120-14" href="#__codelineno-120-14"></a><span class="n">ANALYZE_READS</span><span class="o">(</span><span class="n">ch_samples</span><span class="o">)</span>
 </code></pre></div>
 <ul>
 <li>메타데이터를 기반으로 출력 구성</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a><span class="n">publishDir</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="s2">&quot;results/${meta.type}/${meta.id}/${meta.replicate}&quot;</span><span class="w"> </span><span class="o">},</span><span class="w"> </span><span class="nl">mode:</span><span class="w"> </span><span class="s1">&#39;copy&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a><span class="n">output</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-121-2" name="__codelineno-121-2" href="#__codelineno-121-2"></a><span class="w">    </span><span class="n">analysis_results</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-121-3" name="__codelineno-121-3" href="#__codelineno-121-3"></a><span class="w">        </span><span class="n">path</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">meta</span><span class="o">,</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="s2">&quot;${meta.type}/${meta.id}/${meta.replicate}&quot;</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-121-4" name="__codelineno-121-4" href="#__codelineno-121-4"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-121-5" name="__codelineno-121-5" href="#__codelineno-121-5"></a><span class="o">}</span>
 </code></pre></div>
 </li>
 </ol>
@@ -6979,7 +7097,60 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 </ul>
 <hr />
 <h2 id="_18">다음 단계<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
-<p><a href="../">사이드 퀘스트 메뉴</a>로 돌아가거나 페이지 오른쪽 하단의 버튼을 클릭하여 목록의 다음 주제로 이동하세요.</p><style type="text/css">.quiz {
+<p><a href="../">사이드 퀘스트 메뉴</a>로 돌아가거나 페이지 오른쪽 하단의 버튼을 클릭하여 목록의 다음 주제로 이동하세요.</p><div id="quiz-progress-sidebar" aria-label="퀴즈 진행 상황" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    퀴즈 진행 상황
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          답변함: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          정답: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          초기화
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="퀴즈 진행 상황" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        답변함: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        정답: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        초기화
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -7026,10 +7197,12 @@ meta map에 대한 자세한 내용은 <a href="../metadata/">메타데이터와
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -7950,16 +8123,6 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
-      }
-    });
-  }
-
   // Truncate text to a maximum length, adding ellipsis if needed
   function truncateText(text, maxLength) {
     if (text.length <= maxLength) return text;
@@ -8594,9 +8757,6 @@ window.mkdocsQuizConfig = {
     // Initialize tracker
     quizTracker.init();
 
-    // Translate template elements
-    translateTemplateElements();
-
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();
 
@@ -8677,7 +8837,7 @@ window.mkdocsQuizConfig = {
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
           
-          <a href="../workflows_of_workflows/" class="md-footer__link md-footer__link--prev" aria-label="이전: 워크플로우의 워크플로우">
+          <a href="../essential_scripting_patterns/" class="md-footer__link md-footer__link--prev" aria-label="이전: 필수 스크립팅 패턴">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -8687,20 +8847,20 @@ window.mkdocsQuizConfig = {
                 이전
               </span>
               <div class="md-ellipsis">
-                워크플로우의 워크플로우
+                필수 스크립팅 패턴
               </div>
             </div>
           </a>
         
         
           
-          <a href="../debugging/" class="md-footer__link md-footer__link--next" aria-label="다음: 워크플로우 디버깅">
+          <a href="../metadata/" class="md-footer__link md-footer__link--next" aria-label="다음: 메타데이터와 메타 맵">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 다음
               </span>
               <div class="md-ellipsis">
-                워크플로우 디버깅
+                메타데이터와 메타 맵
               </div>
             </div>
             <div class="md-footer__button md-icon">

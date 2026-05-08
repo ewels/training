@@ -160,6 +160,64 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
+      
     </div>
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
@@ -375,40 +433,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
@@ -2311,7 +2342,7 @@
   <span class="md-ellipsis">
     
   
-    오리엔테이션
+    시작하기
   
 
     
@@ -2367,7 +2398,35 @@
   <span class="md-ellipsis">
     
   
-    필수 Nextflow 스크립팅 패턴
+    필수 스크립팅 패턴
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../side_quests/working_with_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    파일 입력 처리
   
 
     
@@ -2472,6 +2531,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../side_quests/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    워크플로우 문제 해결
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../side_quests/workflows_of_workflows/" class="md-nav__link">
         
   
@@ -2480,62 +2567,6 @@
     
   
     워크플로우의 워크플로우
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../side_quests/working_with_files/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    파일 입력 처리
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../side_quests/debugging/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    워크플로우 디버깅
   
 
     
@@ -3637,43 +3668,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -3773,7 +3767,7 @@
 <p>이에 대한 모범 사례가 궁금하다면, <em>training.nextflow.io</em> 에 메타데이터와 meta map에 관한 사이드 퀘스트가 있으니 참고하세요.</p>
 <h2 id="3">3. 배열을 통해 여러 입력값 제공하기<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>다음으로 채널의 구조와 코딩 언어의 다른 데이터 구조와의 차이점을 살펴봅니다. 다른 언어를 사용해 본 적이 있다면 익숙한 개념인 배열을 채널에서 사용할 수 있는지 생각해 봅니다.</p>
-<p>채널에서 배열을 사용할 수 있을까요? 시도해 봅니다. 문서에서 복사한 <em>"greetings_array"</em> 배열을 생성하고 <em>"Hello", "Bonjour"</em>, <em>"Holà"</em> 를 입력합니다. 그런 다음 하드코딩된 문자열 대신 이것을 사용합니다. "channel.of" <em>"greetings_array"</em> 로 이 배열을 채널에 전달합니다.</p>
+<p>채널에서 배열을 사용할 수 있을까요? 시도해 봅니다. 문서에서 복사한 <em>"greetings_array"</em> 배열을 생성하고 <em>"Hello", "Bonjour"</em>, <em>"Hola"</em> 를 입력합니다. 그런 다음 하드코딩된 문자열 대신 이것을 사용합니다. "channel.of" <em>"greetings_array"</em> 로 이 배열을 채널에 전달합니다.</p>
 <p>터미널을 열고 파이프라인을 실행합니다.</p>
 <p>view 구문이 배열을 예상대로 출력했지만, 빨간색 텍스트(또는 <em>"-ansi-log"</em> 가 꺼져 있다면 다른 색상)가 문제가 발생했음을 알려줍니다.</p>
 <p>더 이상 녹색 체크 표시가 없고 빨간색 X 표시가 있습니다. 화면을 조금 넓혀서 읽기 쉽게 하면 Nextflow가 무엇이 잘못되었는지 알려줍니다.</p>
@@ -3809,11 +3803,11 @@
 <p>그런 다음 이 복잡한 경로에 쓰려고 했기 때문에 어떻게 해야 할지 몰랐습니다. 프로세스 work 디렉토리의 범위를 벗어났습니다.</p>
 <p>처음에 언급했듯이 Nextflow는 실행된 모든 작업을 특수한 work 디렉토리 내에 캡슐화합니다. 해당 work 디렉토리 외부의 데이터에 쓰려고 하면 Nextflow가 안전 예방 조치로 이를 차단합니다. 절대 경로에 쓰려고 했고 Nextflow가 이를 방지했습니다.</p>
 <h2 id="42-splitcsv">4.2. splitCsv() 연산자를 사용하여 파일 파싱하기<a class="headerlink" href="#42-splitcsv" title="Permanent link">&para;</a></h2>
-<p>이 채널을 확인하고 어떻게 보이는지 살펴봅니다. 웹사이트에서 복사한 <em>.view</em> 를 추가합니다. 동적 클로저가 있고 입력으로 변수 이름 "<em>csv"</em> 를 사용합니다. 이것이 채널 내용이며 splitCsv 전의 모습입니다.</p>
+<p>이 채널을 확인하고 어떻게 보이는지 살펴봅니다. <em>".view"</em> 를 추가할 수 있으며, 웹사이트에서 복사한 것입니다. <em>.view</em> 를 사용하고, 동적 클로저가 있으며 입력으로 변수 이름 "<em>csv"</em> 를 사용합니다. 이것이 채널 내용이며 splitCsv 전의 모습입니다.</p>
 <p>다시 실행하면 여전히 실패하지만 채널 내부를 보여줍니다. 특별히 흥미롭지는 않습니다. <em>path</em> 변수입니다. 터미널에 출력되므로 문자열처럼 보이지만, 이 파일에 대한 정보와 메타데이터를 포함하는 <em>path</em> 객체입니다.</p>
-<p>파일의 메타데이터를 입력으로 전달하고 싶지 않습니다. 파일의 내용을 전달하고 싶습니다. <em>greetings.csv</em> 파일을 보면 <em>Hello, Bonjour, Holà</em> 등의 변수가 있습니다. 파일 자체를 단일 객체로 전달하는 것이 아니라 이것들을 프로세스에 전달하고 싶습니다.</p>
+<p>파일의 메타데이터를 입력으로 전달하고 싶지 않습니다. 파일의 내용을 전달하고 싶습니다. <em>greetings.csv</em> 파일을 보면 <em>Hello, Bonjour, Hola</em> 등의 서로 다른 변수들이 있습니다. 파일 자체를 단일 객체로 전달하는 것이 아니라 이것들을 프로세스에 전달하고 싶습니다.</p>
 <p>따라서 이 CSV 파일을 파싱해야 합니다. 압축을 풀고 CSV 파일의 내용을 가져와서 채널을 통해 프로세스에 전달해야 합니다.</p>
-<p>로그 메시지에서 알 수 있듯이 <em>splitCsv</em> 를 사용해야 합니다. 또 다른 채널 연산자입니다. "."을 입력하고 "s"를 입력하면 자동 완성이 제안됩니다. <em>splitCsv</em> 와 괄호를 입력합니다.</p>
+<p>로그 메시지에서 알 수 있듯이 <em>splitCsv</em> 를 사용해야 합니다. 또 다른 채널 연산자입니다. "<em>dot" "s"</em> 를 입력하면 자동 완성이 제안됩니다. <em>splitCsv</em> 와 괄호를 입력합니다.</p>
 <p><em>splitCsv</em> 후에 또 다른 <em>view</em> 구문을 추가하여 이후의 모습을 확인합니다. 파이프라인을 실행하여 결과를 확인합니다.</p>
 <p>실패했지만 새로운 방식으로 실패했습니다. 이것은 진전입니다.</p>
 <p>이번에도 스크립트에 문제가 있습니다. 더 이상 최종 경로가 없지만, 이전에 배열을 고정 입력으로 전달할 때 본 오류와 매우 유사한 변수 배열이 있습니다.</p>
@@ -3823,12 +3817,12 @@
 <p>변수 이름은 원하는 대로 지정할 수 있으므로, 더 이상 CSV가 아니므로 <em>myarray</em> 로 지정합니다. <em>flatten</em> 으로 다시 실행하여 어떻게 되는지 확인합니다.</p>
 <p>이번에는 CSV를 세 개의 배열 객체로 파싱하고 flatten을 적용했습니다. 파이프라인이 통과되었습니다. 하지만 <em>flatten</em> 이 모든 것을 완전히 평탄화하여 각 행의 세 개의 독립적인 배열 항목을 얻게 됩니다. 프로세스가 CSV의 모든 행에 대해 세 번씩 실행되었습니다. 결과 파일이 많이 생성되었고 1, 2, 3, 4, 5, 6 등 원하는 CSV의 첫 번째 열만이 아닌 모든 것이 포함되었습니다.</p>
 <h2 id="43-map">4.3. map() 연산자를 사용하여 인사말 추출하기<a class="headerlink" href="#43-map" title="Permanent link">&para;</a></h2>
-<p>첫 번째 열만 가져오려면 어떻게 해야 할까요? flatten이 너무 단순하다면, 실제로 원하는 것을 지정할 수 있는 더 복잡한 연산자가 필요합니다.</p>
+<p>첫 번째 열만 가져오려면 어떻게 해야 할까요? flatten이 너무 단순하다면, CSV에서 원하는 것을 직접 지정할 수 있는 더 복잡한 연산자가 필요합니다.</p>
 <p>이를 위해 <em>map</em> 을 사용합니다. <em>map</em> 은 기본적으로 주어진 모든 요소에 대해 어떤 코드나 함수를 실행하고 변환을 수행합니다. 매우 유연하기 때문에 Nextflow 코드에서 자주 볼 수 있습니다.</p>
-<p>그 자체로는 아무것도 하지 않으므로 일반 괄호가 아닌 클로저가 필요하며 수행할 작업을 지정해야 합니다. CSV에서 행을 받으므로 논리적인 변수 이름인 <em>"row"</em> 를 사용합니다. 이것이 입력이며 해당 배열의 첫 번째 요소만 반환하고 싶습니다.</p>
-<p>Nextflow의 배열은 0부터 시작하므로 첫 번째 요소는 row[0]입니다. 두 번째 열이라면 1, 세 번째 열이라면 2가 됩니다. 원하는 것을 반환할 수 있지만, 첫 번째 값만 반환합니다.</p>
+<p>그 자체로는 아무것도 하지 않으므로 일반 괄호가 아닌 클로저가 필요하며 수행할 작업을 지정해야 합니다. CSV에서 행을 받으므로 논리적인 변수 이름인 <em>"row"</em> 를 사용합니다. 이것이 입력이며 해당 배열의 첫 번째 요소만 반환합니다.</p>
+<p>Nextflow의 배열은 0부터 시작하므로 첫 번째 요소는 row[0]입니다. 두 번째 열이라면 1, 세 번째 열이라면 2가 됩니다. 원하는 것을 반환할 수 있지만, 여기서는 첫 번째 값만 반환합니다.</p>
 <p>파이프라인을 다시 실행하여 예상대로 동작하는지 확인합니다.</p>
-<p><em>splitCsv</em> 후에 배열이 있고, <em>map</em> 후에는 깔끔한 문자열인 <em>"Hello", "Bonjour"</em>, <em>"Holà"</em> 가 있습니다. 파이프라인이 이제 원하는 대로 동작합니다.</p>
+<p><em>splitCsv</em> 후에 배열이 있고, <em>map</em> 후에는 깔끔한 문자열인 <em>"Hello", "Bonjour"</em>, <em>"Hola"</em> 가 있습니다. 파이프라인이 이제 원하는 대로 동작합니다.</p>
 <p>이제 view 명령들을 모두 제거합니다. 더 이상 필요하지 않습니다.</p>
 <h2 id="_2">요약<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>디버깅을 마쳤고 최종 코드가 완성되었습니다. <em>Path</em> 로 분류된 <em>input</em> 이라는 CLI 매개변수를 받아 Nextflow가 경로를 찾고 로드하여 CSV 파일을 이해합니다. 모든 행을 반환하고 각 행의 첫 번째 요소만 채널에 매핑하여 채널 내용을 구성하고 프로세스에 전달합니다.</p>
@@ -3841,7 +3835,60 @@
 <p>채널은 이해하기 쉬운 개념이 아닙니다. 잠시 휴식을 취하고 이에 대해 생각해 보고, 자료를 다시 읽어보며 이 개념들을 확실히 이해하세요. 이것이 Nextflow 이해의 핵심이며, 채널과 다양한 채널 연산자, 다양한 채널 팩토리를 더 잘 이해할수록 Nextflow 작성이 더 즐거워지고 파이프라인이 더 강력해집니다.</p>
 <p>이것은 Python이나 다른 언어의 일반적인 프로그래밍과 다릅니다. 여기서는 <em>if</em> 문을 사용하지 않으며, 채널과 연산자를 사용하는 함수형 흐름 프로그래밍입니다. 다소 다르지만 매우 강력합니다.</p>
 <p>이번 챕터가 끝났습니다. 잠시 휴식을 취하고 파트 3 동영상에서 만나겠습니다. 파트 3에서는 Hello Workflow를 다루며 워크플로우에 대해 더 자세히 이야기합니다.</p>
-<p>이전 챕터와 마찬가지로 웹페이지 하단에 퀴즈 문제가 있으니, 빠르게 풀어보고 방금 다룬 자료의 다양한 부분을 이해했는지 확인하세요. 그 외에는 다음 동영상에서 만나겠습니다. 감사합니다.</p><style type="text/css">.quiz {
+<p>이전 챕터와 마찬가지로 웹페이지 하단에 퀴즈 문제가 있으니, 빠르게 풀어보고 방금 다룬 자료의 다양한 부분을 이해했는지 확인하세요. 그 외에는 다음 동영상에서 만나겠습니다. 감사합니다.</p><div id="quiz-progress-sidebar" aria-label="퀴즈 진행 상황" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    퀴즈 진행 상황
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          답변함: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          정답: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          초기화
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="퀴즈 진행 상황" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        답변함: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        정답: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        초기화
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -3888,10 +3935,12 @@
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -4812,16 +4861,6 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
-      }
-    });
-  }
-
   // Truncate text to a maximum length, adding ellipsis if needed
   function truncateText(text, maxLength) {
     if (text.length <= maxLength) return text;
@@ -5455,9 +5494,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();

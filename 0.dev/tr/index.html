@@ -164,6 +164,64 @@
     </div>
     <div data-md-component="announce">
       
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+            
+<div style="text-align: center">
+  Nextflow Training Week (2025-Q1):
+  <strong>March 10-14, 2025</strong>
+  <a
+    class="md-button"
+    href="https://community.seqera.io/t/nextflow-training-week-2025-q1/1775/6"
+    target="_blank"
+  >
+    More info
+    <span class="twemoji"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"
+        ></path></svg
+    ></span>
+  </a>
+</div>
+<style type="text/css">
+  .md-banner {
+    display: none;
+  }
+</style>
+
+<script>
+  (function () {
+    function hideAnnouncement() {
+      var announcementDate = new Date(
+        "2025-03-15T00:00:00Z",
+      );
+      var currentDate = new Date();
+      var banner = document.querySelector(".md-banner");
+      if (banner && currentDate <= announcementDate) {
+        banner.style.display = "block";
+      }
+    }
+
+    // Run on initial load
+    hideAnnouncement();
+
+    // Hook into XHR to run after each page update
+    var originalOpen = XMLHttpRequest.prototype.open;
+    XMLHttpRequest.prototype.open = function () {
+      this.addEventListener("load", function () {
+        setTimeout(hideAnnouncement, 0); // Ensure it runs after the request completes
+      });
+      return originalOpen.apply(this, arguments);
+    };
+  })();
+</script>
+ 
+          </div>
+          
+        </aside>
+      
     </div>
     
       <div data-md-color-scheme="default" data-md-component="outdated" hidden>
@@ -379,40 +437,13 @@
     <div class="md-container" data-md-component="container">
       
       
-  
-  <nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (mobile) -->
-    <div class="quiz-progress-bar">
-      <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-      <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-    </div>
-    <div data-md-component="quiz-progress">
-        <div class="quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
-          </span>
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-    </div>
-  </nav>
-
-  
-  
         
           
         
       
-
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-  
             
               
                 
@@ -2604,7 +2635,7 @@
   <span class="md-ellipsis">
     
   
-    Yönlendirme
+    Başlarken
   
 
     
@@ -2660,7 +2691,35 @@
   <span class="md-ellipsis">
     
   
-    Temel Nextflow Betik Kalıpları
+    Temel Betik Kalıpları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="side_quests/working_with_files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dosya Girdi İşleme
   
 
     
@@ -2765,6 +2824,34 @@
   
   
     <li class="md-nav__item">
+      <a href="side_quests/debugging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    İş Akışlarında Sorun Giderme
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="side_quests/workflows_of_workflows/" class="md-nav__link">
         
   
@@ -2773,62 +2860,6 @@
     
   
     İş Akışlarının İş Akışları
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="side_quests/working_with_files/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Dosya Girdi İşleme
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="side_quests/debugging/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    İş Akışlarında Hata Ayıklama
   
 
     
@@ -3847,43 +3878,6 @@
               </div>
             
           
-
-  
-  <div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
-    <!-- mkdocs-quiz progress sidebar (desktop) -->
-    <label class="md-nav__title">
-      <span class="md-nav__icon md-icon"></span>
-      <span data-quiz-translate="Quiz Progress">Quiz Progress</span>
-    </label>
-    <ul class="md-nav__list" data-md-component="quiz-progress">
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Answered:">Answered:</span> <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
-          </span>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link">
-          <div class="quiz-progress-bar">
-            <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
-            <div class="quiz-progress-bar-correct" style="width: 0%"></div>
-          </div>
-        </div>
-      </li>
-      <li class="md-nav__item">
-        <div class="md-nav__link quiz-correct-reset">
-          <span class="md-ellipsis">
-            <span data-quiz-translate="Correct:">Correct:</span> <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
-          </span>
-          <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
-            <span data-quiz-translate="Reset">Reset</span>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </div>
-
           
             <div class="md-content" data-md-component="content">
               
@@ -3920,7 +3914,7 @@
 <hr />
 <p><strong>Nextflow topluluk eğitim portalına hoş geldiniz!</strong></p>
 <p>Aşağıda listelenen eğitim kursları, kendi kendinize kullanabileceğiniz bir kaynak olarak tasarlanmıştır.
-Bu kurslara istediğiniz zaman, Github Codespaces aracılığıyla sunduğumuz web tabanlı ortamda veya kendi ortamınızda çalışabilirsiniz.</p>
+Bu kursları istediğiniz zaman, Github Codespaces aracılığıyla sunduğumuz web tabanlı ortamda veya kendi ortamınızda çalışabilirsiniz.</p>
 <p><a class="md-button md-button--primary mt-1" href="#catalog-of-nextflow-training-courses">Kurslara göz atın <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </li>
 <li>
@@ -3928,7 +3922,7 @@ Bu kurslara istediğiniz zaman, Github Codespaces aracılığıyla sunduğumuz w
 <hr />
 <details class="warning">
 <summary>Sürüm uyumluluğu</summary>
-<p><!-- Bu içerikte yapılan her güncellemenin yerel kurulum sayfasına da kopyalanması gerekir -->
+<p><!-- Bu içerikte yapılan güncellemelerin yerel kurulum sayfasına da kopyalanması gerekir -->
 <strong>Ocak 2026 itibarıyla, aksi belirtilmedikçe tüm Nextflow eğitim kurslarımız, katı sözdizimi etkinleştirilmiş Nextflow 25.10.2 veya daha yeni bir sürümünü gerektirmektedir.</strong></p>
 <p>Sürüm gereksinimleri ve katı sözdizimi hakkında daha fazla bilgi için lütfen <a href="https://nextflow.io/docs/latest/strict-syntax.html">Nextflow belgeleri geçiş kılavuzuna</a> bakın.</p>
 <p>Önceki sözdizimine karşılık gelen eğitim materyalinin eski sürümlerine, bu web sayfasının menü çubuğundaki sürüm seçici aracılığıyla ulaşabilirsiniz.</p>
@@ -3957,8 +3951,8 @@ Bu kurslara istediğiniz zaman, Github Codespaces aracılığıyla sunduğumuz w
 <details class="licensing">
 <summary>Açık kaynak lisansı ve katkı politikası</summary>
 <p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img align="right" alt="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)" src="assets/img/cc_by-nc-sa.svg" /></a></p>
-<p>Bu eğitim materyali <a href="https://seqera.io">Seqera</a> tarafından geliştirilmekte ve sürdürülmekte olup topluluk yararına açık kaynak lisansı (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>) altında yayımlanmaktadır. Bu materyali lisans kapsamı dışında (ticari kullanım ve yeniden dağıtım kısıtlamalarına dikkat edin) kullanmak istiyorsanız lütfen talebinizi görüşmek üzere <a href="mailto:community@seqera.io">community@seqera.io</a> adresinden bizimle iletişime geçin.</p>
-<p>Topluluktan gelen iyileştirmeleri, düzeltmeleri ve hata raporlarını memnuniyetle karşılıyoruz. Her sayfanın sağ üst köşesinde, sorunları bildirebildiğiniz veya pull request aracılığıyla eğitim kaynak materyalinde değişiklik önerebileceğiniz kod deposuna bağlantı veren bir <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> simgesi bulunmaktadır. Daha fazla ayrıntı için depodaki <code>README.md</code> dosyasına bakın.</p>
+<p>Bu eğitim materyali <a href="https://seqera.io">Seqera</a> tarafından geliştirilip sürdürülmekte olup topluluk yararına açık kaynak lisansı (<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA</a>) altında yayımlanmaktadır. Bu materyali lisans kapsamı dışında (ticari kullanım ve yeniden dağıtım kısıtlamalarına dikkat edin) kullanmak istiyorsanız lütfen talebinizi görüşmek üzere <a href="mailto:community@seqera.io">community@seqera.io</a> adresiyle iletişime geçin.</p>
+<p>Topluluktan gelen iyileştirmeleri, düzeltmeleri ve hata raporlarını memnuniyetle karşılıyoruz. Her sayfanın sağ üst köşesinde, sorunları bildirebildiğiniz veya bir pull request aracılığıyla eğitim kaynak materyalinde değişiklik önerebileceğiniz kod deposuna bağlantı veren bir <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg></span> simgesi bulunmaktadır. Daha fazla ayrıntı için depodaki <code>README.md</code> dosyasına bakın.</p>
 </details>
 </li>
 </ul>
@@ -3984,7 +3978,7 @@ Daha fazla bilgi için <a href="https://github.com/nextflow-io/training/blob/mas
 </details>
 <details class="courses">
 <summary><strong>Nextflow Run:</strong> Mevcut pipeline'ları çalıştırmayı öğrenin</summary>
-<p>Nextflow pipeline'larını çalıştırmaya ve yapılandırmaya yönelik kısa bir giriş kursu. Hello Nextflow geliştirici kursunu temel almakla birlikte koda daha az odaklanır. Çalıştırma, çıktılar, temel kod yapısı ve farklı hesaplama ortamları için yapılandırmayı kapsar.</p>
+<p>Hello Nextflow geliştirici kursunu temel alan, ancak koda daha az odaklanan, pipeline'ları çalıştırma ve yapılandırmaya yönelik kısa bir giriş kursu. Çalıştırma, çıktılar, temel kod yapısı ve farklı hesaplama ortamları için yapılandırmayı kapsamaktadır.</p>
 <p><a class="md-button md-button--secondary" href="nextflow_run/">Nextflow Run eğitimine başlayın <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <hr />
@@ -4002,7 +3996,7 @@ Daha fazla bilgi için <a href="https://github.com/nextflow-io/training/blob/mas
 </details>
 <details class="courses">
 <summary><strong>Görüntüleme için Nextflow</strong> (uzamsal omiks)</summary>
-<p>Analiz pipeline'larını çalıştırmak ve özelleştirmek isteyen görüntüleme ve uzamsal omiks alanındaki araştırmacılar için. Kurs, Nextflow pipeline'larını çalıştırmayı, yapılandırmayı ve girdileri yönetmeyi biyolojik açıdan anlamlı bir bağlamda göstermek amacıyla nf-core/molkart pipeline'ını kullanmaktadır.</p>
+<p>Analiz pipeline'larını çalıştırmak ve özelleştirmek isteyen görüntüleme ve uzamsal omiks alanındaki araştırmacılar için. Kurs, Nextflow pipeline'larını çalıştırmayı, yapılandırmayı ve girdileri yönetmeyi göstermek amacıyla biyolojik açıdan ilgili bir pipeline olan nf-core/molkart'ı kullanmaktadır.</p>
 <p><a class="md-button md-button--secondary" href="nf4_science/imaging/">Görüntüleme için Nextflow eğitimine başlayın <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 </li>
@@ -4015,7 +4009,7 @@ Daha fazla bilgi için <a href="https://github.com/nextflow-io/training/blob/mas
 nf-core topluluğunun pipeline'ları nasıl ve neden oluşturduğunu, bu tekniklere nasıl katkıda bulunabileceğinizi ve bunları nasıl yeniden kullanabileceğinizi anlayın.</p>
 <details class="courses">
 <summary><strong>Hello nf-core:</strong> nf-core ile başlayın</summary>
-<p><a href="https://nf-co.re/">nf-core</a> uyumlu pipeline'ları çalıştırmak ve geliştirmek isteyen geliştiriciler için. Kurs, nf-core şablonunu ve geliştirme en iyi uygulamalarını izleyen, mevcut nf-core modüllerini kullanan basit ama tam işlevsel pipeline'lar geliştirmeye yetecek düzeyde nf-core pipeline'larının yapısını kapsamaktadır.</p>
+<p><a href="https://nf-co.re/">nf-core</a> uyumlu pipeline'ları çalıştırmak ve geliştirmek isteyen geliştiriciler için. Kurs, nf-core şablonunu ve geliştirme en iyi uygulamalarını izleyen, mevcut nf-core modüllerini kullanan, basit ama tam işlevsel pipeline'lar geliştirmeye yetecek düzeyde nf-core pipeline'larının yapısını kapsamaktadır.</p>
 <p><a class="md-button md-button--secondary" href="hello_nf-core/">Hello nf-core eğitimine başlayın <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <hr />
@@ -4023,7 +4017,7 @@ nf-core topluluğunun pipeline'ları nasıl ve neden oluşturduğunu, bu teknikl
 <p>Gerçek dünya kullanım senaryolarına yönelik Nextflow pipeline'ları geliştirmek ve dağıtmak için ileri düzey kavramları ve mekanizmaları öğrenin.</p>
 <details class="courses">
 <summary><strong>Side Quests:</strong> Bağımsız konulara derinlemesine dalış</summary>
-<p>Nextflow geliştiricileri için tasarlanmış, belirli konularda bilgi ve becerilerini genişletmek ve/veya derinleştirmek isteyenlere yönelik bağımsız mini kurslar. Doğrusal bir sırayla sunulmakla birlikte herhangi bir sırayla alınabilirler (bağımlılıklar için her mini kursun genel bakış bölümüne bakın).</p>
+<p>Belirli konularda kapsamlarını genişletmek ve/veya becerilerini derinleştirmek isteyen Nextflow geliştiricileri için tasarlanmış bağımsız mini kurslar. Doğrusal bir sırayla sunulmakla birlikte herhangi bir sırayla alınabilirler (her mini kursun genel bakışındaki bağımlılıklara bakın).</p>
 <p><a class="md-button md-button--secondary" href="side_quests/">Side Quests'e göz atın <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg></span></a></p>
 </details>
 <details class="courses">
@@ -4043,7 +4037,60 @@ Bu materyallere erişmeniz gerekiyorsa Ocak 2026 öncesine ait <a href="https://
 <div class="homepage_logos">
 <p><img alt="Seqera" src="assets/img/seqera_logo.png#only-light" /></p>
 <p><img alt="Seqera" src="assets/img/seqera_logo_dark.png#only-dark" /></p>
-</div><style type="text/css">.quiz {
+</div><div id="quiz-progress-sidebar" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (desktop) -->
+  <label class="md-nav__title">
+    <span class="md-nav__icon md-icon"></span>
+    Quiz Progress
+  </label>
+  <ul class="md-nav__list" data-md-component="quiz-progress">
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <span class="md-ellipsis">
+          Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span> (<span class="quiz-progress-answered-percentage">0%</span>)
+        </span>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+          <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+        </div>
+      </div>
+    </li>
+    <li class="md-nav__item">
+      <div class="md-nav__link quiz-correct-reset">
+        <span class="md-ellipsis">
+          Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span> (<span class="quiz-progress-score-percentage">0%</span>)
+        </span>
+        <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+          Reset
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+<nav id="quiz-progress-mobile" class="quiz-progress-mobile md-nav" aria-label="Quiz Progress" style="display: none;">
+  <!-- mkdocs-quiz progress sidebar (mobile) -->
+  <div class="quiz-progress-bar">
+    <div class="quiz-progress-bar-incorrect" style="width: 0%"></div>
+    <div class="quiz-progress-bar-correct" style="width: 0%"></div>
+  </div>
+  <div data-md-component="quiz-progress">
+    <div class="quiz-correct-reset">
+      <span class="md-ellipsis">
+        Answered: <span class="quiz-progress-answered">0</span> / <span class="quiz-progress-total">0</span>
+      </span>
+      <span class="md-ellipsis">
+        Correct: <span class="quiz-progress-score">0</span> / <span class="quiz-progress-score-total">0</span>
+      </span>
+      <a href="#" class="quiz-reset-all-link" style="color: var(--md-primary-fg-color); text-decoration: none;">
+        Reset
+      </a>
+    </div>
+  </div>
+</nav><style type="text/css">.quiz {
   border: 1px solid black;
   padding: 1rem;
   margin: 1rem 0;
@@ -4090,10 +4137,12 @@ Bu materyallere erişmeniz gerekiyorsa Ocak 2026 öncesine ait <a href="https://
 .wrong label,
 .wrong label * {
   color: #dc3545;
+  text-decoration: line-through;
 }
 .correct label,
 .correct label * {
   color: #198754;
+  font-weight: bold;
 }
 
 fieldset {
@@ -5014,16 +5063,6 @@ window.mkdocsQuizConfig = {
     },
   };
 
-  // Translate template elements with data-quiz-translate attributes
-  function translateTemplateElements() {
-    document.querySelectorAll("[data-quiz-translate]").forEach((element) => {
-      const key = element.getAttribute("data-quiz-translate");
-      if (key) {
-        element.textContent = t(key);
-      }
-    });
-  }
-
   // Truncate text to a maximum length, adding ellipsis if needed
   function truncateText(text, maxLength) {
     if (text.length <= maxLength) return text;
@@ -5657,9 +5696,6 @@ window.mkdocsQuizConfig = {
   function initializePage() {
     // Initialize tracker
     quizTracker.init();
-
-    // Translate template elements
-    translateTemplateElements();
 
     // Reposition sidebar for Material theme TOC integration
     repositionSidebar();
